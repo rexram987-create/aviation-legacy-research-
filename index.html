@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviation Matrix | מרכז המחקר</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #050505;
+            --card-dark: #111111;
+            --accent-blue: #3b82f6;
+            --accent-gold: #fbbf24;
+        }
+        body {
+            font-family: 'Assistant', sans-serif;
+            background-color: var(--bg-dark);
+            color: #e5e7eb;
+            overflow-x: hidden;
+        }
+        .s25-container {
+            max-width: 480px; /* S25 Ultra Optimized Width */
+            margin: 0 auto;
+            min-height: 100vh;
+        }
+        .glass {
+            background: rgba(17, 17, 17, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #fff 30%, #6366f1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .nav-card:active {
+            transform: scale(0.97);
+        }
+    </style>
+</head>
+<body class="p-0 m-0">
+
+    <div class="s25-container px-6 py-10">
+        
+        <!-- Header Section -->
+        <header class="mb-12 text-center">
+            <div class="inline-block p-1 mb-4 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 shadow-lg shadow-blue-900/20">
+                <div class="bg-black rounded-full px-4 py-1">
+                    <span class="text-[10px] font-bold tracking-[0.2em] text-blue-400">AVIATION INTELLIGENCE</span>
+                </div>
+            </div>
+            <h1 class="text-5xl font-extrabold tracking-tighter gradient-text mb-2">AVIATION<br>MATRIX</h1>
+            <p class="text-gray-500 text-xs font-light tracking-widest uppercase">Global Airline Structural Mapping</p>
+        </header>
+
+        <!-- Introduction Section -->
+        <section class="glass rounded-3xl p-6 mb-10 shadow-2xl">
+            <h3 class="text-xl font-bold text-blue-400 mb-4 flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                מבוא למחקר
+            </h3>
+            <div class="text-gray-300 text-sm leading-relaxed text-justify space-y-4 font-light">
+                <p>
+                    ברוך הבא ל-**Aviation Matrix**, פרויקט הניתוח המבני וההיסטורי של ענקיות התעופה העולמיות. מחקר זה אינו מסתפק בנתונים טכניים של ציי מטוסים, אלא צולל אל עומק ה-DNA של החברות המעצבות את השמיים.
+                </p>
+                <p>
+                    בדומה למחקר ה-Press Matrix שיצרנו, אנו מחויבים כאן לרמת הפירוט הגבוהה ביותר. כל חברה נבחנת דרך ארבעה צירים מרכזיים: 
+                    <span class="text-blue-400 font-semibold">אטימולוגיה</span> (מקור השם ומשמעותו הלשונית), 
+                    <span class="text-blue-400 font-semibold">ביוגרפיה</span> (ילדותו ואישיותו של המייסד), 
+                    <span class="text-blue-400 font-semibold">אידיאולוגיה</span> (חזון ההקמה המקורי) ו-
+                    <span class="text-blue-400 font-semibold">ציר זמן</span> היסטורי.
+                </p>
+                <p>
+                    הפרויקט מחולק למגזרים אסטרטגיים כדי לאפשר ניתוח השוואתי בין תפיסות עולם מערביות (Legacy) לבין המודלים הדינמיים של המזרח והמפרץ.
+                </p>
+            </div>
+        </section>
+
+        <!-- Navigation Menu -->
+        <div class="space-y-5">
+            <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest px-2">תחומי מחקר זמינים</h4>
+
+            <!-- Phase 1: Western Legacy -->
+            <div class="nav-card glass rounded-2xl p-5 relative overflow-hidden group border-r-4 border-blue-600">
+                <div class="flex justify-between items-start mb-2">
+                    <h2 class="text-2xl font-bold text-white tracking-tight">Western Legacy</h2>
+                    <span class="bg-blue-600/20 text-blue-400 text-[10px] px-2 py-1 rounded-md font-bold uppercase">Phase 01</span>
+                </div>
+                <p class="text-gray-400 text-xs mb-6 leading-snug">
+                    ניתוח הענקיות ההיסטוריות: American, Delta, United, Air France, Lufthansa. התמקדות בשורשי התעופה המערבית.
+                </p>
+                <button class="w-full bg-white text-black font-bold py-3 rounded-xl flex items-center justify-center gap-2 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                    <span>פתח מחקר</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                </button>
+            </div>
+
+            <!-- Phase 2: Global Connectors -->
+            <div class="nav-card glass rounded-2xl p-5 relative overflow-hidden group border-r-4 border-emerald-600">
+                <div class="flex justify-between items-start mb-2">
+                    <h2 class="text-2xl font-bold text-white tracking-tight">Global Connectors</h2>
+                    <span class="bg-emerald-600/20 text-emerald-400 text-[10px] px-2 py-1 rounded-md font-bold uppercase">Phase 02</span>
+                </div>
+                <p class="text-gray-400 text-xs mb-6 leading-snug">
+                    יוקרה ועוצמה מהמזרח: Emirates, Etihad, Qatar, Singapore, ANA, Turkish, Cathay Pacific.
+                </p>
+                <button class="w-full bg-emerald-600/20 text-emerald-400 border border-emerald-600/30 font-bold py-3 rounded-xl flex items-center justify-center gap-2 transition-all">
+                    <span>בשלבי הכנה</span>
+                </button>
+            </div>
+
+            <!-- Future: Low Cost -->
+            <div class="nav-card glass rounded-2xl p-5 opacity-40 grayscale">
+                <div class="flex justify-between items-start mb-2">
+                    <h2 class="text-2xl font-bold text-gray-400 tracking-tight italic">Low-Cost Dynamics</h2>
+                </div>
+                <p class="text-gray-500 text-[10px] leading-snug">
+                    מחקר נפרד על Southwest ו-Ryanair.
+                </p>
+            </div>
+        </div>
+
+        <!-- System Footer -->
+        <footer class="mt-16 border-t border-white/5 pt-8 text-center">
+            <div class="flex justify-center gap-4 mb-4">
+                <div class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></div>
+                <div class="w-2 h-2 rounded-full bg-indigo-600 animate-pulse" style="animation-delay: 0.2s"></div>
+                <div class="w-2 h-2 rounded-full bg-purple-600 animate-pulse" style="animation-delay: 0.4s"></div>
+            </div>
+            <p class="text-[9px] text-gray-600 uppercase tracking-[0.3em] font-bold">Optimized for S25 Ultra Interface</p>
+            <p class="text-[9px] text-gray-700 mt-2">© 2026 | Meta-Cognitive Aviation Research</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
