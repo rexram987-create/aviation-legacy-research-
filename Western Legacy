@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviation Matrix | Western Legacy - Complete Intelligence Dossier</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;600;700;800&family=Playfair+Display:ital,wght@0,900;1,900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-obsidian: #010204;
+            --card-deep: #080a0f;
+            --accent-cyan: #22d3ee;
+            --accent-gold: #fbbf24;
+            --accent-red: #ef4444;
+            --accent-blue: #3b82f6;
+        }
+        body {
+            font-family: 'Assistant', sans-serif;
+            background-color: var(--bg-obsidian);
+            color: #e2e8f0;
+            line-height: 1.7;
+        }
+        .s25-container {
+            max-width: 480px;
+            margin: 0 auto;
+        }
+        .intel-header {
+            font-family: 'Playfair Display', serif;
+            background: linear-gradient(to bottom, #fff 40%, #64748b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-module {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 32px;
+        }
+        .etymology-chip {
+            background: rgba(34, 211, 238, 0.07);
+            color: var(--accent-cyan);
+            border: 1px solid rgba(34, 211, 238, 0.2);
+            font-family: monospace;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+        }
+        .founder-profile-box {
+            border-right: 4px solid var(--accent-cyan);
+            padding-right: 1.5rem;
+            margin: 2rem 0;
+        }
+        .founding-nexus-box {
+            background: rgba(251, 191, 36, 0.03);
+            border-right: 2px solid var(--accent-gold);
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+            border-radius: 0 12px 12px 0;
+        }
+        .trauma-highlight {
+            background: rgba(239, 68, 68, 0.05);
+            border-right: 2px solid #ef4444;
+            padding: 1rem;
+            border-radius: 0 12px 12px 0;
+            font-style: italic;
+            font-size: 0.9rem;
+            color: #fca5a5;
+        }
+        .achievement-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 8px;
+            font-size: 0.85rem;
+            color: #cbd5e1;
+        }
+        .achievement-item::before {
+            content: '•';
+            color: var(--accent-cyan);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="pb-32">
+
+    <!-- Top Status Bar -->
+    <nav class="sticky top-0 z-50 bg-black/90 backdrop-blur-lg border-b border-white/5 p-4">
+        <div class="s25-container flex justify-between items-center">
+            <a href="index.html" class="text-cyan-500 text-[10px] font-black tracking-widest uppercase">← Back to Index</a>
+            <span class="text-[10px] text-gray-600 font-bold uppercase tracking-[0.3em]">Phase 01 | Absolute Intel</span>
+        </div>
+    </nav>
+
+    <div class="s25-container px-6 pt-10">
+        
+        <header class="mb-16">
+            <h1 class="text-6xl font-black intel-header leading-none mb-4 italic text-center">WESTERN<br>LEGACY</h1>
+            <p class="text-cyan-500 text-[10px] font-bold uppercase tracking-[0.5em] border-t border-cyan-900/30 pt-4 text-center">Deep Structural Intelligence & Historical Narrative</p>
+        </header>
+
+        <!-- 01. AMERICAN AIRLINES -->
+        <article class="mb-32">
+            <div class="flex items-center gap-4 mb-8">
+                <span class="text-6xl font-black text-white/5">01</span>
+                <div>
+                    <h2 class="text-4xl font-black text-white leading-tight">American Airlines</h2>
+                    <p class="text-[11px] text-cyan-400 font-bold uppercase tracking-widest italic">The Efficiency Titan</p>
+                </div>
+            </div>
+
+            <div class="glass-module p-6 mb-10">
+                <div class="space-y-4 text-[14px] text-gray-300 font-light">
+                    <p><strong class="text-white underline decoration-cyan-500">שנת ייסוד רשמית:</strong> 25 בינואר, 1930.</p>
+                    <p><strong class="text-white underline decoration-cyan-500">הבונה/ההוגה:</strong> Cyrus Rowlett Smith (1899–1990).</p>
+                    <p><strong class="text-white underline decoration-cyan-500">מיקום ייסוד:</strong> פורט וורת', טקסס, ארה"ב.</p>
+                </div>
+            </div>
+
+            <!-- Expanding Background & Founding Nexus -->
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-cyan-500 uppercase mb-4 border-b border-cyan-900/30 pb-1 flex items-center gap-2">
+                    הקשר הייסוד: רקע וסיבה מורחבים
+                </h4>
+                <div class="founding-nexus-box text-sm font-light leading-relaxed text-justify">
+                    <p>
+                        <span class="text-white font-bold block mb-2 underline italic">הרקע: עידן הקונסולידציה המלוכלכת</span>
+                        בסוף שנות ה-20, שמי ארה"ב היו זירת קרב של כ-80 חברות קטנות וכושלות. הרקע להקמה היה הניסיון של תאגיד <span class="text-white">AVCO</span> ליצור מונופול על חוזי דואר האוויר הממשלתיים. ב-25 בינואר 1930, תחת לחץ פיננסי כבד, אוחדו כל החברות הללו לתוך <span class="italic font-bold">American Airways</span>. אולם, החברה הייתה מנופחת, ללא מטה מרכזי ובעלת ציי מטוסים לא תואמים.
+                    </p>
+                    <p class="mt-4">
+                        <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד: הישרדות לאחר שערוריית ה"קלי"</span>
+                        הסיבה האמיתית להפיכתה לחברה המודרנית ב-1934 הייתה **שערוריית דואר האוויר** (Air Mail Scandal). הממשלה ביטלה את כל חוזי הדואר הממשלתיים, מה שגזר גזר דין מוות על חברות התעופה. סיירוס סמית' מונה כדי להציל את השרידים. הוא ייסד את "American Airlines" כחברה שחייבת **להרוויח מהטסת אנשים ולא מדואר**. זו הייתה מהפכה קפיטליסטית: בניית מודל עסקי שאינו נשען על סובסידיות אלא על יעילות צרכנית המונית.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Expanded Etymology -->
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-cyan-500 uppercase mb-4">אטימולוגיה מורחבת וזהות</h4>
+                <div class="space-y-4 text-sm font-light text-justify leading-relaxed">
+                    <p>
+                        השם <span class="text-white font-bold italic underline decoration-cyan-500">American</span> הוא פריסה פסיכולוגית של המושג הלאומי. המילה נגזרת מהשורש הגרמני העתיק <span class="etymology-chip">Amalric</span>, שבו השורש <span class="italic">Amal</span> מסמל עבודה קשה וחסרת פשרות (עמל), ו-<span class="italic">Ric</span> מסמל עוצמה ושלטון. סמית' בחר לנכס את שם היבשת כדי ליצור תחושת ריבונות.
+                    </p>
+                    <p>
+                        המעבר מהמונח <span class="etymology-tag">Airways</span> ל-<span class="etymology-tag">Airlines</span> סימן את אימוץ המודל הליניארי של ענף הרכבות. המילה <span class="italic">Line</span> (קו/שורה) נגזרת מהלטינית <span class="etymology-chip">Linea</span> (חוט פשתן ישר), ומסמל את הפיכת השמיים למסלול מדויק, צפוי ומתועש, בניגוד ל"נתיב" (Way) המרמז על הרפתקה פתוחה.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Founder Deep Profile -->
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-cyan-500 uppercase mb-4">פרופיל מייסד: סיירוס רולנד סמית'</h4>
+                <div class="founder-profile-box">
+                    <div class="space-y-6 text-[14px] text-gray-400 font-light text-justify leading-relaxed">
+                        <p>
+                            <span class="text-white font-bold block mb-1 underline italic">אטימולוגיה של שם המייסד:</span>
+                            <span class="text-cyan-400 font-bold italic">Cyrus</span> (סיירוס) נגזר מהפרסית <span class="italic">Kūruš</span> שפירושו "שמש" או "צעיר" (בעברית: כורש). <span class="text-cyan-400 font-bold italic">Rowlett</span> (רולנד) נגזר מגרמנית עתיקה <span class="italic">Hrodland</span> – שילוב של <span class="italic">Hrod</span> (תהילה) ו-<span class="italic">Land</span> (אדמה). השם <span class="text-cyan-400 font-bold italic">Smith</span> (סמית') הוא שם תעסוקתי אנגלו-סקסי שפירושו "חרש מתכת" (מתוך השורש <span class="italic">Smitan</span> - להכות/לעמול). שילוב השמות מסמל "שליט של תהילה ועמל קשה".
+                        </p>
+                        <p>
+                            <span class="text-white font-bold block mb-2 underline italic">ילדות ושברים פסיכולוגיים:</span>
+                            נולד בטקסס למשפחה שחוותה התפרקות טראומטית. אביו נטש שבעה ילדים ואם חסרת כל, מה שאילץ את סיירוס לעבוד בגיל 9 כמנקה משרדים. 
+                        </p>
+                        <div class="trauma-highlight">
+                            הנטישה יצרה אצלו צורך פתולוגי בשליטה. עבורו, "יעילות" הייתה מנגנון הגנה נגד חוסר הוודאות של ילדותו. הוא ראה במספרים כלי נשק נגד הגורל. הוא היה ישן על ספות המשרד במטה החברה, דורש מעובדיו את אותה רמת הקרבה נוקשה שגזר על עצמו כדי להבטיח שהאימפריה לא תקרוס לעולם.
+                        </div>
+                        <p>
+                            <span class="text-white font-bold block mb-2 underline italic">הישגים מרכזיים:</span>
+                            <ul class="achievement-list">
+                                <li class="achievement-item">פיתוח ה-Douglas DC-3, המטוס ששינה את הכלכלה העולמית.</li>
+                                <li class="achievement-item">הקמת מערכת ה-SABRE הממוחשבת בשיתוף IBM.</li>
+                                <li class="achievement-item">הפיכת AA לחברה הגדולה בעולם ושר המסחר של ארה"ב.</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <!-- 02. DELTA AIR LINES -->
+        <article class="mb-32">
+            <div class="flex items-center gap-4 mb-8">
+                <span class="text-6xl font-black text-white/5">02</span>
+                <div>
+                    <h2 class="text-4xl font-black text-white leading-tight">Delta Air Lines</h2>
+                    <p class="text-[11px] text-red-500 font-bold uppercase tracking-widest italic">The Southern Sentinel</p>
+                </div>
+            </div>
+
+            <div class="glass-module p-6 mb-10 border-r-4 border-red-600">
+                <div class="space-y-4 text-[14px] text-gray-300 font-light">
+                    <p><strong class="text-white underline decoration-red-600">שנת ייסוד (ריסוס):</strong> 2 במרץ, 1925.</p>
+                    <p><strong class="text-white underline decoration-red-600">הבונה/ההוגה:</strong> Collett Everman Woolman (1889–1966).</p>
+                    <p><strong class="text-white underline decoration-red-600">מיקום ייסוד:</strong> מייקון, ג'ורג'יה.</p>
+                </div>
+            </div>
+
+            <!-- Expanding Background & Founding Nexus -->
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-red-500 uppercase mb-4 border-b border-red-900/30 pb-1 flex items-center gap-2">
+                    הקשר הייסוד: רקע וסיבה מורחבים
+                </h4>
+                <div class="founding-nexus-box text-sm font-light leading-relaxed text-justify" style="border-right-color: var(--accent-red);">
+                    <p>
+                        <span class="text-white font-bold block mb-2 underline italic">הרקע: חורבן תעשיית הכותנה</span>
+                        הרקע להקמת דלתא הוא מאבק הישרדות ביולוגי. בראשית שנות ה-20, מזיק קטלני בשם "חדקונית הכותנה" (Boll Weevil) השמיד את שדות הדרום ואיים על כלכלת ארה"ב כולה. קולט וולמן, שעבד במשרד החקלאות, הבין שהפתרון היחיד הוא ריסוס מהאוויר – טכנולוגיה שהייתה אז בחיתוליה.
+                    </p>
+                    <p class="mt-4">
+                        <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד: ניצול הון מושבת</span>
+                        המעבר להטסת נוסעים ב-1929 נבע מ**סיבה לוגיסטית-כלכלית**: המטוסים החקלאיים היו מושבתים מחוץ לעונת הריסוס, מה שיצר נטל כלכלי כבד. וולמן ייסד את שירות הנוסעים כדי **להבטיח את שרידותו של הצי האווירי לאורך כל השנה**. הוא גייס הון ממשקיעים מקומיים בדרום, אנשים שהכירו אותו אישית, והקים חברה שנועדה לחבר את הערים הקטנות של לואיזיאנה ומיסיסיפי לעולם.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Expanded Etymology -->
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-red-500 uppercase mb-4">אטימולוגיה מורחבת וזהות</h4>
+                <div class="space-y-4 text-sm font-light text-justify leading-relaxed">
+                    <p>
+                        השם <span class="etymology-chip" style="background:rgba(239,68,68,0.1); color:#ef4444; border-color:#ef444433;">Delta</span> נגזר מהאות היוונית הרביעית <span class="italic font-bold">Δ</span>, המסמלת שינוי וצמיחה. אולם, השורש העמוק ביותר הוא השמי <span class="etymology-chip" style="background:none; border:none; padding:0;">Dalet</span> (דלת/פתח).
+                    </p>
+                    <p>
+                        עבור וולמן, השם היה ייצוג פיזי של ה<span class="text-white italic">Mississippi Delta</span>. הבחירה בשם זה נועדה ליצור מותג המחובר לאדמה ולקהילה. זהו מותג שנועד לשדר הכנסת אורחים דרומית (Southern Hospitality), שהיא המשכו הישיר של היחס האישי שקיבלו החקלאים בראשית הדרך.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Founder Profile -->
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-red-500 uppercase mb-4">פרופיל מייסד: קולט אברמן וולמן</h4>
+                <div class="founder-profile-box" style="border-right-color: var(--accent-red);">
+                    <div class="space-y-6 text-[14px] text-gray-400 font-light text-justify leading-relaxed">
+                        <p>
+                            <span class="text-white font-bold block mb-1 underline italic">אטימולוגיה של שם המייסד:</span>
+                            <span class="text-red-400 font-bold italic">Collett</span> (קולט) הוא צורת הקטנה צרפתית של <span class="italic">Nicolas</span>, שפירושו מיוונית "ניצחון העם" (<span class="italic">Nike</span> - ניצחון, <span class="italic">Laos</span> - עם). <span class="text-red-400 font-bold italic">Everman</span> (אברמן) מורכב מהשורש הגרמני <span class="italic">Eber</span> (חזיר בר - סמל לחוסן וכוח) ו-<span class="italic">Man</span> (אדם). <span class="text-red-400 font-bold italic">Woolman</span> (וולמן) הוא שם תעסוקתי שפירושו "איש הצמר", המעיד על שורשים חקלאיים עמוקים. שילוב השמות מסמל "ניצחון של אדם בעל חוסן חקלאי".
+                        </p>
+                        <p>
+                            <span class="text-white font-bold block mb-2 underline italic">ילדות וערכים:</span>
+                            גדל בסביבה חקלאית שמרנית שבה העבודה נתפסה כחובה דתית. המשיכה שלו לתעופה הייתה פרקטית לחלוטין – המטוס היה עבורו מחרשה מעופפת.
+                        </p>
+                        <div class="trauma-highlight" style="border-right-color: var(--accent-red);">
+                            הזהות שלו עוצבה כ"מגן הקהילה". הוא פיתח סלידה מגינונים של עושר וראוותנות. הוא היה ידוע כמי שמתהלך במוסכים בבגדי עבודה ולוחץ ידיים למכונאים. האידיאולוגיה שלו, "The Delta Family", נבעה מהצורך שלו בערבות הדדית כנגד פגעי הטבע והגורל.
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <!-- 03. UNITED AIRLINES -->
+        <article class="mb-32">
+            <div class="flex items-center gap-4 mb-8">
+                <span class="text-6xl font-black text-white/5">03</span>
+                <div>
+                    <h2 class="text-4xl font-black text-white leading-tight">United Airlines</h2>
+                    <p class="text-[11px] text-indigo-400 font-bold uppercase tracking-widest italic">The Industrial Machine</p>
+                </div>
+            </div>
+
+            <!-- Metadata -->
+            <div class="glass-module p-6 mb-10 border-r-4 border-indigo-600">
+                <div class="space-y-4 text-[14px] text-gray-300 font-light">
+                    <p><strong class="text-white underline decoration-indigo-600">שנת ייסוד (Varney):</strong> 6 באפריל, 1926.</p>
+                    <p><strong class="text-white underline decoration-indigo-600">הבונה/ההוגה:</strong> William Boeing (1881–1956).</p>
+                    <p><strong class="text-white underline decoration-indigo-600">מיקום ייסוד:</strong> סיאטל, ארה"ב.</p>
+                </div>
+            </div>
+
+            <!-- Expanding Background & Founding Nexus -->
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-indigo-500 uppercase mb-4 border-b border-indigo-900/30 pb-1 flex items-center gap-2">
+                    הקשר הייסוד: רקע וסיבה מורחבים
+                </h4>
+                <div class="founding-nexus-box text-sm font-light leading-relaxed text-justify" style="border-right-color: var(--accent-blue);">
+                    <p>
+                        <span class="text-white font-bold block mb-2 underline italic">הרקע: חזון האינטגרציה האנכית</span>
+                        הרקע להקמת יונייטד הוא הרצון של וויליאם בואינג לשלוט בכל פירור בשרשרת האספקה האווירית. הוא כבר שלט בייצור המטוסים בסיאטל ובייצור המנועים (Pratt & Whitney). ב-1926 הוא הקים את <span class="text-white font-bold italic">Boeing Air Transport</span> כדי להשתלט על קו הדואר היוקרתי בין שיקגו לסן פרנסיסקו.
+                    </p>
+                    <p class="mt-4">
+                        <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד: בניית מונופול הנדסי</span>
+                        הקמת יונייטד (United Aircraft and Transport Corporation) ב-1931 נבעה מהסיבה של **יצירת שלמות מערכתית**. בואינג רצה שהנוסע יהיה לקוח שבוי של המהנדס. סיבת הייסוד הייתה **שליטה תעשייתית טוטאלית** – מטוס של בואינג, עם מנוע של בואינג, בנתיב של בואינג. זה היה המודל המוקדם ביותר של תאגיד תעופה גלובלי השולט בכל שלבי הייצור והתפעול.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Expanded Etymology -->
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-indigo-500 uppercase mb-4">אטימולוגיה מורחבת וזהות</h4>
+                <div class="space-y-4 text-sm font-light text-justify leading-relaxed">
+                    <p>
+                        השם <span class="etymology-chip" style="background:rgba(79,70,229,0.1); color:#6366f1; border-color:#6366f133;">United</span> מקורו בלטינית <span class="etymology-chip" style="background:none; border:none; padding:0;">Unitas</span>, המסמלת שלמות המורכבת מחלקים רבים הפועלים כאחד. השורש <span class="italic">Unus</span> (אחד) מסמל את ביטול האינדיבידואליות לטובת המערכת.
+                    </p>
+                    <p>
+                        עבור בואינג, השם לא סימל אחדות של אנשים, אלא **אחידות של חלקים**. זהו שם שמשדר עוצמה תעשייתית קרה, אמינות הנדסית וסטנדרטיזציה קשיחה. המותג נועד להדגיש את המעבר מהפרפורמנס האישי של הטייס לביצועים המכניים של המערכת המאוחדת.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Founder Profile -->
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-indigo-500 uppercase mb-4">פרופיל מייסד: וויליאם בואינג</h4>
+                <div class="founder-profile-box" style="border-right-color: var(--accent-blue);">
+                    <div class="space-y-6 text-[14px] text-gray-400 font-light text-justify leading-relaxed">
+                        <p>
+                            <span class="text-white font-bold block mb-1 underline italic">אטימולוגיה של שם המייסד:</span>
+                            <span class="text-indigo-400 font-bold italic">William</span> (וויליאם) נגזר מגרמנית עתיקה <span class="italic">Willahelm</span> – שילוב של <span class="italic">Willa</span> (רצון/תשוקה) ו-<span class="italic">Helm</span> (קסדה/הגנה). פירושו "מגן נחוש". השם <span class="text-indigo-400 font-bold italic">Boeing</span> (בואינג) הוא שם משפחה גרמני (<span class="italic">Böing</span>) המבוסס על השם הפרטי <span class="italic">Bodo</span>, שפירושו "שליח" או "מפקד". שילוב השמות מסמל "מפקד ומגן בעל רצון ברזל".
+                        </p>
+                        <p>
+                            <span class="text-white font-bold block mb-2 underline italic">ילדות ושברים:</span>
+                            נולד לממשפחה של תעשייני עץ גרמנים אמידה. אביו נפטר כשהיה בן 8, טראומה שהובילה לשליחתו לפנימייה יוקרתית בשוויץ.
+                        </p>
+                        <div class="trauma-highlight" style="border-right-color: var(--accent-blue);">
+                            הבידוד בשוויץ יצר אצלו זהות של מהנדס מרוחק ופרפקציוניסט. הוא לא חיפש חברים או הרפתקאות; הוא חיפש את השלמות שבמכונה. כשהממשלה פירקה את המונופול שלו ב-1934, הוא ראה בזה עלבון אישי ליושרה ההנדסית שלו ופרש מהתעופה לצמיתות.
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <!-- 04. AIR FRANCE -->
+        <article class="mb-32">
+            <div class="flex items-center gap-3 mb-8">
+                <span class="text-6xl font-black text-blue-900/20">.04</span>
+                <div>
+                    <h2 class="text-4xl font-black text-white leading-tight">Air France</h2>
+                    <p class="text-[11px] text-blue-500 font-bold uppercase tracking-widest italic">The Sovereign Wing</p>
+                </div>
+            </div>
+
+            <!-- Metadata -->
+            <div class="glass-module p-6 mb-10 border-r-4 border-blue-500">
+                <div class="space-y-4 text-[14px] text-gray-300 font-light">
+                    <p><strong class="text-white underline decoration-blue-500">שנת ייסוד רשמית:</strong> 7 באוקטובר, 1933.</p>
+                    <p><strong class="text-white underline decoration-blue-500">הבונה/ההוגה:</strong> ממשלת צרפת (מיזוג 5 חברות).</p>
+                    <p><strong class="text-white underline decoration-blue-500">מיקום ייסוד:</strong> פריז, צרפת.</p>
+                </div>
+            </div>
+
+            <!-- Expanding Background & Founding Nexus -->
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-blue-500 uppercase mb-4 border-b border-blue-900/30 pb-1 flex items-center gap-2">
+                    הקשר הייסוד: רקע וסיבה מורחבים
+                </h4>
+                <div class="founding-nexus-box text-sm font-light leading-relaxed text-justify" style="border-right-color: var(--accent-blue);">
+                    <p>
+                        <span class="text-white font-bold block mb-2 underline italic">הרקע: האימפריאליזם של השמיים</span>
+                        הרקע להקמת אייר פראנס הוא גיאופוליטי. בשנות ה-30 המוקדמות, צרפת הייתה בעלת רשת קולוניאלית ענפה אך מפורקת מבחינה תחבורתית. חמש חברות קטנות (כמו Air Orient ו-CIDNA) היו על סף קריסה כלכלית, מה שאיים על הריבונות הצרפתית במושבות.
+                    </p>
+                    <p class="mt-4">
+                        <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד: בניית ה"חוט המקשר" הלאומי</span>
+                        הקמת אייר פראנס ב-1933 נבעה מהצורך ב**שימור העוצמה הצרפתית הגלובלית**. המדינה כפתה את המיזוג כדי ליצור את ה"חוט המקשר" (Le Trait d'Union) – גוף אחד שיחבר את פריז לאפריקה, הודו-סין ודרום אמריקה. סיבת הייסוד הייתה **דיפלומטיה אווירית**: הפיכת המטוס לשגריר של יוקרה ותרבות, המשמש כזרוע ארוכה של ה"Grandeur" (הגדולה) הצרפתית.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Expanded Etymology -->
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-blue-500 uppercase mb-4">אטימולוגיה מורחבת וזהות</h4>
+                <div class="space-y-4 text-sm font-light text-justify leading-relaxed">
+                    <p>
+                        השם <span class="text-white font-bold italic underline">Air France</span> הוא הצהרת ריבונות מוחלטת. השורש של המילה <span class="italic">France</span> נגזר מהשורש הגרמני <span class="etymology-chip">Frank</span>, שפירושו "חופשי". המותג נועד לשדר כי הצרפתי הוא הריבון החופשי של המרחב האווירי שלו.
+                    </p>
+                    <p>
+                        הלוגו ההיסטורי, ה-<span class="text-blue-500 font-bold italic underline underline-offset-4">Hippocampe ailé</span> (סוס-ים עם כנפיים), מסמל את הקשר בין השמיים למים. האטימולוגיה של המילה <span class="etymology-chip" style="background:rgba(59,130,246,0.1); color:#60a5fa; border:none;">Hippocampus</span> (סוס וזחל מים) מייצגת את היכולת לשלוט במרחבים הלא-יציבים של האוקיינוס והשמיים, והפיכתם לנתיב סלול של יוקרה צרפתית.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Ideology -->
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-blue-500 uppercase mb-4">פרופיל הבונה: דמויות מפתח ואטימולוגיה</h4>
+                <div class="founder-profile-box" style="border-right-color: #3b82f6;">
+                    <div class="space-y-6 text-[14px] text-gray-400 font-light text-justify leading-relaxed">
+                        <p>
+                            <span class="text-white font-bold block mb-1 underline italic">אטימולוגיה של דמויות מפתח (Pierre Cot):</span>
+                            <span class="text-blue-400 font-bold italic">Pierre</span> (פייר) נגזר מהיוונית <span class="italic">Petros</span> שפירושו "סלע" או "אבן" (פטרוס). השם <span class="text-blue-400 font-bold italic">Cot</span> (קוט) נגזר מצרפתית עתיקה שפירושה "בקתה קטנה" או "גבעה". השם מסמל "סלע יציב בתוך המבנה".
+                        </p>
+                        <div class="trauma-highlight" style="border-right-color: #3b82f6;">
+                            הזהות של החברה עוצבה בצל השפלת המלחמה והצורך בתקומה. לאחר 1945, החברה הפכה לסמל לשיקום הכבוד הצרפתי. האידיאולוגיה היא "דיפלומטיה של השמיים" – להביא את פריז לכל מקום בעולם.
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <!-- 05. LUFTHANSA -->
+        <article class="mb-32">
+            <div class="flex items-center gap-3 mb-8">
+                <span class="text-6xl font-black text-yellow-900/20">.05</span>
+                <div>
+                    <h2 class="text-4xl font-black text-white leading-tight">Lufthansa</h2>
+                    <p class="text-[11px] text-yellow-500 font-bold uppercase tracking-widest italic">The Phoenix of Berlin</p>
+                </div>
+            </div>
+
+            <!-- Metadata -->
+            <div class="glass-module p-6 mb-10 border-r-4 border-yellow-600">
+                <div class="space-y-4 text-[14px] text-gray-300 font-light">
+                    <p><strong class="text-white underline decoration-yellow-500">שנת ייסוד ראשונית:</strong> 6 בינואר, 1926.</p>
+                    <p><strong class="text-white underline decoration-yellow-500">שנת הקמה מחדש:</strong> 6 בינואר, 1953.</p>
+                    <p><strong class="text-white underline decoration-yellow-500">הבונה המודרני:</strong> Hans Bongers (1898–1981).</p>
+                    <p><strong class="text-white underline decoration-yellow-500">מיקום ייסוד מחדש:</strong> קלן, גרמניה.</p>
+                </div>
+            </div>
+
+            <!-- Expanding Background & Founding Nexus -->
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-yellow-500 uppercase mb-4 border-b border-yellow-900/30 pb-1 flex items-center gap-2">
+                    הקשר הייסוד: רקע וסיבה מורחבים
+                </h4>
+                <div class="founding-nexus-box text-sm font-light leading-relaxed text-justify" style="border-right-color: var(--accent-gold);">
+                    <p>
+                        <span class="text-white font-bold block mb-2 underline italic">הרקע: חורבן והשפלה לאומית</span>
+                        הרקע להקמת לופטהנזה הוא טראומה לאומית כפולה. ב-1926 היא הוקמה כדי להציל את התעופה הגרמנית מחובות כבדים לאחר מלחמת העולם הראשונה. אולם, ב-1945 היא חוסלה לחלוטין על ידי בעלות הברית ונאסר על גרמניה להטיס מטוסים.
+                    </p>
+                    <p class="mt-4">
+                        <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד: שיקום דרך עליונות הנדסית</span>
+                        הקמתה מחדש ב-1953 נבעה מהסיבה של **החזרת גרמניה המערבית למשפחת העמים**. האנס בונגרס פעל בסתר כדי לתכנן את התחייה בזמן שגרמניה הייתה תחת כיבוש. סיבת הייסוד הייתה הוכחה כי **הדיוק וההנדסה הגרמנית יכולים לשמש כגשר לשלום וסחר גלובלי**. לופטהנזה נוסדה כעמוד התווך של ה"נס הכלכלי" (Wirtschaftswunder), במטרה להוכיח שהגרמנים יכולים להוביל את העולם דמוקרטית וטכנולוגית.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Expanded Etymology -->
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-yellow-500 uppercase mb-4">אטימולוגיה מורחבת וזהות</h4>
+                <div class="space-y-4 text-[14px] font-light text-justify leading-relaxed">
+                    <p>
+                        השם <span class="etymology-chip" style="background:rgba(234,179,8,0.1); color:#eab308; border-color:#eab30833;">Lufthansa</span> הוא הלחם היסטורי מורכב. המילה <span class="etymology-chip" style="background:none; border:none; padding:0;">Luft</span> נגזרת מהשורש הגרמני <span class="italic">Luftus</span> (אוויר/מרחב). אולם, השורש <span class="etymology-chip" style="background:none; border:none; padding:0;">Hansa</span> הוא המשמעותי ביותר.
+                    </p>
+                    <p>
+                        מקור המילה <span class="italic text-yellow-500 font-bold">Hansa</span> הוא בגרמנית עתיקה המציינת "קבוצה" או "לוחמים", אך היא מתייחסת ישירות ל"ליגת ההאנזה" – ברית סחר ימי עוצמתית מימי הביניים. המותג נועד לשדר שהתעופה היא **ברית הסחר המודרנית** של גרמניה. לוגו העגור (Crane) מסמל את המשמעת והנאמנות ללוח הזמנים, ערכים הנטועים עמוק בנפש הגרמנית של דיוק מעל הכל.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Founder Profile -->
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-yellow-500 uppercase mb-4">פרופיל מייסד: האנס בונגרס ואטימולוגיה</h4>
+                <div class="founder-profile-box" style="border-right-color: var(--accent-gold);">
+                    <div class="space-y-6 text-[14px] text-gray-400 font-light text-justify leading-relaxed">
+                        <p>
+                            <span class="text-white font-bold block mb-1 underline italic">אטימולוגיה של שם המייסד:</span>
+                            <span class="text-yellow-500 font-bold italic">Hans</span> (האנס) הוא הצורה הגרמנית של <span class="italic">Johannes</span> (יוחנן), שפירושו מהעברית "ה' חנון". השם <span class="text-yellow-500 font-bold italic">Bongers</span> (בונגרס) הוא שם משפחה גרמני/הולנדי תעסוקתי שפירושו "אדם שעובד במטעים" או "שומר המטעים" (מתוך <span class="italic">Boomgaard</span>). השם מסמל "שמירה על השפע בחסדי האל".
+                        </p>
+                        <div class="trauma-highlight" style="border-right-color: var(--accent-gold);">
+                            הטראומה שלו הייתה החרבת גרמניה ואיבוד לופטהנזה ב-1945. הוא ראה בזה פצע בזהות הלאומית. הוא פעל בסתר ב"משרד בונגרס" בקלן כדי לתכנן את תחיית החברה בזמן שהגרמנים עדיין היו תחת איסור טיסה. עבורו, לופטהנזה הייתה הגשר של גרמניה החדשה לעולם.
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <!-- Intelligence Footer -->
+        <footer class="mt-24 border-t border-white/5 pt-12 pb-20 text-center">
+            <div class="inline-block p-1 rounded-full bg-cyan-600 mb-6 shadow-lg shadow-cyan-900/20">
+                <div class="bg-black rounded-full px-8 py-2">
+                    <span class="text-[11px] font-black text-white uppercase tracking-[0.4em]">Integrated Intelligence Standard</span>
+                </div>
+            </div>
+            <p class="text-[10px] text-gray-700 font-bold uppercase tracking-[0.2em] leading-relaxed">
+                RESEARCH CONCLUDED BY META-COGNITIVE AGENT<br>
+                OPTIMIZED FOR SAMSUNG S25 ULTRA INTERFACE<br>
+                © 2026 | ZERO SHORTCUTS POLICY
+            </p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
+
