@@ -11,6 +11,8 @@
             --bg-dark: #050505;
             --card-dark: #111111;
             --accent-blue: #3b82f6;
+            --accent-emerald: #10b981;
+            --accent-orange: #f97316;
         }
         body {
             font-family: 'Assistant', sans-serif;
@@ -19,7 +21,7 @@
             overflow-x: hidden;
         }
         .s25-container {
-            max-width: 480px; /* S25 Ultra Optimized Width */
+            max-width: 480px; /* S25 Ultra Optimized */
             margin: 0 auto;
             min-height: 100vh;
         }
@@ -39,6 +41,18 @@
         .nav-card:active {
             transform: scale(0.97);
         }
+        .btn-blue {
+            background: linear-gradient(135deg, #2563eb, #1e40af);
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+        }
+        .btn-emerald {
+            background: linear-gradient(135deg, #059669, #064e3b);
+            box-shadow: 0 4px 15px rgba(5, 150, 105, 0.3);
+        }
+        .btn-orange {
+            background: linear-gradient(135deg, #ea580c, #9a3412);
+            box-shadow: 0 4px 15px rgba(234, 88, 12, 0.3);
+        }
     </style>
 </head>
 <body class="p-0 m-0">
@@ -49,66 +63,74 @@
         <header class="mb-12 text-center">
             <div class="inline-block p-1 mb-4 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 shadow-lg shadow-blue-900/20">
                 <div class="bg-black rounded-full px-4 py-1">
-                    <span class="text-[10px] font-bold tracking-[0.2em] text-blue-400">AVIATION INTELLIGENCE</span>
+                    <span class="text-[10px] font-bold tracking-[0.2em] text-blue-400 uppercase">Aviation Intelligence</span>
                 </div>
             </div>
             <h1 class="text-5xl font-extrabold tracking-tighter gradient-text mb-2">AVIATION<br>MATRIX</h1>
-            <p class="text-gray-500 text-xs font-light tracking-widest uppercase">Global Airline Structural Mapping</p>
+            <p class="text-gray-500 text-xs font-light tracking-widest uppercase">Structural Mapping System</p>
         </header>
 
-        <!-- Introduction Section -->
-        <section class="glass rounded-3xl p-6 mb-10 shadow-2xl">
-            <h3 class="text-xl font-bold text-blue-400 mb-4 flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-                מבוא למחקר
-            </h3>
-            <div class="text-gray-300 text-sm leading-relaxed text-justify space-y-4 font-light">
-                <p>
-                    ברוך הבא ל-**Aviation Matrix**, פרויקט הניתוח המבני וההיסטורי של ענקיות התעופה העולמיות. מחקר זה צולל אל עומק ה-DNA של החברות המעצבות את השמיים.
-                </p>
-            </div>
-        </section>
-
         <!-- Navigation Menu -->
-        <div class="space-y-5">
-            <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest px-2">תחומי מחקר זמינים</h4>
+        <div class="space-y-6">
+            <h4 class="text-[10px] font-bold text-gray-600 uppercase tracking-[0.3em] px-2">Research Paths</h4>
 
-            <!-- Phase 1: Western Legacy - FIXED PATH -->
+            <!-- Phase 1: Western Legacy -->
             <a href="western_legacy.html" class="block">
-                <div class="nav-card glass rounded-2xl p-5 relative overflow-hidden group border-r-4 border-blue-600">
-                    <div class="flex justify-between items-start mb-2">
-                        <h2 class="text-2xl font-bold text-white tracking-tight">Western Legacy</h2>
+                <div class="nav-card glass rounded-3xl p-6 relative overflow-hidden group border-r-4 border-blue-600">
+                    <div class="flex justify-between items-start mb-3">
+                        <h2 class="text-2xl font-black text-white tracking-tight">Western Legacy</h2>
                         <span class="bg-blue-600/20 text-blue-400 text-[10px] px-2 py-1 rounded-md font-bold uppercase">Phase 01</span>
                     </div>
-                    <p class="text-gray-400 text-xs mb-6 leading-snug">
-                        ניתוח הענקיות ההיסטוריות: American, Delta, United, Air France, Lufthansa.
+                    <p class="text-gray-400 text-xs mb-6 leading-relaxed font-light">
+                        American, Delta, United, Air France, Lufthansa. ניתוח שורשי התעופה המערבית והקפיטליזם האווירי.
                     </p>
-                    <div class="w-full bg-white text-black font-bold py-3 rounded-xl flex items-center justify-center gap-2 group-hover:bg-blue-600 group-hover:text-white transition-all">
-                        <span>פתח מחקר</span>
+                    <div class="btn-blue text-white font-bold py-4 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-lg active:scale-95">
+                        <span class="text-sm tracking-wide">פתח מחקר שלב א'</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
                     </div>
                 </div>
             </a>
 
             <!-- Phase 2: Global Connectors -->
-            <div class="nav-card glass rounded-2xl p-5 relative overflow-hidden group border-r-4 border-emerald-600 opacity-80">
-                <div class="flex justify-between items-start mb-2">
-                    <h2 class="text-2xl font-bold text-white tracking-tight">Global Connectors</h2>
-                    <span class="bg-emerald-600/20 text-emerald-400 text-[10px] px-2 py-1 rounded-md font-bold uppercase">Phase 02</span>
+            <a href="global_connectors.html" class="block">
+                <div class="nav-card glass rounded-3xl p-6 relative overflow-hidden group border-r-4 border-emerald-600">
+                    <div class="flex justify-between items-start mb-3">
+                        <h2 class="text-2xl font-black text-white tracking-tight">Global Connectors</h2>
+                        <span class="bg-emerald-600/20 text-emerald-400 text-[10px] px-2 py-1 rounded-md font-bold uppercase">Phase 02</span>
+                    </div>
+                    <p class="text-gray-400 text-xs mb-6 leading-relaxed font-light">
+                        Emirates, Singapore, Turkish, ANA, Qatar, Etihad, Cathay. עוצמה מהמזרח והקרנת כוח ריבונית.
+                    </p>
+                    <div class="btn-emerald text-white font-bold py-4 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-lg active:scale-95">
+                        <span class="text-sm tracking-wide">פתח מחקר שלב ב'</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                    </div>
                 </div>
-                <p class="text-gray-400 text-xs mb-6 leading-snug">
-                    יוקרה ועוצמה מהמזרח והמפרץ.
-                </p>
-                <div class="w-full bg-emerald-600/20 text-emerald-400 border border-emerald-600/30 font-bold py-3 rounded-xl flex items-center justify-center gap-2">
-                    <span>בשלבי הכנה</span>
+            </a>
+
+            <!-- Phase 3: Low-Cost Pioneers -->
+            <a href="low_cost_pioneers.html" class="block">
+                <div class="nav-card glass rounded-3xl p-6 relative overflow-hidden group border-r-4 border-orange-600">
+                    <div class="flex justify-between items-start mb-3">
+                        <h2 class="text-2xl font-black text-white tracking-tight">Low-Cost Pioneers</h2>
+                        <span class="bg-orange-600/20 text-orange-400 text-[10px] px-2 py-1 rounded-md font-bold uppercase">Phase 03</span>
+                    </div>
+                    <p class="text-gray-400 text-xs mb-6 leading-relaxed font-light">
+                        Southwest, Ryanair, EasyJet, Wizz Air, Spirit. מהפכת הדמוקרטיזציה של השמיים והיעילות האכזרית.
+                    </p>
+                    <div class="btn-orange text-white font-bold py-4 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-lg active:scale-95">
+                        <span class="text-sm tracking-wide">פתח מחקר שלב ג'</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                    </div>
                 </div>
-            </div>
+            </a>
 
         </div>
 
-        <footer class="mt-16 border-t border-white/5 pt-8 text-center">
-            <p class="text-[9px] text-gray-600 uppercase tracking-[0.3em] font-bold">Optimized for S25 Ultra Interface</p>
-            <p class="text-[9px] text-gray-700 mt-2">© 2026 | Aviation Matrix | Fixed Direct Path</p>
+        <!-- System Footer -->
+        <footer class="mt-16 border-t border-white/5 pt-8 text-center pb-12">
+            <p class="text-[9px] text-gray-600 uppercase tracking-[0.4em] font-bold">Optimized for S25 Ultra Interface</p>
+            <p class="text-[9px] text-gray-700 mt-2 font-medium italic">© 2026 | Aviation Matrix | Integrated Path System</p>
         </footer>
 
     </div>
