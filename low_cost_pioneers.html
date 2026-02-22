@@ -39,9 +39,8 @@
             border-radius: 32px;
         }
         .etymology-chip {
-            background: rgba(249, 115, 22, 0.07);
-            color: var(--accent-orange);
-            border: 1px solid rgba(249, 115, 22, 0.2);
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             font-family: monospace;
             padding: 2px 8px;
             border-radius: 6px;
@@ -53,25 +52,34 @@
             margin: 2rem 0;
         }
         .founding-nexus-box {
-            background: rgba(249, 115, 22, 0.03);
+            background: rgba(255, 255, 255, 0.02);
             border-right: 2px solid var(--accent-orange);
             padding: 1.25rem;
             margin: 1.5rem 0;
             border-radius: 0 12px 12px 0;
         }
         .trauma-highlight {
-            background: rgba(239, 68, 68, 0.05);
-            border-right: 2px solid #ef4444;
-            padding: 1.2rem;
+            padding: 1.1rem;
             border-radius: 0 12px 12px 0;
             font-style: italic;
             font-size: 0.95rem;
-            color: #fca5a5;
-            box-shadow: 10px 0 30px rgba(239, 68, 68, 0.1);
+        }
+        .achievement-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 8px;
+            font-size: 0.85rem;
+            color: #cbd5e1;
+        }
+        .achievement-item::before {
+            content: '•';
+            color: inherit;
+            font-weight: bold;
         }
         .section-divider {
             height: 1px;
-            background: linear-gradient(to left, transparent, rgba(249, 115, 22, 0.3), transparent);
+            background: linear-gradient(to left, transparent, rgba(255, 255, 255, 0.1), transparent);
             margin: 4rem 0;
         }
     </style>
@@ -82,7 +90,7 @@
     <nav class="sticky top-0 z-50 bg-black/90 backdrop-blur-lg border-b border-white/5 p-4">
         <div class="s25-container flex justify-between items-center">
             <a href="index.html" class="text-orange-500 text-[10px] font-black tracking-widest uppercase">← Back to Index</a>
-            <span class="text-[10px] text-gray-600 font-bold uppercase tracking-[0.3em]">Phase 03 | Absolute Intelligence Mapping</span>
+            <span class="text-[10px] text-gray-600 font-bold uppercase tracking-[0.3em]">Phase 03 | Absolute Intelligence</span>
         </div>
     </nav>
 
@@ -90,65 +98,76 @@
         
         <header class="mb-20 text-center">
             <h1 class="text-6xl font-black intel-header leading-none mb-4 italic">LOW-COST<br>PIONEERS</h1>
-            <p class="text-orange-500 text-[10px] font-bold uppercase tracking-[0.5em] border-t border-orange-900/30 pt-4">National Survival & Commercial Disruption Analysis</p>
+            <p class="text-orange-500 text-[10px] font-bold uppercase tracking-[0.5em] border-t border-orange-900/30 pt-4">National Survival & Commercial Disruption</p>
         </header>
 
         <!-- 01. SOUTHWEST AIRLINES -->
-        <article class="mb-48">
+        <article class="mb-32">
             <div class="flex items-center gap-4 mb-8">
-                <span class="text-7xl font-black text-white/5">01</span>
+                <span class="text-6xl font-black text-white/5">01</span>
                 <div>
                     <h2 class="text-4xl font-black text-white leading-tight">Southwest</h2>
                     <p class="text-[11px] text-orange-400 font-bold uppercase tracking-[0.2em] italic">The Rebel of Intra-State Freedom</p>
                 </div>
             </div>
 
-            <div class="glass-module p-6 mb-12">
-                <div class="space-y-5 text-[15px] text-gray-300 font-light">
-                    <p><strong class="text-white underline decoration-orange-500/50 underline-offset-4">שנת ייסוד רשמית:</strong> 15 במרץ, 1967 (המראה ראשונה ב-1971).</p>
+            <div class="glass-module p-6 mb-10 border-r-4 border-orange-500">
+                <div class="space-y-4 text-[14px] text-gray-300 font-light">
+                    <p><strong class="text-white underline decoration-orange-500/50 underline-offset-4">שנת ייסוד רשמית:</strong> 15 במרץ, 1967 (המראה ראשונה ב-1971 אחרי מאבק משפטי).</p>
                     <p><strong class="text-white underline decoration-orange-500/50 underline-offset-4">הבונה והחזיונר:</strong> Herbert "Herb" Kelleher (1931–2019).</p>
                     <p><strong class="text-white underline decoration-orange-500/50 underline-offset-4">מיקום ייסוד:</strong> דאלאס, טקסס, ארה"ב.</p>
                 </div>
             </div>
 
-            <section class="mb-14">
-                <h4 class="text-xs font-bold text-orange-500 uppercase mb-5 border-b border-orange-900/30 pb-1 flex items-center gap-2">הקשר הייסוד: רקע וסיבה מורחבים</h4>
-                <div class="founding-nexus-box text-[15px] font-light leading-relaxed text-justify">
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-orange-500 uppercase mb-4">אטימולוגיה מורחבת וזהות</h4>
+                <div class="space-y-4 text-[14px] font-light text-justify leading-relaxed">
+                    <p>
+                        השם <span class="text-white font-bold italic underline decoration-orange-500">Southwest</span> (דרום-מערב) מציין רשמית את הריבונות הגיאוגרפית של טקסס, אך האסטרטגיה המותגית העמוקה הייתה להפוך את הכיוון הגיאוגרפי הזה למילה נרדפת לחופש, מרד, ואנטי-ממסדיות. במדינה שבה חברות התעופה נקראו בשמות נוקשים ומכובדים, סאות'ווסט בחרה לשדר קלילות מחתרתית.
+                    </p>
+                    <p>
+                        סימול הבורסה שלה, <span class="etymology-chip" style="color:var(--accent-orange);">LUV</span> (אהבה - שיבוש מכוון), נובע משמו של נמל התעופה הביתי שלה (Love Field) בדאלאס. אולם זו הייתה גאונות שיווקית שנועדה להכניס רגש חם, חצי-פלירטוטי, לתעשייה קרה ומנוכרת. צבעי החברה המקוריים – זהב מדברי, אדום וכתום – נבחרו בכוונה כדי לשדר חום אנושי, פשטות ונגישות של "דיינר אמריקאי", בניגוד חריף לכחול-לבן ה"קר", המרוחק והממסדי של חברות הענק (Pan Am, United).
+                    </p>
+                </div>
+            </section>
+
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-orange-500 uppercase mb-4 border-b border-orange-900/30 pb-1 flex items-center gap-2">הקשר הייסוד: רקע וסיבה מורחבים</h4>
+                <div class="founding-nexus-box text-[14px] font-light leading-relaxed text-justify" style="border-right-color: var(--accent-orange);">
                     <p>
                         <span class="text-white font-bold block mb-2 underline italic">הרקע: הקרטל הפדרלי והחנק של ה-CAB</span>
-                        בשנות ה-60, שמי ארה"ב היו נחלתם של עשירים בלבד. מועצת התעופה האזרחית (CAB) שלטה בכל נתיב ובכל מחיר, ומנעה תחרות כדי להגן על חברות ה-Legacy היקרות. הטיסה הייתה טקס מעונב ובלתי נגיש לאדם הפשוט. הרברט קלהר, עורך דין צעיר ופרוע, זיהה "חור שחור" משפטי: ה-CAB שולט רק בטיסות בין מדינות (Interstate). בתוך גבולות טקסס העצומה, הוא הבין שניתן להקים רשת תעופה חופשית לחלוטין מהרגולציה הפדרלית המשתקת.
+                        בשנות ה-60, שמי ארה"ב היו עדיין נחלתם הבלעדית של אנשי עסקים עשירים. מועצת התעופה האזרחית (CAB - הממשל הפדרלי) שלטה ביד רמה בכל נתיב ובכל מחיר, ומנעה בפועל כל תחרות כדי להגן על הרווחים של חברות ה-Legacy היקרות. הטיסה הייתה טקס מעונב ובלתי נגיש לאדם הפשוט. הרברט (הרב) קלהר, עורך דין צעיר ופרוע, יחד עם לקוחו רולין קינג, זיהו על מפית בבר בסן אנטוניו "חור שחור" משפטי גאוני: ה-CAB רשאי לשלוט רק בטיסות החוצות גבולות של מדינות (Interstate). בתוך גבולותיה העצומים של מדינת טקסס, הממשל הפדרלי חסר סמכות.
                     </p>
                     <p class="mt-4">
-                        <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד: מלחמה טוטאלית על זכות התנועה</span>
-                        הסיבה לא הייתה רק עסקית, אלא **מרד ליברטריאני אגרסיבי**. הרעיון נולד על מפית בבר בסן אנטוניו. חברות הענק Braniff ו-Texas International גררו את קלהר לארבע שנים של מאבקים משפטיים מתישים עד לבית המשפט העליון, רק כדי למנוע ממנו להמריא. סיבת הייסוד הייתה הוכחה כי "הזכות לטוס" היא זכות עממית. קלהר נשבע לא לוותר עד שטיסה בין דאלאס ליוסטון תעלה פחות מנסיעה ברכב, והמציא את מודל ה-Point-to-Point שביטל את ה-Hubs היקרים והפך את המטוס לאוטובוס השכונתי של טקסס.
+                        <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד: מלחמה טוטאלית על זכות התנועה החופשית</span>
+                        הסיבה להקמת סאות'ווסט לא הייתה רק תוכנית עסקית, אלא **מרד ליברטריאני ואזרחי אגרסיבי**. חברות הענק Braniff ו-Texas International נכנסו לפאניקה וגררו את קלהר לארבע שנים של מאבקים משפטיים מתישים עד לבית המשפט העליון, רק כדי למנוע מהמטוס הראשון שלו להמריא. סיבת הייסוד הייתה פרינציפיאלית: הוכחה כי "הזכות לטוס" אינה מותרות אלא זכות עממית בסיסית. קלהר נשבע לא לוותר עד שטיסה בין דאלאס, יוסטון וסן אנטוניו תעלה פחות מנסיעה ודלק ברכב פרטי. זה היה הרגע שבו המטוס הפך מלימוזינה יוקרתית לאוטובוס השכונתי של טקסס.
                     </p>
                 </div>
             </section>
 
-            <section class="mb-14">
-                <h4 class="text-xs font-bold text-orange-500 uppercase mb-5">אטימולוגיה וזהות</h4>
-                <div class="space-y-4 text-[15px] font-light text-justify leading-relaxed">
-                    <p>
-                        השם <span class="text-white font-bold italic underline decoration-orange-500">Southwest</span> (דרום-מערב) מציין את הריבונות הגיאוגרפית של טקסס, אך האסטרטגיה המותגית הייתה להפוך אותו למילה נרדפת לחופש ומרד. סימול הבורסה <span class="etymology-chip">LUV</span> (אהבה), על שם נמל התעופה Love Field, הוא גאונות שיווקית שביקשה להכניס רגש חם לתעשייה קרה. הזהות הויזואלית (צבעי מדבר חמים) נועדה לשדר פשטות ונגישות, בניגוד לכחול-לבן ה"קר" והממסדי של המתחרות.
-                    </p>
-                </div>
-            </section>
-
-            <section class="mb-14">
-                <h4 class="text-xs font-bold text-orange-500 uppercase mb-5 flex items-center gap-2"><span>פרופיל מייסד: הרברט קלהר</span></h4>
-                <div class="founder-profile-box">
-                    <div class="space-y-7 text-[15px] text-gray-400 font-light text-justify leading-relaxed">
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-orange-500 uppercase mb-4">פרופיל מייסד: הרברט "הרב" קלהר</h4>
+                <div class="founder-profile-box" style="border-right-color: var(--accent-orange);">
+                    <div class="space-y-6 text-[14px] text-gray-400 font-light text-justify leading-relaxed">
                         <p>
                             <span class="text-white font-bold block mb-1 underline italic text-[13px]">אטימולוגיה של שם המייסד:</span>
-                            <span class="text-orange-400 font-bold italic">Herbert</span> (הרברט) נגזר מגרמנית עתיקה <span class="italic">Hari</span> (צבא) ו-<span class="italic">Berht</span> (מבריק/מפורסם) – "לוחם מבריק של הצבא". השם <span class="text-orange-400 font-bold italic">Kelleher</span> הוא שם אירי קדום <span class="italic">Ó Céileachair</span> שפירושו "צאצא של אוהב ה-Ceile" (בן זוג או חבר). השם המלא משקף "לוחם מבריק הפועל מתוך שותפות ואהבה".
+                            השם <span class="text-orange-400 font-bold italic">Herbert</span> (הרברט) נגזר מהשורשים בגרמנית עתיקה <span class="italic">Hari</span> (צבא/לוחמים) ו-<span class="italic">Berht</span> (מבריק/מפורסם/נוצץ) – משמעותו המילולית היא "לוחם מבריק בראש הצבא". השם <span class="text-orange-400 font-bold italic">Kelleher</span> הוא שם אירי קדום מתוך האליקית <span class="italic">Ó Céileachair</span>, שפירושו "צאצא של אוהב ה-Ceile" (אוהב החבר/בן הזוג/בן הלוויה). השם המלא מתאר בצורה קוסמית את אישיותו: "לוחם משפטי מבריק שפועל מתוך אהבה ושותפות עמוקה לאנשיו".
                         </p>
                         <p>
-                            <span class="text-white font-bold block mb-2 underline italic text-[13px]">ילדות ועיצוב פסיכולוגי:</span>
-                            נולד ב-1931 בניו ג'רזי. בילדותו חווה את קשיי השפל הגדול והיה קרוב באופן יוצא דופן לאימו, שלימדה אותו ש"חוקים יבשים וצדק מוסרי אינם תמיד אותו דבר". מות אביו כשהיה בן 12 אילץ אותו לפתח מנגנון הגנה של הומור פרוע ומשמעת עצמית קשוחה שהוסתרה תחת חזות של "Party Animal".
+                            <span class="text-white font-bold block mb-2 underline italic text-[13px]">ילדות, פגיעות ועיצוב הזהות המורדת:</span>
+                            קלהר נולד ב-1931 בניו ג'רזי. בילדותו חווה את קשיי השפל הגדול והיה קרוב באופן יוצא דופן לאימו, רות, אישה חזקה שלימדה אותו שיעור מפתח: "עמדות ממסדיות, חוקים יבשים וצדק מוסרי אינם תמיד אותו הדבר". אביו נפטר כשהרב היה רק בן 12. היתמות המוקדמת אילצה אותו לפתח מנגנון הגנה כפול: מצד אחד הומור פרוע ואנטי-סמכותי, ומצד שני מוסר עבודה, אינטלקט, ומשמעת עצמית קשוחה, הכל מוסתר תחת חזות חיצונית של "Party Animal".
                         </p>
-                        <div class="trauma-highlight">
-                            הטראומה המעצבת שלו הייתה "הדיכוי הממסדי". ארבע השנים שבהן המערכת המשפטית מנעה ממנו להפעיל את החברה יצרו אצלו בוז פתולוגי לבירוקרטיה. הוא נהג לשתות וויסקי (Wild Turkey) ולעשן בשרשרת כהצהרה של חופש אישי מול חברות הענק. האידיאולוגיה שלו הייתה "The business of business is people" – שימת העובד לפני הלקוח, מתוך הבנה שעובד שנלחם עבור ה"מפקד" שלו ינצח כל שוק.
+                        <div class="trauma-highlight" style="border-right-color: var(--accent-orange); background: rgba(249, 115, 22, 0.05); color:#fdba74;">
+                            הטראומה המעצבת והדלק המנועי שלו היו "דיכוי ממסדי ובירוקרטי". ארבע השנים שבהן המערכת המשפטית וחברות הענק ניסו לחנוק ולרושש אותו בטרם המריא יצרו אצלו בוז פתולוגי לכל מה שמריח מבירוקרטיה כבדה ואליטיזם. הוא הפך למנכ"ל ששותה וויסקי (Wild Turkey), מעשן בשרשרת, ומתלבש כמו אלביס פרסלי – הכל כהצהרת חופש ומרד מתמיד מול החליפות של המזרח. האידיאולוגיה הניהולית המהפכנית שניסח הייתה: "The business of business is people" – העובד תמיד לפני הלקוח.
                         </div>
+                        <p>
+                            <span class="text-white font-bold block mb-2 underline italic text-[13px]">הישגים מרכזיים ומורשת:</span>
+                            <ul class="achievement-list" style="color: var(--accent-orange);">
+                                <li class="achievement-item"><strong>המצאת מודל ה-Point-to-Point:</strong> ביטול הצורך לעבור דרך נמלי תעופה מרכזיים (Hubs) יקרים, ויצירת רשת טיסות ישירות.</li>
+                                <li class="achievement-item"><strong>ה-Turnaround של 10 הדקות:</strong> פיתוח תורת הלוגיסטיקה המבצעית שהכריחה מטוסים לנחות, לפרוק, לעלות ולהמריא שוב תוך 10 דקות בלבד.</li>
+                                <li class="achievement-item"><strong>אפקט סאות'ווסט (The Southwest Effect):</strong> יצירת מודל כלכלי שהוכיח שברגע שסאות'ווסט נכנסת לנתיב מסוים, מחירי הכרטיסים צונחים דרסטית ונפח הנוסעים טס מעלה.</li>
+                            </ul>
+                        </p>
                     </div>
                 </div>
             </section>
@@ -157,61 +176,72 @@
         <div class="section-divider"></div>
 
         <!-- 02. RYANAIR -->
-        <article class="mb-48">
+        <article class="mb-32">
             <div class="flex items-center gap-4 mb-8">
-                <span class="text-7xl font-black text-white/5">02</span>
+                <span class="text-6xl font-black text-white/5">02</span>
                 <div>
                     <h2 class="text-4xl font-black text-white leading-tight">Ryanair</h2>
                     <p class="text-[11px] text-blue-500 font-bold uppercase tracking-[0.2em] italic">The Architect of Brutal Efficiency</p>
                 </div>
             </div>
 
-            <div class="glass-module p-6 mb-12 border-r-4 border-blue-600">
-                <div class="space-y-5 text-[15px] text-gray-300 font-light">
+            <div class="glass-module p-6 mb-10 border-r-4 border-blue-600">
+                <div class="space-y-4 text-[14px] text-gray-300 font-light">
                     <p><strong class="text-white underline decoration-blue-600/50 underline-offset-4">שנת ייסוד רשמית:</strong> 28 בנובמבר, 1984.</p>
-                    <p><strong class="text-white underline decoration-blue-600/50 underline-offset-4">הבונה והמעצב (CEO):</strong> Michael O'Leary (יליד 1961).</p>
+                    <p><strong class="text-white underline decoration-blue-600/50 underline-offset-4">הבונה והמעצב (אדריכל המודל):</strong> Michael O'Leary (יליד 1961).</p>
                     <p><strong class="text-white underline decoration-blue-600/50 underline-offset-4">מיקום ייסוד:</strong> דבלין, אירלנד.</p>
                 </div>
             </div>
 
-            <section class="mb-14">
-                <h4 class="text-xs font-bold text-blue-500 uppercase mb-5 border-b border-blue-900/30 pb-1 flex items-center gap-2">הקשר הייסוד: רקע וסיבה מורחבים</h4>
-                <div class="founding-nexus-box text-[15px] font-light leading-relaxed text-justify" style="border-right-color: var(--accent-blue);">
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-blue-500 uppercase mb-4">אטימולוגיה מורחבת וזהות</h4>
+                <div class="space-y-4 text-[14px] font-light text-justify leading-relaxed">
                     <p>
-                        <span class="text-white font-bold block mb-2 underline italic">הרקע: הדואופול המיושן והבידוד האירי</span>
-                        בשנות ה-80, הנתיב שבין דבלין ללונדון נשלט על ידי Aer Lingus ו-British Airways במחירי עושק שהפכו את אירלנד לאי מבודד כלכלית. טוני ריין הקים את החברה כעסק משפחתי קטן ו"מנומס", אך היא הפסידה הון ועמדה בפני חיסול ב-1991. אירלנד הייתה מדינה ענייה, שמרנית ואיטית, שחברת התעופה שלה הייתה שיקוף של חוסר האונים שלה.
+                        השם <span class="text-white font-bold italic underline decoration-blue-500">Ryanair</span> נגזר ישירות משם המשפחה של המייסד והמממן המקורי, טוני ריין (Tony Ryan). השם האירי המקורי <span class="italic">Ó Riain</span> נושא משמעות של "צאצא של המלך הקטן" או "הנסיך" (מהמילה האירית הקדומה Rí שפירושה מלך). אירוניה היסטורית: חברה שנוסדה על שם "מלך", הפכה למחסלת המלכים הממוסדים של התעופה האירופאית.
+                    </p>
+                    <p>
+                        לוגו החברה, נבל מוזהב עם דמות של כנפי מלאך, הוא ניכוס חתרני של הסמל הלאומי הרשמי של אירלנד. או'לירי הפך את סמל הזהות הלאומית למותג מסחרי המשדר "חופש תנועה זול לכולם". צבעי המותג, כחול אגרסיבי וצהוב צעקני, נבחרו במכוון ולא כדי להיות יפים. הם תוכננו להיראות כמו רשת סופרמרקטים זולה (Discount Store) – מסר ברור לנוסע שאנחנו זולים, ואנחנו לא מתנצלים על חוסר הנוחות.
+                    </p>
+                </div>
+            </section>
+
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-blue-500 uppercase mb-4 border-b border-blue-900/30 pb-1 flex items-center gap-2">הקשר הייסוד: רקע וסיבה מורחבים</h4>
+                <div class="founding-nexus-box text-[14px] font-light leading-relaxed text-justify" style="border-right-color: var(--accent-blue);">
+                    <p>
+                        <span class="text-white font-bold block mb-2 underline italic">הרקע: הדואופול המיושן והבידוד הכלכלי של האי האירי</span>
+                        בשנות ה-80, הנתיב הקצר אך הקריטי שבין דבלין ללונדון נשלט כדיקטטורה על ידי שתי חברות: Aer Lingus (חברת הלאום האירית) ו-British Airways. הם הפעילו דואופול קשוח וגבו מחירי עושק מוגזמים שמנעו מאזרחים אירים ממוצעים למצוא עבודה או לטוס הביתה. אירלנד הייתה מדינה ענייה, שמרנית דתית ואיטית, והתעופה היקרה רק החריפה את הבידוד הפיזי והכלכלי של האי. טוני ריין הקים את חברתו בהתחלה כעסק קלאסי ומשפחתי, אך החברה דיממה כספים, ועמדה בפני חיסול ב-1991.
                     </p>
                     <p class="mt-4">
-                        <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד: טרנספורמציה אכזרית למודל ה-Ultra Low Cost</span>
-                        מייקל או'לירי נשלח על ידי ריין למשימת "סגירת החברה". לאחר פגישה עם קלהר בטקסס, הוא הבין שניתן להעתיק את המודל לאירופה – אבל בצורה אגרסיבית פי עשרה. סיבת הייסוד המודרנית הייתה **דמוקרטיזציה כפויה של אירופה דרך יעילות ברוטלית**. או'לירי החליט לבטל כל סממן של שירות (אוכל, מים, שמיכות), להשתמש בנמלי תעופה נידחים שהיו בסיסי צבא נטושים, ולהפוך את המטוס למכונת שינוע של בני אדם ללא גינונים. המטרה הייתה לשבור את חברות הענק האירופיות דרך מחירי רצפה שהפכו את הטיסה לזולה יותר ממונית בעיר.
+                        <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד (מחדש): טרנספורמציה אכזרית למודל ה-Ultra Low Cost</span>
+                        מייקל או'לירי, יועץ מס צעיר, נשלח על ידי ריין למשימת קברן: "תסגור את החברה". אבל לאחר פגישה עם קלהר מסאות'ווסט, או'לירי עבר הארה. הוא החליט שסיבת הקיום של ראינאייר תהיה **דמוקרטיזציה כפויה של אירופה דרך יעילות ברוטלית**. או'לירי מחק את כל מה שראינאייר הייתה: הוא ביטל את מחלקות העסקים, זרק את האוכל בחינם, גבה כסף על כבודה, והעביר את הטיסות למסלולי נחיתה נידחים (בסיסי צבא נטושים). המטרה הייתה לשבור את החברות המדושנות בעזרת מחירי רצפה קיצוניים.
                     </p>
                 </div>
             </section>
 
-            <section class="mb-14">
-                <h4 class="text-xs font-bold text-blue-500 uppercase mb-5">אטימולוגיה וזהות</h4>
-                <div class="space-y-4 text-[15px] font-light text-justify leading-relaxed">
-                    <p>
-                        השם <span class="text-white font-bold italic underline decoration-blue-500">Ryanair</span> נגזר משם המשפחה של המייסד הפיננסי טוני ריין. השם האירי המקורי <span class="italic">Ó Riain</span> פירושו "צאצא של המלך הקטן" (Rí - מלך). הלוגו, נבל מוזהב עם כנפי מלאך, הוא ניכוס חתרני של הסמל הלאומי של אירלנד, שהוסב למותג מסחרי המבטיח "חופש תנועה זול". הצבעים הכחול והצהוב נועדו לשדר פשטות וזול, בדומה לסופרמרקט גדול שאינו מתנצל על חוסר הנוחות שלו.
-                    </p>
-                </div>
-            </section>
-
-            <section class="mb-14">
-                <h4 class="text-xs font-bold text-blue-500 uppercase mb-5 flex items-center gap-2"><span>פרופיל הבנאי: מייקל או'לירי</span></h4>
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-blue-500 uppercase mb-4">פרופיל הבנאי: מייקל או'לירי</h4>
                 <div class="founder-profile-box" style="border-right-color: var(--accent-blue);">
-                    <div class="space-y-7 text-[15px] text-gray-400 font-light text-justify leading-relaxed">
+                    <div class="space-y-6 text-[14px] text-gray-400 font-light text-justify leading-relaxed">
                         <p>
                             <span class="text-white font-bold block mb-1 underline italic text-[13px]">אטימולוגיה של שם המייסד:</span>
-                            <span class="text-blue-400 font-bold italic">Michael</span> (מייקל) - מקורו בעברית "מי כאל". <span class="text-blue-400 font-bold italic">O'Leary</span> (או'לירי) נגזר מהאירית <span class="italic">Ó Laoghaire</span> - שפירושו "רועה עגלים" (<span class="italic">Laogh</span> - עגל). השם משקף "מנהיג עממי השומר על העדר בחסדי האל".
+                            <span class="text-blue-400 font-bold italic">Michael</span> (מייקל) - בעברית "מי כאל". <span class="text-blue-400 font-bold italic">O'Leary</span> (או'לירי) נגזר מהשורש הגאלי <span class="italic">Ó Laoghaire</span> - שפירושו "צאצא של רועה העגלים" (<span class="italic">Laogh</span> - עגל/בקר). השם מעיד פסיכולוגית על "מנהיג ארצי ועממי, השומר ודוחף את העדר שלו בחסד ובכוח".
                         </p>
                         <p>
-                            <span class="text-white font-bold block mb-2 underline italic text-[13px]">ילדות ועיצוב זהות:</span>
-                            נולד ב-1961 בקורק, אירלנד. הוא התחנך בבית ספר ישועי קשוח (Clongowes Wood), שם ספג משמעת נוקשה שפיתחה אצלו רצון עז למרוד בסמכות דוגמטית. בילדותו חווה את אירלנד כמדינה דתית, איטית וענייה שסובלת מהגירה שלילית, דבר שנטע בו רעב בלתי פוסק להצלחה חומרית אדירה ובוז לכל דבר שאינו "תכל'ס".
+                            <span class="text-white font-bold block mb-2 underline italic text-[13px]">ילדות, חינוך נוקשה ועיצוב זהות:</span>
+                            נולד ב-1961 בקורק שבאירלנד. התחנך בפנימייה ישועית קשוחה שם ספג משמעת דתית נוקשה שפיתחה אצלו באופן פרדוקסלי רצון עז וציני למרוד בסמכויות דוגמטיות וצבועות. בילדותו ונעוריו הוא חווה את אירלנד כמדינה ענייה שסובלת מהגירה שלילית המונית. החוויה הזו נטעה בו רעב בלתי פוסק להצלחה חומרית ובוז לכל דבר שאינו פרקטי.
                         </p>
-                        <div class="trauma-highlight" style="border-right-color: #2563eb; background: rgba(37, 99, 235, 0.05);">
-                            הטראומה שלו היא "בזבוז זמן ומשאבים". הוא מתעב חוסר יעילות וראוותנות של המעמד הישן. האידיאולוגיה שלו היא "The Efficiency Gospel": התעופה היא לוגיסטיקה, לא חוויה. האגרסיביות המפורסמת שלו היא מנגנון הגנה של סוחר שמאמין שרק המחיר הנמוך ביותר יבטיח את הישרדות החלשים בשוק תחרותי. עבורו, Ryanair היא הוכחה שאכזריות ניהולית היא הדרך היחידה להשיג דמוקרטיזציה אמיתית בשחקים.
+                        <div class="trauma-highlight" style="border-right-color: #2563eb; background: rgba(37, 99, 235, 0.05); color:#93c5fd;">
+                            הטראומה העמוקה שלו היא "חלחלה מבזבוז משאבים וזמן". הוא מתעב חוסר יעילות, חוסר מעש וראוותנות של המעמד הישן. האידיאולוגיה שלו היא "The Efficiency Gospel": התעופה איננה חוויה, היא שרשרת אספקה ולוגיסטיקה קרה שמטרתה להעביר ביומסה אנושית מנקודה לנקודה. האגרסיביות התקשורתית שלו (העלבת נוסעים) היא כלי נשק שמבטיח את הישרדות החלשים בשוק תחרותי. עבורו, אכזריות ניהולית היא הדרך היחידה לדמוקרטיזציה של השחקים.
                         </div>
+                        <p>
+                            <span class="text-white font-bold block mb-2 underline italic text-[13px]">הישגים מרכזיים ומורשת:</span>
+                            <ul class="achievement-list" style="color: var(--accent-blue);">
+                                <li class="achievement-item"><strong>שכלול מודל ה-Unbundling:</strong> פירוק כל רכיב אפשרי מהכרטיס למקור הכנסה צדדי (Ancillary Revenue).</li>
+                                <li class="achievement-item"><strong>סחיטת נמלי תעופה משניים:</strong> איתור נמלי תעופה נטושים באירופה ודרישת סובסידיות כדי לנחות שם, תוך היפוך מאזן הכוחות.</li>
+                                <li class="achievement-item"><strong>כיבוש אירופה המספרית:</strong> הפיכת ראינאייר לחברת התעופה הגדולה והרווחית ביותר באירופה (נוסעים נישאים).</li>
+                            </ul>
+                        </p>
                     </div>
                 </div>
             </section>
@@ -220,61 +250,72 @@
         <div class="section-divider"></div>
 
         <!-- 03. EASYJET -->
-        <article class="mb-48">
+        <article class="mb-32">
             <div class="flex items-center gap-4 mb-8">
-                <span class="text-7xl font-black text-white/5">03</span>
+                <span class="text-6xl font-black text-white/5">03</span>
                 <div>
                     <h2 class="text-4xl font-black text-white leading-tight">EasyJet</h2>
                     <p class="text-[11px] text-orange-600 font-bold uppercase tracking-[0.2em] italic">The Serial Disruptor of Privilege</p>
                 </div>
             </div>
 
-            <div class="glass-module p-6 mb-12 border-r-4 border-orange-500">
-                <div class="space-y-5 text-[15px] text-gray-300 font-light">
-                    <p><strong class="text-white underline decoration-orange-500/50 underline-offset-4">שנת ייסוד רשמית:</strong> 18 באוקטובר, 1995 (המראה ראשונה מלוטון).</p>
-                    <p><strong class="text-white underline decoration-orange-500/50 underline-offset-4">הבונה והמייסד:</strong> Stelios Haji-Ioannou (יליד 1967).</p>
-                    <p><strong class="text-white underline decoration-orange-500/50 underline-offset-4">מיקום ייסוד:</strong> נמל התעופה לוטון, לונדון, בריטניה.</p>
+            <div class="glass-module p-6 mb-10 border-r-4 border-orange-600">
+                <div class="space-y-4 text-[14px] text-gray-300 font-light">
+                    <p><strong class="text-white underline decoration-orange-600/50 underline-offset-4">שנת ייסוד רשמית:</strong> 18 באוקטובר, 1995.</p>
+                    <p><strong class="text-white underline decoration-orange-600/50 underline-offset-4">הבונה והמייסד:</strong> Sir Stelios Haji-Ioannou (יליד 1967).</p>
+                    <p><strong class="text-white underline decoration-orange-600/50 underline-offset-4">מיקום ייסוד:</strong> לונדון, בריטניה (נמל תעופה לוטון).</p>
                 </div>
             </div>
 
-            <section class="mb-14">
-                <h4 class="text-xs font-bold text-orange-600 uppercase mb-5 border-b border-orange-900/30 pb-1 flex items-center gap-2">הקשר הייסוד: רקע וסיבה מורחבים</h4>
-                <div class="founding-nexus-box text-[15px] font-light leading-relaxed text-justify" style="border-right-color: #f97316;">
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-orange-600 uppercase mb-4">אטימולוגיה מורחבת וזהות</h4>
+                <div class="space-y-4 text-[14px] font-light text-justify leading-relaxed">
                     <p>
-                        <span class="text-white font-bold block mb-2 underline italic">הרקע: המהפכה הטכנולוגית והדה-רגולציה באירופה</span>
-                        באמצע שנות ה-90, אירופה החלה להסיר את המגבלות על תעופה בינלאומית. סטליוס, בנו של איל ספנות יווני, זיהה שבעוד Ryanair פונה לשוק ה"עני", ישנו ואקום עבור נוסעים צעירים ודינמיים שמחפשים פשטות טכנולוגית ללא הבושה של "טיסת עניים". הוא רצה להפוך את המטוס למוצר צריכה מהיר (FMCG) שניתן לצרוך בלחיצת כפתור.
+                        השם <span class="text-white font-bold italic underline decoration-orange-600">EasyJet</span> (איזיג'ט) משלב את המילה <span class="italic">Easy</span> (קל/פשוט) – שמקורה בצרפתית עתיקה <span class="italic">Aise</span> המעידה על נוחות וחופש מדאגות – עם המילה החזקה <span class="italic">Jet</span> המייצגת טכנולוגיה ומהירות. הבחירה ב-"Easy" נועדה לעקר ולשאוב את הפחד, הפורמליות והבירוקרטיה מתהליך הטיסה.
+                    </p>
+                    <p>
+                        הזהות הוויזואלית, בפרט הצבע הכתום הבוהק (Pantone 021C), נבחרה במכוון כדי לזעזע את העין ולשדר אנרגיה צעירה, נגישות, וחוסר פורמליות קיצוני בתוך הטרמינלים האפרוריים והמעונבים של אירופה. הכתום של איזיג'ט הוא זעקת קריאה: אנחנו כאן, אנחנו שקופים, ואנחנו לא קשורים למועדון השמרני של החברות הישנות.
+                    </p>
+                </div>
+            </section>
+
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-orange-600 uppercase mb-4 border-b border-orange-900/30 pb-1 flex items-center gap-2">הקשר הייסוד: רקע וסיבה מורחבים</h4>
+                <div class="founding-nexus-box text-[14px] font-light leading-relaxed text-justify" style="border-right-color: #f97316;">
+                    <p>
+                        <span class="text-white font-bold block mb-2 underline italic">הרקע: הדה-רגולציה של אירופה והקהל הצעיר</span>
+                        באמצע שנות ה-90, אירופה החלה להסיר את המגבלות על תעופה בינלאומית. בעוד שראינאייר כבר החלה לפעול כמובילת שוק ה"לואו-קוסט לעניים", סטליוס זיהה ואקום שיווקי ענק: קהל של נוסעים צעירים, דינמיים ואנשי עסקים שמחפשים פשטות וטכנולוגיה ללא ה"בושה" או הסבל של טיסת עניים ספרטנית אל שדות תעופה נטושים.
                     </p>
                     <p class="mt-4">
-                        <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד: "תעופה כדרך חיים" ושיבוש מורשת האבות</span>
-                        סיבת הייסוד הייתה **שיבוש המודל העסקי המסורתי דרך טכנולוגיה**. EasyJet הייתה הראשונה בעולם שביטלה את סוכני הנסיעות ומכרה כרטיסים ישירות בטלפון ובאינטרנט (עם המיתוג הכתום הצעקני של מספרי הטלפון על צדי המטוס). סיבת הייסוד הייתה הפיכת המותג לדרך חיים פשוטה, תוך ויתור על ה-Hubs והפיכת הטיסה לחלק מהיומיום של הסטודנט והעובד הצעיר. סטליוס הקים את החברה עם שני מטוסים חכורים כדי להוכיח שהון משפחתי יכול לשמש ליצירת ערך חדש וחדשני, ולא רק לשימור נכסים שמרניים של המאה ה-20.
+                        <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד: שיבוש המודל המסורתי דרך טכנולוגיה</span>
+                        סיבת הייסוד של EasyJet הייתה **שיבוש המודל העסקי המסורתי דרך טכנולוגיה מתקדמת וישירה**. איזיג'ט הייתה חברת התעופה הראשונה בעולם שביטלה לחלוטין את מנגנון המתווכים וסוכני הנסיעות היקרים, ומכרה כרטיסים ישירות לצרכן בטלפון ובאינטרנט. סיבת הייסוד הפסיכולוגית של סטליוס הייתה להוכיח שהון משפחתי מסורתי וכבד יכול לשמש ליצירת ערך חדש וחדשני. הוא רצה להפוך את המטוס למוצר צריכה ספונטני (FMCG).
                     </p>
                 </div>
             </section>
 
-            <section class="mb-14">
-                <h4 class="text-xs font-bold text-orange-600 uppercase mb-5">אטימולוגיה וזהות</h4>
-                <div class="space-y-4 text-[15px] font-light text-justify leading-relaxed">
-                    <p>
-                        השם <span class="text-white font-bold italic underline decoration-orange-600">EasyJet</span> משלב את המילה <span class="italic">Easy</span> (קל/פשוט) - שמקורה בצרפתית עתיקה <span class="italic">Aise</span> (נוחות/רווחה) - עם המילה <span class="italic">Jet</span>. הצבע הכתום הבוהק (Pantone 021C) נבחר במכוון כדי לזעזע את העין ולשדר אנרגיה, נגישות וחוסר פורמליות קיצונית בנמלי התעופה המעונבים של אירופה.
-                    </p>
-                </div>
-            </section>
-
-            <section class="mb-14">
-                <h4 class="text-xs font-bold text-orange-600 uppercase mb-5 flex items-center gap-2"><span>פרופיל מייסד: סטליוס האג'י-יואנו</span></h4>
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-orange-600 uppercase mb-4">פרופיל מייסד: סר סטליוס האג'י-יואנו</h4>
                 <div class="founder-profile-box" style="border-right-color: #f97316;">
-                    <div class="space-y-7 text-[15px] text-gray-400 font-light text-justify leading-relaxed">
+                    <div class="space-y-6 text-[14px] text-gray-400 font-light text-justify leading-relaxed">
                         <p>
                             <span class="text-white font-bold block mb-1 underline italic text-[13px]">אטימולוגיה של שם המייסד:</span>
-                            השם <span class="text-orange-400 font-bold italic">Stelios</span> (סטליוס) נגזר מיוונית <span class="italic">Stylos</span> שפירושו "עמוד" או "תומך". השם <span class="text-orange-400 font-bold italic">Haji-Ioannou</span> מורכב מהתואר <span class="italic">Haji</span> (צליין שעלה לרגל) ו-<span class="italic">Ioannou</span> (יוחנן - ה' חנון). השם משקף "עמוד תומך של שושלת צליינים המבורכת בחסד אל".
+                            השם <span class="text-orange-400 font-bold italic">Stelios</span> (סטליוס) נגזר מיוונית עתיקה <span class="italic">Stylos</span>, שפירושו המילולי הוא "עמוד", "תומך" או "מגדל". השם <span class="text-orange-400 font-bold italic">Haji-Ioannou</span> (האג'י-יואנו) מורכב משני חלקים: התואר <span class="italic">Haji</span> מציין מי שעלה לרגל, והשם <span class="italic">Ioannou</span> (יוחנן) שמשמעותו שהאל חנן אותו. השם המלא נושא משקל כבד: "העמוד התומך של שושלת צליינים עתיקה המבורכת בחסדי שמיים".
                         </p>
                         <p>
-                            <span class="text-white font-bold block mb-2 underline italic text-[13px]">ילדות ועיצוב זהות:</span>
-                            נולד ב-1967 באתונה למשפחת ספנות קפריסאית עשירה להחריד. הוא גדל בתוך עושר מופלג אך בצל דמותו הדומיננטית והקשוחה של אביו, לווקאס, "מלך המיכליות", שבנה אימפריה מאפס ולא האמין בקיצורי דרך. סטליוס חונך להבין שהון הוא כלי נשק שצריך לדעת להפעיל נגד המוסכמות.
+                            <span class="text-white font-bold block mb-2 underline italic text-[13px]">ילדות בצל זהב ועיצוב הזהות הריבונית:</span>
+                            סטליוס נולד ב-1967 באתונה למשפחת ספנות יוונית-קפריסאית עשירה כקורח. הוא גדל עטוף בעושר מופלג, אך חווה זאת בצל דמותו הדומיננטית והקשוחה של אביו, איל ספנות המכונה "מלך המיכליות", שלא האמין בפינוק או בקיצורי דרך. סטליוס חונך מינקות להבין שהון הוא כלי נשק שצריך לדעת להפעיל נגד המוסכמות ונגד חולשות השוק.
                         </p>
-                        <div class="trauma-highlight" style="border-right-color: #f97316; background: rgba(249, 115, 22, 0.05);">
-                            הדחף הפסיכולוגי שלו הוא "הצורך להוכיח רלוונטיות בזכות עצמו". הוא לא רצה להיות רק "היורש". הוא רצה לבנות אימפריה שתהיה מזוהה עם המודרניות שלו. האידיאולוגיה שלו היא "Serial Entrepreneurship": מיתוג של כל היבט בחיים תחת השם Easy, כדי להוכיח שיעילות ופשטות הן השפה של העתיד. עבורו, EasyJet הייתה הדרך "להרוג" את המודל הישן של אביו ולהפוך לאצולה עסקית גלובלית במו ידיו.
+                        <div class="trauma-highlight" style="border-right-color: #f97316; background: rgba(249, 115, 22, 0.05); color:#fdba74;">
+                            הדחף הפסיכולוגי, ואולי הטראומה המעצבת שלו, הוא "תסביך היורש" או "הצורך להוכיח רלוונטיות בזכות עצמו". סטליוס סירב להיות רק עוד בן עשירים שלוקח את העסק של אבא. הוא רצה לבנות אימפריה שתהיה מזוהה עם המודרניות שלו. האידיאולוגיה שפיתח היא "Serial Entrepreneurship": מיתוג של כל היבט מסורבל בחיים תחת מטריית המותג Easy, כדי להוכיח שיעילות, שקיפות ופשטות הן השפה של המאה ה-21.
                         </div>
+                        <p>
+                            <span class="text-white font-bold block mb-2 underline italic text-[13px]">הישגים מרכזיים ומורשת:</span>
+                            <ul class="achievement-list" style="color: var(--accent-orange);">
+                                <li class="achievement-item"><strong>מהפכת המכירה הישירה:</strong> חיתוך כוחם של סוכני הנסיעות, תחילה עם מרכז טלפוני (שמספרו הודפס על המטוסים) ואז דרך מסחר אינטרנטי מהפכני.</li>
+                                <li class="achievement-item"><strong>אלגוריתם התמחור הדינמי:</strong> יישום והבאה למיינסטרים של המודל שבו "ככל שתקדים להזמין, תשלם פחות", שחינך דור שלם של אירופאים לתכנן מראש.</li>
+                                <li class="achievement-item"><strong>הפיכת טיסות לפריט צריכה בסיסי:</strong> הפיכת המטוס למעין "מונית אווירית" שמאפשרת לאנשים לחיות בלונדון ולעבוד או לבלות סופי שבוע באירופה באופן קבוע.</li>
+                            </ul>
+                        </p>
                     </div>
                 </div>
             </section>
@@ -283,61 +324,72 @@
         <div class="section-divider"></div>
 
         <!-- 04. WIZZ AIR -->
-        <article class="mb-48">
+        <article class="mb-32">
             <div class="flex items-center gap-4 mb-8">
-                <span class="text-7xl font-black text-white/5">04</span>
+                <span class="text-6xl font-black text-white/5">04</span>
                 <div>
                     <h2 class="text-4xl font-black text-white leading-tight tracking-tighter">Wizz Air</h2>
                     <p class="text-[11px] text-pink-500 font-bold uppercase tracking-[0.2em] italic">The Post-Communist Efficiency Rebirth</p>
                 </div>
             </div>
 
-            <div class="glass-module p-6 mb-12 border-r-4 border-pink-600">
-                <div class="space-y-5 text-[15px] text-gray-300 font-light">
-                    <p><strong class="text-white underline decoration-pink-500/50 underline-offset-4">שנת ייסוד רשמית:</strong> ספטמבר 2003 (טיסה ראשונה מקטוביץ' ב-2004).</p>
+            <div class="glass-module p-6 mb-10 border-r-4 border-pink-600">
+                <div class="space-y-4 text-[14px] text-gray-300 font-light">
+                    <p><strong class="text-white underline decoration-pink-500/50 underline-offset-4">שנת ייסוד רשמית:</strong> ספטמבר 2003 (המראה ראשונה במאי 2004).</p>
                     <p><strong class="text-white underline decoration-pink-500/50 underline-offset-4">הבונה והחזיונר:</strong> József Váradi (יליד 1962).</p>
-                    <p><strong class="text-white underline decoration-pink-500/50 underline-offset-4">מיקום ייסוד:</strong> בודפשט, הונגריה (עם שורשים פולניים).</p>
+                    <p><strong class="text-white underline decoration-pink-500/50 underline-offset-4">מיקום ייסוד:</strong> בודפשט, הונגריה.</p>
                 </div>
             </div>
 
-            <section class="mb-14">
-                <h4 class="text-xs font-bold text-pink-500 uppercase mb-5 border-b border-pink-900/30 pb-1 flex items-center gap-2">הקשר הייסוד: רקע וסיבה מורחבים</h4>
-                <div class="founding-nexus-box text-[15px] font-light leading-relaxed text-justify" style="border-right-color: #db2777;">
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-pink-500 uppercase mb-4">אטימולוגיה מורחבת וזהות</h4>
+                <div class="space-y-4 text-[14px] font-light text-justify leading-relaxed">
                     <p>
-                        <span class="text-white font-bold block mb-2 underline italic">הרקע: קריסת הדינוזאורים של הגוש המזרחי והאיחוד האירופי</span>
-                        בתחילת שנות ה-2000, מדינות מזרח אירופה הצטרפו לאיחוד האירופי. חברות התעופה הלאומיות הישנות (כמו Malév ההונגרית) היו מנופחות, מושחתות ובלתי יעילות, והחלו לקרוס תחת חוקי השוק החופשי. יוז'ף ואראדי היה מנכ"ל Malév שפוטר בבושת פנים בגלל ניסיונו ליישם רפורמות קפיטליסטיות כואבות בתוך גוף ממשלתי מאובן.
+                        השם <span class="text-white font-bold italic underline decoration-pink-500">Wizz</span> הוא אונומטופיה המייצגת באנגלית סלנגית מהירות, חדות, תנועה מהירה באוויר, או לחלופין המילה "קוסם" (Wizard). במתכוון, השם אינו נושא שום שורש סלאבי, הונגרי או לאומי. הוא נועד להיות אוניברסלי לחלוטין ולנתק את החברה מזיהוי גיאוגרפי של "מזרח אירופה הענייה".
+                    </p>
+                    <p>
+                        בחירת צבעי המותג, פוקסיה (Fuchsia/סגול-ורוד בוהק) וצבעי תכלת-כחול, הייתה מרד ויזואלי של ממש. הצבעים נבחרו במכוון כדי להיות זועקים, שמחים, ו"לא-לאומיים" – הצהרה נגד הצבעים הכבדים והמיושנים של חברות הדגל הקומוניסטיות לשעבר. המותג הוורוד משדר מודרניות פלסטית, קלילות מערבית, וגישה חסרת פשרות שאינה כבולה להיסטוריה של האזור.
+                    </p>
+                </div>
+            </section>
+
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-pink-500 uppercase mb-4 border-b border-pink-900/30 pb-1 flex items-center gap-2">הקשר הייסוד: רקע וסיבה מורחבים</h4>
+                <div class="founding-nexus-box text-[14px] font-light leading-relaxed text-justify" style="border-right-color: #db2777;">
+                    <p>
+                        <span class="text-white font-bold block mb-2 underline italic">הרקע: קריסת הדינוזאורים של הגוש המזרחי</span>
+                        בתחילת שנות ה-2000, מדינות מרכז ומזרח אירופה עמדו לפני הצטרפות לאיחוד האירופי ב-2004. בעוד הגבולות נפתחו, חברות התעופה הלאומיות הישנות (כמו Malév ההונגרית) נותרו דינוזאורים מהעידן הקומוניסטי: מנופחות ובלתי יעילות לחלוטין. יוז'ף ואראדי היה המנכ"ל של Malév שפוטר בבושת פנים רק בגלל ניסיונו להציל אותה וליישם בה רפורמות קפיטליסטיות כואבות.
                     </p>
                     <p class="mt-4">
-                        <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד: ניצול הואקום הגיאופוליטי של ניידות העבודה</span>
-                        סיבת הייסוד הייתה **חיבור כוח העבודה המזרח-אירופי למרכז הכלכלי של המערב**. ואראדי הבין שמיליוני פועלים וסטודנטים חייבים לנוע במהירות ובזול בין פולין, רומניה והונג קונג לבין מוקדי הכוח של לונדון וברלין. הוא גייס משקיעים אמריקאים אגרסיביים (Indigo Partners) והקים את Wizz Air כחברה "חסרת מולדת" – חברה שפועלת בכל מזרח אירופה אך מנוהלת בסטנדרטים של יעילות קיצונית. סיבת הייסוד הייתה הפיכת הגבולות שקרסו לנתיבי רווח מהירים ודינמיים, תוך הוכחה שהמזרח יכול להיות יעיל יותר מהמערב.
+                        <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד: ניצול הואקום הגיאופוליטי של הגירת העבודה</span>
+                        סיבת הייסוד הייתה **חיבור כוח העבודה המזרח-אירופי למרכזי העושר של המערב**. ואראדי הבין שמיליוני פועלים וסטודנטים חייבים לנוע במהירות בין פולין, רומניה וליטא, לבין מוקדי פרנסה בלונדון וברלין. הוא הקים את Wizz Air כחברה "חסרת מולדת" שמפעילה בסיסים בכל רחבי מזרח אירופה אך מנוהלת בסטנדרטים של יעילות מערבית קיצונית.
                     </p>
                 </div>
             </section>
 
-            <section class="mb-14">
-                <h4 class="text-xs font-bold text-pink-500 uppercase mb-5">אטימולוגיה וזהות</h4>
-                <div class="space-y-4 text-[15px] font-light text-justify leading-relaxed">
-                    <p>
-                        השם <span class="text-white font-bold italic underline decoration-pink-500">Wizz</span> הוא אונומטופיה המייצגת מהירות ותנועה חדה באוויר ("וויזז"). הצבע הוורוד והסגול (Fuchsia) נבחרו במכוון כדי להיות בולטים ו"לא-לאומיים", הצהרה נגד הצבעים הכבדים והמיושנים של חברות הדגל הישנות. המותג משדר מודרניות, קלילות וגישה עסקית חסרת פשרות שאינה כבולה להיסטוריה הכואבת של האזור.
-                    </p>
-                </div>
-            </section>
-
-            <section class="mb-14">
-                <h4 class="text-xs font-bold text-pink-500 uppercase mb-5 flex items-center gap-2"><span>פרופיל מייסד: יוז'ף ואראדי</span></h4>
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-pink-500 uppercase mb-4">פרופיל מייסד: יוז'ף ואראדי</h4>
                 <div class="founder-profile-box" style="border-right-color: #db2777;">
-                    <div class="space-y-7 text-[15px] text-gray-400 font-light text-justify leading-relaxed">
+                    <div class="space-y-6 text-[14px] text-gray-400 font-light text-justify leading-relaxed">
                         <p>
                             <span class="text-white font-bold block mb-1 underline italic text-[13px]">אטימולוגיה של שם המייסד:</span>
-                            השם <span class="text-pink-400 font-bold italic">József</span> (יוז'ף) הוא הגרסה ההונגרית ליוסף - "ה' יוסיף". השם <span class="text-pink-400 font-bold italic">Váradi</span> (ואראדי) נגזר מהמילה ההונגרית <span class="italic">Vár</span> (מבצר/טירה) עם הסיומת <span class="italic">-di</span> המציינת מוצא ("זה שבא מהמבצר"). השם משקף "אדם המוסיף כוח והגנה מתוך המבצר האיתן".
+                            השם <span class="text-pink-400 font-bold italic">József</span> (יוז'ף) הוא יוסף, שמשמעותו "ה' יוסיף". השם <span class="text-pink-400 font-bold italic">Váradi</span> (ואראדי) נגזר מ-<span class="italic">Vár</span> (מבצר/טירה) עם הסיומת <span class="italic">-di</span> (האדם שבא מהמבצר). השם משקף בצורה אירונית ועוצמתית "אדם המוסיף שפע וריבוי, הפועל מתוך ומגן על המבצר האיתן שלו".
                         </p>
                         <p>
-                            <span class="text-white font-bold block mb-2 underline italic text-[13px]">ילדות ועיצוב פסיכולוגי:</span>
-                            נולד ב-1962 בדברצן, הונגריה, תחת שלטון קומוניסטי אפרורי ואיטי. הוא גדל במערכת שבה הכל היה מתוכנן מראש וחסר תמריצים, חוויה שיצרה אצלו הערצה עמוקה ליעילות הקפיטליסטית המהירה. הוא למד כלכלה בבודפשט ועבד ב-Procter & Gamble, שם למד את תורת המותגים האמריקאית ואת חשיבותו של הלקוח כגורם רווח טהור.
+                            <span class="text-white font-bold block mb-2 underline italic text-[13px]">ילדות קומוניסטית ועיצוב תודעת המהירות:</span>
+                            נולד ב-1962 בדברצן תחת צילו של שלטון קומוניסטי אפרורי. הוא גדל במערכת של מחסור, מה שיצר אצלו כמיהה עמוקה ליעילות קפיטליסטית ולשוק החופשי. הוא עבד בתאגיד האמריקאי הענק Procter & Gamble, שם ספג את תורת המותגים וההבנה שהלקוח הוא גורם רווח טהור שיש לייעל.
                         </p>
-                        <div class="trauma-highlight" style="border-right-color: #db2777; background: rgba(219, 39, 119, 0.05);">
-                            הטראומה שלו היא "קריסת המערכות הישנות והשפלה מקצועית". הפיטורים שלו מחברת Malév יצרו אצלו צורך פתולוגי להוכיח שהמודל הישן מת ושהוא יכול לבנות משהו חזק יותר מההריסות. הוא הפך ל"רובוט של יעילות" שלא מקבל שום תירוץ לעיכוב או לבזבוז. האידיאולוגיה שלו היא "Ultra-Low Cost": חיתוך בכל עלות שאינה תורמת ישירות להמראה. עבורו, Wizz Air היא הוכחה שמזרח אירופה יכולה להיות יעילה יותר מהמערב אם רק משחררים אותה מהמשקולות של העבר הקומוניסטי והשחיתות הישנה.
+                        <div class="trauma-highlight" style="border-right-color: #db2777; background: rgba(219, 39, 119, 0.05); color:#fbcfe8;">
+                            הטראומה העסקית שלו היא "קריסת המערכות הישנות וההשפלה המקצועית". הפיטורים הפוליטיים שלו מחברת Malév יצרו אצלו צורך פתולוגי להוכיח שהמודל הישן מת ושהוא היחיד שיכול לבנות משהו חזק עשרות מונים מההריסות. הוא הפך ל"רובוט של יעילות כלכלית". האידיאולוגיה הניהולית שלו היא "Ultra-Low Cost" טהור: חיתוך אכזרי וממוחשב בכל עלות. עבורו, Wizz Air מוכיחה שמזרח אירופה יכולה להיות יצרנית ויעילה יותר מהמערב אם רק ישחררו אותה ממשקולות הקומוניזם.
                         </div>
+                        <p>
+                            <span class="text-white font-bold block mb-2 underline italic text-[13px]">הישגים מרכזיים ומורשת:</span>
+                            <ul class="achievement-list" style="color: var(--accent-pink);">
+                                <li class="achievement-item"><strong>שליטה במזרח אירופה:</strong> זיהוי וכיבוש מהיר של השוק במרכז ומזרח אירופה, והפיכת וויז אייר למובילה האזורית.</li>
+                                <li class="achievement-item"><strong>אובססיית צי צעיר:</strong> החזקת צי המטוסים הצעיר ביותר באירופה (A321neo בתצורה דחוסה) כדי להשיג יעילות דלק חסרת תקדים.</li>
+                                <li class="achievement-item"><strong>מינוף תנועת העבודה (Labor Migration):</strong> בניית רשת נתיבים שהתבססה על תנועת עובדי כפיים ומהגרים כלכליים (VFR) שנעו מזרחה ומערבה, תוך הפיכת הכרטיס לזול יותר מאוטובוס.</li>
+                            </ul>
+                        </p>
                     </div>
                 </div>
             </section>
@@ -346,74 +398,78 @@
         <div class="section-divider"></div>
 
         <!-- 05. SPIRIT AIRLINES -->
-        <article class="mb-48">
+        <article class="mb-32">
             <div class="flex items-center gap-4 mb-8">
-                <span class="text-7xl font-black text-white/5">05</span>
+                <span class="text-6xl font-black text-white/5">05</span>
                 <div>
-                    <h2 class="text-4xl font-black text-white leading-tight">Spirit</h2>
+                    <h2 class="text-4xl font-black text-white leading-tight">Spirit Airlines</h2>
                     <p class="text-[11px] text-yellow-500 font-bold uppercase tracking-[0.2em] italic">The Bare Fare Extremist</p>
                 </div>
             </div>
 
-            <div class="glass-module p-6 mb-12 border-r-4 border-yellow-500">
-                <div class="space-y-5 text-[15px] text-gray-300 font-light">
-                    <p><strong class="text-white underline decoration-yellow-500/50 underline-offset-4">שנת הפיכה ל-ULCC:</strong> 2007 (תחת הנהגת ביל פרנקי).</p>
-                    <p><strong class="text-white underline decoration-yellow-500/50 underline-offset-4">הבונה והאדריכל:</strong> William A. "Bill" Franke (יליד 1937).</p>
+            <div class="glass-module p-6 mb-10 border-r-4 border-yellow-500">
+                <div class="space-y-4 text-[14px] text-gray-300 font-light">
+                    <p><strong class="text-white underline decoration-yellow-500/50 underline-offset-4">שנת הפיכה ל-ULCC (במתכונת הנוכחית):</strong> 2007 (תחת הנהגתו של ביל פרנקי וקרן אינדיגו).</p>
+                    <p><strong class="text-white underline decoration-yellow-500/50 underline-offset-4">הבונה ואדריכל המודל הקיצוני:</strong> William A. "Bill" Franke (יליד 1937).</p>
                     <p><strong class="text-white underline decoration-yellow-500/50 underline-offset-4">מיקום מטה:</strong> מיראמר, פלורידה, ארה"ב.</p>
                 </div>
             </div>
 
-            <section class="mb-14">
-                <h4 class="text-xs font-bold text-yellow-500 uppercase mb-5 border-b border-yellow-900/30 pb-1 flex items-center gap-2">הקשר הייסוד: רקע וסיבה מורחבים</h4>
-                <div class="founding-nexus-box text-[15px] font-light leading-relaxed text-justify" style="border-right-color: #facc15;">
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-yellow-500 uppercase mb-4">אטימולוגיה מורחבת וזהות</h4>
+                <div class="space-y-4 text-[14px] font-light text-justify leading-relaxed">
                     <p>
-                        <span class="text-white font-bold block mb-2 underline italic">הרקע: השוק הרווי והצורך במינימליזם קיצוני בארה"ב</span>
-                        בתחילת שנות ה-2000, Southwest כבר הפכה לחברה "מכובדת" ויקרה יחסית שאיבדה את חדות המחיר שלה. נוצר ואקום עצום עבור נוסעים שמוכנים לוותר על כל נוחות, כבוד או שירות בשביל המחיר הנמוך ביותר האפשרי. ספיריט הייתה חברת צ'רטר קטנה וכושלת עד שנרכשה על ידי קרן Indigo Partners המתמחה בייעול ברוטלי ורכישת חברות בשבר.
+                        השם <span class="text-white font-bold italic underline decoration-yellow-500">Spirit</span> (רוח) נבחר במקור כדי לשדר חיוניות של חברה קטנה. אולם, תחת המיתוג החדש והאכזרי של ה-ULCC, הוא הפך לרוח פסיכולוגית אחרת – "רוח של מינימליזם דורסני ופונקציונלי".
+                    </p>
+                    <p>
+                        הזהות הוויזואלית השנויה במחלוקת – מטוסים צבועים בצהוב בוהק עם כיתוב שחור זול במכוון ("The Taxi") – נבחרה במטרה פסיכולוגית: להידמות למונית צהובה ניו יורקית או לשקית סופרמרקט. המסר: זהו כלי תחבורה פונקציונלי שנועד להביא אותך מנקודה א' ל-ב', בלי טיפת יומרה או יוקרה. הצהוב הצעקני הוא הודאה באשמה שנועדה לייאש מראש ציפיות: "אנחנו זולים, ואנחנו גאים בזה".
+                    </p>
+                </div>
+            </section>
+
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-yellow-500 uppercase mb-4 border-b border-yellow-900/30 pb-1 flex items-center gap-2">הקשר הייסוד: רקע וסיבה מורחבים</h4>
+                <div class="founding-nexus-box text-[14px] font-light leading-relaxed text-justify" style="border-right-color: #facc15;">
+                    <p>
+                        <span class="text-white font-bold block mb-2 underline italic">הרקע: השוק האמריקאי הרווי והצורך במינימליזם קיצוני</span>
+                        בתחילת שנות ה-2000, שוק התעופה האמריקאי היה עייף. סאות'ווסט האגדית התבגרה והפכה ליקרה יחסית. נוצר ואקום עצום וחור שחור בתחתית שרשרת המזון: עבור מיליוני נוסעים שמוכנים לוותר על כל טיפת נוחות, שירות או כבוד אנושי בסיסי רק כדי לקבל את המחיר הנמוך ביותר האפשרי. ספיריט נרכשה על ידי קרן "Indigo Partners" המתמחה בייעול ברוטלי וברכישת חברות במצבי שבר עמוקים.
                     </p>
                     <p class="mt-4">
                         <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד: הפרדה רדיקלית של שירותים (Unbundling) כאידיאולוגיה</span>
-                        ביל פרנקי ייסד את מודל ה-**Bare Fare**. סיבת הייסוד הייתה מתמטית טהורה: פירוק מחיר הכרטיס למרכיביו היסודיים ביותר. הנוסע משלם רק על הכיסא (ובקושי על המקום לרגליים). כל דבר אחר – מים, תיק יד, הדפסת כרטיס – הפך למקור רווח. סיבת הייסוד הייתה "הזכות לטוס למי שאין לו כסף", תוך שימוש במטוסים חדשים וחסכוניים ביותר כדי למקסם רווחים מהעמלות. זהו הקפיטליזם בשיא הדיוק המתמטי שלו, שבו הלקוח הוא יחידת רווח קרה.
+                        ביל פרנקי החיל את מודל ה-**Bare Fare** (המחיר העירום). סיבת הייסוד הייתה מתמטית טהורה: פירוק כירורגי של מחיר כרטיס הטיסה למרכיביו היסודיים ביותר. הנוסע משלם אך ורק על השכרת כיסא הטיסה. כל דבר אחר – מים, הדפסת כרטיס, תיק יד קטן – עוקר מהכרטיס והפך למקור רווח נפרד שנדרש עבורו תשלום עתק. זהו הקפיטליזם בשיא הדיוק המחושב שלו, שבו הלקוח ונוחותו הם רק עוד משתנה במשוואה של יחידת רווח.
                     </p>
                 </div>
             </section>
 
-            <section class="mb-14">
-                <h4 class="text-xs font-bold text-yellow-500 uppercase mb-5">אטימולוגיה וזהות</h4>
-                <div class="space-y-4 text-[15px] font-light text-justify leading-relaxed">
-                    <p>
-                        השם <span class="text-white font-bold italic underline decoration-yellow-500">Spirit</span> (רוח) נבחר במקור לשדר חיוניות, אך תחת המיתוג החדש הוא הפך לרוח של "מינימליזם דורסני". הזהות הצהובה-שחורה ("The Taxi") נבחרה במכוון כדי להידמות למונית ניו-יורקית – כלי תחבורה פונקציונלי שנועד להביא אותך מנקודה א' ל-ב', בלי שום יומרה ליוקרה. הצהוב הצעקני נועד לשדר: "אנחנו זולים, ואנחנו גאים בזה, אל תצפו לשום דבר מעבר למחיר".
-                    </p>
-                </div>
-            </section>
-
-            <section class="mb-14">
-                <h4 class="text-xs font-bold text-yellow-500 uppercase mb-5 flex items-center gap-2"><span>פרופיל הבנאי: ביל פרנקי</span></h4>
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-yellow-500 uppercase mb-4">פרופיל הבנאי: ויליאם (ביל) פרנקי</h4>
                 <div class="founder-profile-box" style="border-right-color: #facc15;">
-                    <div class="space-y-7 text-[15px] text-gray-400 font-light text-justify leading-relaxed">
+                    <div class="space-y-6 text-[14px] text-gray-400 font-light text-justify leading-relaxed">
                         <p>
                             <span class="text-white font-bold block mb-1 underline italic text-[13px]">אטימולוגיה של שם המייסד:</span>
-                            השם <span class="text-yellow-400 font-bold italic">William</span> (וויליאם) נגזר מהגרמנית <span class="italic">Willa</span> (רצון) ו-<span class="italic">Helm</span> (קסדה/הגנה). השם <span class="text-yellow-400 font-bold italic">Franke</span> (פרנקי) הוא שם אתני המציין את שבט ה"פרנקים", שפירושו במקור "אדם חופשי". השם משקף "רצון חופשי המגן על עצמו בנחישות".
+                            השם <span class="text-yellow-400 font-bold italic">William</span> (וויליאם) מורכב מ-<span class="italic">Willa</span> (רצון מתכתי) ו-<span class="italic">Helm</span> (קסדה/הגנה). השם <span class="text-yellow-400 font-bold italic">Franke</span> (פרנקי) הוא שם המציין את השבטים הגרמאניים ("הפרנקים"), שפירוש שמם הוא "אדם חופשי" שאינו כפוף למרות. השם משקף פסיכולוגית "אדם בעל רצון חופשי המגן על עצמו והונו בנחישות".
                         </p>
                         <p>
-                            <span class="text-white font-bold block mb-2 underline italic text-[13px]">ילדות וזהות עסקית:</span>
-                            נולד ב-1937 בטקסס. הוא גדל בעולם של פיננסים ושיקום חברות בקשיים (Turnaround). בניגוד לקלהר או או'לירי, פרנקי הוא לא טייס או איש תפעול בנשמתו, אלא מומחה להנדסה פיננסית קרה. הוא רואה במטוסים נכסים מניבים ובנוסעים יחידות רווח שניתן למקסם.
+                            <span class="text-white font-bold block mb-2 underline italic text-[13px]">ילדות עקורה וזהות עסקית של מהנדס רווח:</span>
+                            נולד ב-1937 בטקסס, וגדל בפרגוואי ובברזיל, מה שחשף אותו למציאות כלכלית קשה. פרנקי איננו טייס או רומנטיקן של שחקים בשום צורה. הוא פנה לעולם הפיננסים והשקעות הון והתמחה בשיקום חברות קורסות. הוא רואה במטוסים נכסים מניבים (Assets) ובנוסעים – יחידות המייצרות נתוני רווח שניתן למקסם ולהנדס.
                         </p>
-                        <div class="trauma-highlight" style="border-right-color: #facc15; background: rgba(250, 204, 21, 0.05);">
-                            האידיאולוגיה שלו היא "קפיטליזם של יעילות מוחלטת". הוא ידוע כמי שאינו מתרגש מתלונות נוסעים על חוסר נוחות או חוסר אדיבות; עבורו, הבושה היא לא בשירות דל, אלא במחיר גבוה שאינו מוצדק כלכלית. הוא בנה את ספיריט כמכונת מזומנים שמוכיחה שאנשים תמיד יבחרו במחיר על פני כבוד. הוא הבנאי של תעשיית ה-Ultra Low Cost העולמית, אדם שביטל את הרומנטיקה של הטיסה לטובת המתמטיקה של השחקים.
+                        <div class="trauma-highlight" style="border-right-color: #facc15; background: rgba(250, 204, 21, 0.05); color:#fef08a;">
+                            האידיאולוגיה הניהולית שלו היא "קפיטליזם של יעילות מוחלטת". הוא אינו מתרגש או נכנע לעולם מתלונות זועמות של נוסעים על חוסר נוחות; עבורו, הבושה האמיתית אינה שירות דל, אלא גביית מחיר גבוה שאינו מוצדק כלכלית ממי שידו אינה משגת. הוא בנה את ספיריט כמכונת מזומנים חסרת בושה, שמוכיחה מדי יום שחלק ניכר מהאנשים תמיד יבחרו במחיר הזול ביותר על פני כבוד עצמי ונוחות. הוא ביטל סופית את הרומנטיקה של הטיסה לטובת המתמטיקה של השחקים.
                         </div>
+                        <p>
+                            <span class="text-white font-bold block mb-2 underline italic text-[13px]">הישגים מרכזיים ומורשת:</span>
+                            <ul class="achievement-list" style="color: var(--accent-yellow-bright);">
+                                <li class="achievement-item"><strong>ייבוא והקצנת מודל ה-ULCC בארה"ב:</strong> האיש הראשון שהעז לקחת את המודל האכזרי של ראינאייר ולהפעיל אותו בתוך השוק האמריקאי המפונק.</li>
+                                <li class="achievement-item"><strong>הפיכת העמלות (Ancillary) לליבת העסק:</strong> יצירת מציאות שבה חלק עצום מהכנסות החברה מגיע מעמלות נלוות (תיקים, מושבים) ולא מהכרטיס עצמו.</li>
+                                <li class="achievement-item"><strong>אימפריית אינדיגו (Indigo Partners):</strong> הקמה וניהול של קרן ההשקעות שהפכה לאימפריה גלובלית החולשת על חברות הלואו-קוסט המצליחות בעולם.</li>
+                            </ul>
+                        </p>
                     </div>
                 </div>
             </section>
         </article>
 
-        <!-- Intelligence Footer -->
-        <footer class="mt-24 border-t border-white/5 pt-12 pb-20 text-center">
-            <div class="inline-block p-1 rounded-full bg-orange-600 mb-6 shadow-lg shadow-orange-900/20">
-                <div class="bg-black rounded-full px-8 py-2">
-                    <span class="text-[11px] font-black text-white uppercase tracking-[0.4em]">Integrated Intelligence Standard</span>
-                </div>
-            </div>
-            <div class="section-divider"></div>
+        <div class="section-divider"></div>
 
         <!-- 06. INDIGO AIRLINES -->
         <article class="mb-32">
@@ -438,10 +494,10 @@
                 <h4 class="text-xs font-bold text-indigo-500 uppercase mb-4">אטימולוגיה מורחבת וזהות</h4>
                 <div class="space-y-4 text-[14px] font-light text-justify leading-relaxed">
                     <p>
-                        השם <span class="text-white font-bold italic underline decoration-indigo-600">IndiGo</span> הוא משחק מילים גאוני וכפול. מצד אחד, הוא הלחם בסיסי ואנרגטי של המילים <span class="italic">India</span> (הודו) ו-<span class="italic">Go</span> (לנסוע/לנוע) – "הודו זזה". מצד שני, המילה מתייחסת ישירות לצבע ה-<span class="etymology-chip" style="color:var(--accent-blue);">Indigo</span> (אינדיגו/כחול-סגול עמוק), צבען היסטורי ועשיר שהופק במקור בהודו ושינה את פני הסחר העולמי. 
+                        השם <span class="text-white font-bold italic underline decoration-indigo-600">IndiGo</span> הוא משחק מילים גאוני וכפול. מצד אחד, הוא הלחם בסיסי ואנרגטי של המילים <span class="italic">India</span> (הודו) ו-<span class="italic">Go</span> (לנסוע/לנוע) – "הודו זזה". מצד שני, המילה מתייחסת ישירות לצבע ה-<span class="etymology-chip" style="color:var(--accent-blue);">Indigo</span> (אינדיגו/כחול-סגול עמוק), צבען היסטורי ועשיר שהופק במקור בהודו ושינה את פני הסחר העולמי (משמעות המילה ביוונית עתיקה היא "מהודו"). 
                     </p>
                     <p>
-                        הזהות הוויזואלית, בגווני כחול אינדיגו ולבן נקי, תוכננה לשדר מקצועיות קלינית, סדר ורעננות. בעוד שחברות התעופה ההודיות המסורתיות התהדרו בצבעים חמים ופאר אוריינטלי המזכיר מהראג'ות, אינדיגו בחרה בעיצוב הייטקיסטי, סטרילי ומינימליסטי. המסר היה ברור ומנוגד לשוק: אין כאן פינוק אריסטוקרטי, יש כאן מכונה דייקנית ואמינה.
+                        הזהות הוויזואלית, בגווני כחול אינדיגו ולבן נקי, תוכננה לשדר מקצועיות קלינית, סדר ורעננות. בעוד שחברות התעופה ההודיות המסורתיות התהדרו בצבעים חמים ופאר אוריינטלי המזכיר מהראג'ות, אינדיגו בחרה בעיצוב הייטקיסטי, סטרילי ומינימליסטי. המסר היה ברור ומנוגד לשוק: אין כאן פינוק אריסטוקרטי, יש כאן מכונה דייקנית ואמינה שעובדת במציאות כאוטית.
                     </p>
                 </div>
             </section>
@@ -475,7 +531,7 @@
                             גנגוואל עזב את הודו לארה"ב וטיפס בסולם הדרגות עד לתפקיד מנכ"ל US Airways האמריקאית. שם הוא ספג את תורת המערכות והיעילות של מודל הלואו-קוסט. באטיה גדל אל תוך תעשיית התיירות בהודו והכיר כל פוליטיקאי ואתגר לוקאלי. כשהם התאחדו, הם הביאו מודל מהפכני: ארכיטקטורה אמריקאית-מתמטית המיושמת על מציאות סוציולוגית הודית.
                         </p>
                         <div class="trauma-highlight" style="border-right-color: #4f46e5; background: rgba(79, 70, 229, 0.05); color:#c7d2fe;">
-                            הזהות הפסיכולוגית של החברה עוצבה כתגובת נגד עזה, כמעט אלימה, לתרבות ה-VIP ההודית. האידיאולוגיה השלטת שלהם הייתה שקיפות תפעולית קיצונית ועיוורון למעמד: אין כרטיסי חינם לחברי פרלמנט או שרי ממשלה, ואין לעולם המתנה לנוסעים מאחרים, יהיו חשובים ומקושרים ככל שיהיו. ההתנגדות הקיצונית שלהם לאגו ניהולי אפשרה להם לשמור על משמעת ברזל במדינה הידועה בכאוס התעבורתי שלה.
+                            הזהות הפסיכולוגית של החברה עוצבה כתגובת נגד עזה, כמעט אלימה, לתרבות ה-VIP ההודית. האידיאולוגיה השלטת שלהם הייתה שקיפות תפעולית קיצונית ועיוורון למעמד: אין כרטיסי חינם לחברי פרלמנט או שרי ממשלה (צעד חסר תקדים בהודו), ואין לעולם המתנה לנוסעים מאחרים, יהיו חשובים ומקושרים ככל שיהיו. ההתנגדות הקיצונית שלהם לאגו ניהולי אפשרה להם לשמור על משמעת ברזל במדינה הידועה בכאוס התעבורתי שלה.
                         </div>
                         <p>
                             <span class="text-white font-bold block mb-2 underline italic text-[13px]">הישגים מרכזיים ומורשת:</span>
@@ -489,10 +545,19 @@
                 </div>
             </section>
         </article>
+
+        <!-- Intelligence Footer -->
+        <footer class="mt-24 border-t border-white/5 pt-12 pb-20 text-center">
+            <div class="inline-block p-1 rounded-full bg-orange-600 mb-6 shadow-lg shadow-orange-900/20">
+                <div class="bg-black rounded-full px-8 py-2">
+                    <span class="text-[11px] font-black text-white uppercase tracking-[0.4em]">Integrated Intelligence Standard • V6 Final</span>
+                </div>
+            </div>
             <p class="text-[10px] text-gray-700 font-bold uppercase tracking-[0.2em] leading-relaxed text-center">
                 PHASE 03 COMPLETE ANALYSIS | LOW-COST PIONEERS FULL DOSSIER<br>
                 OPTIMIZED FOR SAMSUNG S25 ULTRA INTERFACE<br>
-                © 2026 | ZERO SHORTCUTS POLICY
+                STATUS: INDIGO MATRIX INTEGRATED & FOOTER RESTORED<br>
+                © 2026 | AVIATION MATRIX
             </p>
         </footer>
 
@@ -500,3 +565,5 @@
 
 </body>
 </html>
+
+
