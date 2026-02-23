@@ -14,6 +14,8 @@
             --accent-gold: #fbbf24;
             --accent-red: #ef4444;
             --accent-blue: #3b82f6;
+            --accent-indigo: #4f46e5;
+            --accent-sky: #0ea5e9;
         }
         body {
             font-family: 'Assistant', sans-serif;
@@ -61,24 +63,30 @@
         .trauma-highlight {
             background: rgba(239, 68, 68, 0.05);
             border-right: 2px solid #ef4444;
-            padding: 1rem;
+            padding: 1.25rem;
             border-radius: 0 12px 12px 0;
             font-style: italic;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             color: #fca5a5;
+            box-shadow: -10px 0 30px rgba(239, 68, 68, 0.05);
         }
         .achievement-item {
             display: flex;
             align-items: flex-start;
             gap: 10px;
             margin-bottom: 8px;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             color: #cbd5e1;
         }
         .achievement-item::before {
             content: '•';
             color: inherit;
             font-weight: bold;
+        }
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(to left, transparent, rgba(255, 255, 255, 0.1), transparent);
+            margin: 4rem 0;
         }
     </style>
 </head>
@@ -88,7 +96,7 @@
     <nav class="sticky top-0 z-50 bg-black/90 backdrop-blur-lg border-b border-white/5 p-4">
         <div class="s25-container flex justify-between items-center">
             <a href="index.html" class="text-cyan-500 text-[10px] font-black tracking-widest uppercase">← Back to Index</a>
-            <span class="text-[10px] text-gray-600 font-bold uppercase tracking-[0.3em]">Phase 01 | Absolute Intel</span>
+            <span class="text-[10px] text-gray-600 font-bold uppercase tracking-[0.3em]">Phase 01 | Absolute Intelligence</span>
         </div>
     </nav>
 
@@ -117,64 +125,63 @@
                 </div>
             </div>
 
-            <!-- Expanded Etymology -->
             <section class="mb-12">
                 <h4 class="text-xs font-bold text-cyan-500 uppercase mb-4">אטימולוגיה מורחבת וזהות</h4>
-                <div class="space-y-4 text-sm font-light text-justify leading-relaxed">
-                    <p>
-                        השם <span class="text-white font-bold italic underline decoration-cyan-500">American</span> הוא פריסה פסיכולוגית של המושג הלאומי והחלת דוקטרינת ה"ייעוד הגלוי" (Manifest Destiny) על המרחב האווירי. המילה נגזרת מהשורש הגרמני העתיק <span class="etymology-chip">Amalric</span>, שבו השורש <span class="italic">Amal</span> מסמל עבודה קשה וחסרת פשרות (עמל), ו-<span class="italic">Ric</span> מסמל עוצמה ושלטון. סיירוס סמית' בחר לנכס את שם היבשת כולה כדי ליצור תחושת ריבונות מוחלטת – מטוס של "אמריקן" לא סתם טס מעל אמריקה, הוא <span class="italic">מייצג</span> את אמריקה.
-                    </p>
-                    <p>
-                        המעבר האסטרטגי מהמונח המוקדם <span class="etymology-tag" style="background:rgba(255,255,255,0.05); padding:2px 6px; border-radius:4px;">Airways</span> למונח הנוכחי <span class="etymology-tag" style="background:rgba(255,255,255,0.05); padding:2px 6px; border-radius:4px;">Airlines</span> סימן את אימוץ המודל הליניארי, התעשייתי והצפוי של ענף הרכבות. המילה <span class="italic">Line</span> (קו/שורה) נגזרת מהלטינית <span class="etymology-chip">Linea</span> (חוט פשתן ישר), ומסמלת את הפיכת השמיים הפראיים למסלול מדויק, מתועש ומתוזמן היטב, בניגוד ל"נתיב" (Way) המרמז על הרפתקה פתוחה ובלתי צפויה של עידן החלוצים.
-                    </p>
+                <div class="space-y-6 text-sm font-light text-justify leading-relaxed">
+                    <div>
+                        <span class="text-white font-bold block mb-1 underline italic">חלק א': American</span>
+                        <p>השם <span class="italic font-bold text-white">American</span> מהווה פריסה פסיכולוגית של המושג הלאומי והחלת דוקטרינת ה"ייעוד הגלוי" (Manifest Destiny) על המרחב האווירי. המילה נגזרת מהשורש הגרמני העתיק <span class="etymology-chip">Amalric</span>, שבו השורש <span class="italic">Amal</span> מסמל עבודה קשה, "עמל" וחסרת פשרות, ו-<span class="italic">Ric</span> מסמל עוצמה, שלטון וריבונות. סיירוס סמית' בחר לנכס את שם היבשת כולה כדי ליצור תחושת ריבונות מוחלטת – המטרה הפסיכולוגית היא שמטוס של החברה לא רק טס מעל ארה"ב, אלא הוא מהווה ייצוג פיזי של הריבונות האמריקאית עצמה וזרוע דיפלומטית עקיפה שלה.</p>
+                    </div>
+                    <div>
+                        <span class="text-white font-bold block mb-1 underline italic">חלק ב': Airlines</span>
+                        <p>המעבר האסטרטגי מהמונח המוקדם שהיה נהוג בחברה, <span class="italic text-white">Airways</span> (נתיבי אוויר), למונח המודרני <span class="italic text-white">Airlines</span> (קווי אוויר) נועד לשדר מעבר חריף לתיעוש. המילה <span class="italic">Line</span> נגזרת מהלטינית <span class="etymology-chip">Linea</span> (חוט פשתן ישר). היא מסמלת את הפיכת השמיים הפראיים למסלול מדויק, ליניארי, צפוי ותעשייתי (המאומץ באופן ישיר ממודל מסילות הברזל), בניגוד גמור למילה "נתיב" המרמזת על הרפתקה פתוחה, מסוכנת ובלתי צפויה של ימי החלוצים ודואר האוויר המוקדמים.</p>
+                    </div>
                 </div>
             </section>
 
-            <!-- Expanding Background & Founding Nexus -->
             <section class="mb-12">
-                <h4 class="text-xs font-bold text-cyan-500 uppercase mb-4 border-b border-cyan-900/30 pb-1 flex items-center gap-2">
-                    הקשר הייסוד: רקע וסיבה מורחבים
-                </h4>
+                <h4 class="text-xs font-bold text-cyan-500 uppercase mb-4 border-b border-cyan-900/30 pb-1 flex items-center gap-2">הקשר הייסוד: רקע וסיבה מורחבים</h4>
                 <div class="founding-nexus-box text-sm font-light leading-relaxed text-justify" style="border-right-color: var(--accent-cyan);">
                     <p>
-                        <span class="text-white font-bold block mb-2 underline italic">הרקע: עידן הקונסולידציה הכלכלית ו"ועידת השלל"</span>
-                        בסוף שנות ה-20, שמי ארה"ב היו זירת קרב כאוטית של כ-80 חברות קטנות וכושלות. הרקע להקמת התאגיד היה "ועידת השלל" (Spoils Conference) הידועה לשמצה של 1930, שבה שר הדואר האמריקאי, וולטר פולגר בראון, כפה על עשרות חברות קטנות להתמזג לשלושה תאגידי ענק תחת איום של שלילת חוזים. קונגלומרט ההשקעות <span class="text-white">AVCO</span> ניצל את הלחץ כדי ליצור מונופול, וב-25 בינואר 1930 אוחדו שברי החברות הללו לתוך <span class="italic font-bold">American Airways</span>. אולם, החברה שנולדה מהמהלך הייתה מפלצת בירוקרטית מנופחת, ללא מטה מרכזי יעיל, ובעלת צי מטוסים מעורבב ויקר לתחזוקה.
+                        <span class="text-white font-bold block mb-2 underline italic">הרקע: עידן הקונסולידציה ו"ועידת השלל"</span>
+                        בסוף שנות ה-20, שמי ארה"ב היו זירת קרב כאוטית של עשרות חברות תעופה קטנות, מקומיות וכושלות. הרקע האמיתי להקמת התאגיד היה אירוע פוליטי חסר תקדים המכונה "ועידת השלל" (Spoils Conference) של שנת 1930. שר הדואר האמריקאי דאז, וולטר פולגר בראון, כפה באכזריות על עשרות חברות להתמזג לשלושה תאגידי ענק תחת איום של שלילת חוזים ממשלתיים לדואר. קונגלומרט ההשקעות <span class="text-white">AVCO</span> ניצל את הלחץ הפוליטי הזה, וב-25 בינואר 1930 איחד את שברי החברות הללו לתוך חברה אחת: <span class="italic font-bold">American Airways</span>. אולם, החברה שנולדה הייתה מפלצת בירוקרטית מנופחת ויקרה, נטולת כיוון אחיד.
                     </p>
                     <p class="mt-4">
-                        <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד: הישרדות קפיטליסטית לאחר שערוריית דואר האוויר</span>
-                        הסיבה האמיתית להפיכתה של החברה לישות המודרנית והדורסנית שאנו מכירים כיום התרחשה ב-1934 בעקבות **שערוריית דואר האוויר** (Air Mail Scandal). הנשיא פרנקלין דלאנו רוזוולט, שזעם על השחיתות שנתגלתה, ביטל באבחה אחת את כל חוזי הדואר הממשלתיים – מקור ההכנסה הבלעדי של התעשייה. מכה זו גזרה גזר דין מוות פיננסי על חברות התעופה. סיירוס סמית' מונה בחופזה לנשיא כדי להציל את השרידים. הוא ייסד מחדש את "American Airlines" מתוך הכרה היסטורית אחת: **החברה חייבת להרוויח מהטסת בני אדם, לא מהטסת שקי דואר מסובסדים**. זו הייתה המהפכה הקפיטליסטית האמיתית של התעופה המערבית – בניית מודל עסקי צרכני, יעיל להחריד, הנשען על כלכלת המונים במקום על תמיכה ממשלתית.
+                        <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד: מהפכה קפיטליסטית לאחר שערוריית דואר האוויר</span>
+                        הסיבה לייסודה מחדש והפיכתה לישות המודרנית, היעילה והדורסנית שאנו מכירים התרחשה ב-1934 בעקבות משבר שנודע כ**שערוריית דואר האוויר**. הנשיא פרנקלין רוזוולט, שזעם על השחיתות בחוזים, ביטל באבחה אחת את כל חוזי הדואר הממשלתיים. מהלך זה גזר למעשה גזר דין מוות פיננסי על התעשייה שחיה על סובסידיות. סיירוס סמית' מונה בחופזה לנשיא כדי להציל את השרידים מקריסה ופשיטת רגל. הוא ייסד מחדש את החברה כ-"American Airlines" מתוך הכרה היסטורית פשוטה ואכזרית: **החברה חייבת ללמוד להרוויח אך ורק מהטסת בני אדם, ולא מתלות בהטסת שקי דואר מסובסדים**. זו הייתה המהפכה הקפיטליסטית האמיתית של התעופה המערבית – המעבר למודל עסקי צרכני הנשען על מסות של אנשים.
                     </p>
                 </div>
             </section>
 
-            <!-- Founder Deep Profile -->
             <section class="mb-12">
                 <h4 class="text-xs font-bold text-cyan-500 uppercase mb-4">פרופיל מייסד: סיירוס רולנד סמית' (C.R. Smith)</h4>
                 <div class="founder-profile-box" style="border-right-color: var(--accent-cyan);">
                     <div class="space-y-6 text-[14px] text-gray-400 font-light text-justify leading-relaxed">
                         <p>
                             <span class="text-white font-bold block mb-1 underline italic">אטימולוגיה של שם המייסד:</span>
-                            <span class="text-cyan-400 font-bold italic">Cyrus</span> (סיירוס) נגזר מהפרסית <span class="italic">Kūruš</span> שפירושו "שמש" או "צעיר" (מיוחס גם לכורש הגדול, מקים אימפריות). <span class="text-cyan-400 font-bold italic">Rowlett</span> (רולנד) נגזר מגרמנית עתיקה <span class="italic">Hrodland</span> – שילוב של <span class="italic">Hrod</span> (תהילה) ו-<span class="italic">Land</span> (אדמה). השם <span class="text-cyan-400 font-bold italic">Smith</span> (סמית') הוא שם תעסוקתי אנגלו-סקסי שפירושו "חרש מתכת" (מתוך השורש <span class="italic">Smitan</span> - להכות, לחשל, לעמול). שילוב השמות מסמל פסיכולוגית "מקים אימפריה של תהילה ועמל קשה".
+                            השם <span class="text-cyan-400 font-bold italic">Cyrus</span> (סיירוס) נגזר מהפרסית העתיקה <span class="italic">Kūruš</span> שפירושו "שמש" או "צעיר" (המיוחס גם לכורש הגדול, מקים האימפריה הפרסית). השם <span class="text-cyan-400 font-bold italic">Rowlett</span> מגיע מגרמנית עתיקה ומשמעותו "תהילה של אדמה" (<span class="italic">Hrod</span> - תהילה, <span class="italic">Land</span> - אדמה). השם <span class="text-cyan-400 font-bold italic">Smith</span> (סמית') הוא שם תעסוקתי אנגלו-סקסי נפוץ שפירושו "חרש מתכת" (מהשורש <span class="italic">Smitan</span> - להכות, לחשל עמוקות בחום). השילוב מסמל פסיכולוגית באופן נבואי "מקים אימפריה של תהילה באמצעות עמל קשה וחישול ברזל".
                         </p>
                         <p>
-                            <span class="text-white font-bold block mb-2 underline italic">ילדות ושברים פסיכולוגיים:</span>
-                            נולד בטקסס הכפרית והנוקשה למשפחה שחוותה התפרקות טראומטית ומשפילה. אביו נטש במפתיע את הבית, מותיר אחריו אם חסרת כל ושבעה ילדים רעבים. העוני המחפיר אילץ את סיירוס הצעיר לעזוב את לימודיו ולעבוד בגיל 9 כמנקה משרדים, מנהל חשבונות זוטר ופקיד כדי להאכיל את אחיו. 
+                            <span class="text-white font-bold block mb-2 underline italic">ילדות, פגיעות ושברים פסיכולוגיים:</span>
+                            סמית' נולד בטקסס הכפרית למשפחה שחוותה התפרקות טראומטית ומשפילה. אביו נטש במפתיע את הבית, מותיר אחריו אם חסרת כל ושבעה ילדים רעבים ללא אמצעי קיום. העוני המחפיר אילץ את סיירוס הצעיר לעזוב את לימודיו ולצאת לעבוד כבר בגיל 9 כמנקה משרדים, מנהל חשבונות זוטר ופקיד בנק רק כדי להאכיל את אחיו ולשרוד. החוויה המוקדמת הזו של אובדן רשת ביטחון צרבה בו חרדה כלכלית עמוקה שלעולם לא הרפתה ממנו.
                         </p>
-                        <div class="trauma-highlight" style="border-right-color: var(--accent-cyan);">
-                            טראומת הנטישה והעוני יצרה אצלו צורך פתולוגי כמעט בשליטה, סדר ויציבות פיננסית. עבור סמית', "יעילות כלכלית" לא הייתה רק אסטרטגיה עסקית, אלא מנגנון הגנה קיומי נגד חוסר הוודאות של גורלו. הוא ראה במספרים ובמאזנים כלי נשק. כמנכ"ל, הוא היה מתקיים על קפה וסיגריות, ישן על ספות המשרד במטה החברה במשך ימים, ודורש מעובדיו ומנהליו את אותה רמת הקרבה דתית ונוקשה שגזר על עצמו – הכל כדי להבטיח שהאימפריה שבנה לעולם לא תקרוס כמו משפחתו.
+                        <div class="trauma-highlight" style="border-right-color: var(--accent-cyan); background: rgba(34, 211, 238, 0.05); color:#a5f3fc;">
+                            טראומת הנטישה והעוני של ילדותו יצרה אצלו צורך פתולוגי כמעט בשליטה, סדר ויציבות פיננסית. עבור סמית', המושג "יעילות כלכלית" לא היה רק אסטרטגיה עסקית נחמדה שנלמדת באוניברסיטה, אלא מנגנון הגנה קיומי ואישי נגד חוסר הוודאות והכאוס של גורלו. הוא ראה במספרים ובמאזנים כלי נשק למניעת קריסה. כמנכ"ל, הוא היה חי על קפה וסיגריות, ישן על ספות המשרד במטה החברה במשך ימים ארוכים כדי לפקח על כל הוצאה, ודורש מעצמו ומעובדיו רמת הקרבה דתית ונוקשה. כל פגם קטן ביעילות נתפס בעיניו כאיום אישי הישרדותי, והכל נועד להבטיח שהאימפריה שבנה לעולם לא תתפרק כפי שקרסה משפחתו.
                         </div>
                         <p>
                             <span class="text-white font-bold block mb-2 underline italic">הישגים מרכזיים ומורשת:</span>
                             <ul class="achievement-list" style="color: var(--accent-cyan);">
-                                <li class="achievement-item"><strong>פיתוח ה-Douglas DC-3:</strong> שיחת הטלפון ההיסטורית שלו לדונלד דאגלס שבה התעקש על מטוס רחב מספיק למיטות שינה, הולידה את המטוס הראשון בהיסטוריה שיכול היה לייצר רווח מהטסת נוסעים בלבד, ושינה את הכלכלה העולמית לנצח.</li>
-                                <li class="achievement-item"><strong>מערכת SABRE:</strong> ייזום שיתוף הפעולה המהפכני עם ענקית המחשוב IBM בשנות ה-50 (על בסיס טכנולוגיית הגנה אווירית צבאית) ליצירת מערכת הזמנת הכרטיסים הממוחשבת הראשונה. פיתוח שהפך את ענף התעופה ממערכת של כרטיסיות נייר לוגיסטיות לרשת מידע דיגיטלית חובקת עולם.</li>
-                                <li class="achievement-item"><strong>אדריכלות כוח פוליטית:</strong> הפיכתה של אמריקן לחברת התעופה הגדולה והמשפיעה בעולם (עד היום), תוך כדי כהונה כקצין לוגיסטיקה בכיר במלחמת העולם השנייה, ולאחר מכן כשר המסחר של ארצות הברית תחת הנשיא לינדון ג'ונסון.</li>
+                                <li class="achievement-item"><strong>פיתוח ה-Douglas DC-3:</strong> בשיחת טלפון היסטורית לדונלד דאגלס הוא התעקש על פיתוח מטוס רחב ומרווח מספיק למיטות שינה, מה שהוליד את המטוס האגדי הראשון בהיסטוריה שיכול היה לייצר רווח נקי מהטסת נוסעים בלבד (ללא שום תלות בחוזי הדואר הממשלתיים), מהלך ששינה את הכלכלה העולמית.</li>
+                                <li class="achievement-item"><strong>מהפכת המידע SABRE:</strong> ייזום פרויקט שיתוף הפעולה עם ענקית המחשוב IBM בשנות ה-50 (על בסיס טכנולוגיית מכ"ם והגנה אווירית של הצבא) ליצירת מערכת הזמנת הכרטיסים הממוחשבת הראשונה בעולם. המהלך הפך את התעופה מתעשייה של כרטיסיות נייר מסורבלות לרשת מידע דיגיטלית מהירה וחובקת עולם.</li>
+                                <li class="achievement-item"><strong>אדריכלות כוח פוליטית:</strong> הפיכת אמריקן לחברת התעופה הגדולה, החזקה והמשפיעה בעולם לאורך עשורים, תוך כדי כהונה אישית שלו כקצין לוגיסטיקה צבאי בכיר במלחמת העולם השנייה, ולאחר מכן כשר המסחר של ארצות הברית בממשלו של הנשיא לינדון ג'ונסון.</li>
                             </ul>
                         </p>
                     </div>
                 </div>
             </section>
         </article>
+
+        <div class="section-divider"></div>
 
         <!-- 02. DELTA AIR LINES -->
         <article class="mb-32">
@@ -188,70 +195,69 @@
 
             <div class="glass-module p-6 mb-10 border-r-4 border-red-600">
                 <div class="space-y-4 text-[14px] text-gray-300 font-light">
-                    <p><strong class="text-white underline decoration-red-600">שנת ייסוד (כחברת ריסוס):</strong> 2 במרץ, 1925.</p>
+                    <p><strong class="text-white underline decoration-red-600">שנת ייסוד (כחברת ריסוס חקלאי):</strong> 2 במרץ, 1925.</p>
                     <p><strong class="text-white underline decoration-red-600">הבונה/ההוגה:</strong> Collett Everman Woolman (1889–1966).</p>
-                    <p><strong class="text-white underline decoration-red-600">מיקום ייסוד:</strong> מייקון, ג'ורג'יה (ומאוחר יותר מונרו, לואיזיאנה).</p>
+                    <p><strong class="text-white underline decoration-red-600">מיקום ייסוד:</strong> מייקון, ג'ורג'יה (ולאחר מכן עברה ללואיזיאנה ואטלנטה).</p>
                 </div>
             </div>
 
-            <!-- Expanded Etymology -->
             <section class="mb-12">
                 <h4 class="text-xs font-bold text-red-500 uppercase mb-4">אטימולוגיה מורחבת וזהות</h4>
-                <div class="space-y-4 text-sm font-light text-justify leading-relaxed">
-                    <p>
-                        השם <span class="etymology-chip" style="background:rgba(239,68,68,0.1); color:#ef4444; border-color:#ef444433;">Delta</span> נגזר מהאות היוונית הרביעית <span class="italic font-bold">Δ</span> (בצורת משולש המסמל יציבות), המייצגת מדעית ומתמטית שינוי, צמיחה ותנועה. אולם, השורש הבלשני העמוק ביותר הוא השמי <span class="etymology-chip" style="background:none; border:none; padding:0;">Dalet</span> (דלת), המייצג פתח או שער לממד חדש.
-                    </p>
-                    <p>
-                        עבור קולט וולמן, הבחירה לא הייתה אקדמית אלא גיאוגרפית ורגשית: השם היה ייצוג פיזי של ה-<span class="text-white font-bold italic">Mississippi Delta</span> (דלתת נהר המיסיסיפי). הבחירה נועדה ליצור מותג המחובר בצורה אורגנית לאדמה העשירה, לחקלאים המקומיים ולקהילה שסבבה אותו. זהו מותג תעופתי שבאופן פרדוקסלי סירב להתנתק מהקרקע. הוא נועד לשדר את "הכנסת האורחים הדרומית" (Southern Hospitality), שהיא המשכו הישיר והמסחרי של היחס האישי החם שקיבלו החקלאים בראשית דרכה של החברה כשעוד ריססה את שדותיהם.
-                    </p>
+                <div class="space-y-6 text-sm font-light text-justify leading-relaxed">
+                    <div>
+                        <span class="text-white font-bold block mb-1 underline italic">חלק א': Delta</span>
+                        <p>השם <span class="etymology-chip" style="background:rgba(239,68,68,0.1); color:#ef4444; border-color:#ef444433;">Delta</span> נגזר מהאות היוונית הרביעית <span class="italic font-bold">Δ</span>, המייצגת מדעית ומתמטית שינוי מתמיד, התרחבות וצמיחה. אולם, השורש הבלשני ההיסטורי והעמוק ביותר הוא השמי <span class="etymology-chip" style="background:none; border:none; padding:0;">Dalet</span> (דלת בעברית/פניקית), המייצג פתח, כניסה או שער לממד חדש. למרות האטימולוגיה העשירה הזו, עבור המייסד קולט וולמן, הבחירה בשם לא הייתה אקדמית אלא גיאוגרפית, חקלאית ורגשית לחלוטין: השם היה ייצוג פיזי של ה-<span class="text-white font-bold italic">Mississippi Delta</span> (דלתת נהר המיסיסיפי). המטרה הייתה לייצר מותג תעופתי שבאופן פרדוקסלי סירב להתנתק מהאדמה ומהחקלאים שלה, ונועד לשדר את תרבות "הכנסת האורחים הדרומית" החמה (Southern Hospitality).</p>
+                    </div>
+                    <div>
+                        <span class="text-white font-bold block mb-1 underline italic">חלק ב': Air Lines</span>
+                        <p>בניגוד גמור לחברות מתחרות כמו אמריקן שאיחדו את המילה ל-Airlines כסמל תעשייתי וקפיטליסטי, דלתא התעקשה בשנותיה המוקדמות (ועד היום בלוגו הרשמי הכתוב) על ההפרדה ל-<span class="italic text-white">Air Lines</span> (שתי מילים נפרדות). ההפרדה הדקדוקית והוויזואלית הזו נועדה להדגיש מבחינה פסיכולוגית וחקלאית את ה"שורות" (Lines) – הנתיבים הישרים, המדויקים והקרובים לקרקע שחצו מטוסי הריסוס מעל שדות הכותנה, ממש בדומה לתלמי המחרשה הישרים בשדה החקלאי המסורתי של הדרום.</p>
+                    </div>
                 </div>
             </section>
 
-            <!-- Expanding Background & Founding Nexus -->
             <section class="mb-12">
-                <h4 class="text-xs font-bold text-red-500 uppercase mb-4 border-b border-red-900/30 pb-1 flex items-center gap-2">
-                    הקשר הייסוד: רקע וסיבה מורחבים
-                </h4>
+                <h4 class="text-xs font-bold text-red-500 uppercase mb-4 border-b border-red-900/30 pb-1 flex items-center gap-2">הקשר הייסוד: רקע וסיבה מורחבים</h4>
                 <div class="founding-nexus-box text-sm font-light leading-relaxed text-justify" style="border-right-color: var(--accent-red);">
                     <p>
-                        <span class="text-white font-bold block mb-2 underline italic">הרקע: אפוקליפסה חקלאית וחורבן תעשיית הכותנה</span>
-                        הרקע להקמת דלתא שונה מכל חברת תעופה אחרת: הוא אינו נולד מתוך רצון לכבוש את השמיים, אלא מתוך מאבק הישרדות ביולוגי על הקרקע. בראשית שנות ה-20, מזיק קטלני, חרק זעיר ורעבתני בשם "חדקונית הכותנה" (Boll Weevil), פלש ממקסיקו והחל להשמיד את שדות הדרום בשיטתיות, מאיים למוטט את הכלכלה האמריקאית כולה שנסמכה על גידולי הכותנה. קולט וולמן, אז מדריך ומפקח במשרד החקלאות האמריקאי, הבין שהפתרון היחיד להתמודד עם המגפה הוא לפזר קוטלי חרקים מגובה נמוך ובמהירות – על ידי ריסוס מהאוויר, טכנולוגיה שהייתה אז ניסיונית ומסוכנת ביותר.
+                        <span class="text-white font-bold block mb-2 underline italic">הרקע: אפוקליפסה חקלאית וחורבן תעשיית הכותנה העולמית</span>
+                        הרקע להקמת דלתא שונה לחלוטין מכל חברת תעופה אחרת בעולם: היא לא נולדה מתוך רצון רומנטי לכבוש את השמיים או להטיס עשירים, אלא מתוך מאבק הישרדות ביולוגי, מלוכלך ונואש על הקרקע עצמה. בראשית שנות ה-20, מזיק קטלני, חרק זעיר ורעבתני במיוחד בשם "חדקונית הכותנה" (Boll Weevil), פלש דרך מקסיקו והחל להשמיד את שדות הדרום בשיטתיות מטרידה. המגפה איימה למוטט את הכלכלה האמריקאית כולה שנסמכה אז בצורה קריטית על גידולי הכותנה של הדרום. קולט וולמן, שעבד אז כמדריך ומפקח במשרד החקלאות, הבין שהפתרון היחיד להתמודד עם הנחילים הוא לפזר קוטלי חרקים (אבק ארסן) מגובה נמוך ובמהירות עצומה – על ידי ריסוס מהאוויר, טכנולוגיה שהייתה אז ניסיונית, מסוכנת ופראית לחלוטין.
                     </p>
                     <p class="mt-4">
-                        <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד: ניצול לוגיסטי של הון מושבת</span>
-                        המעבר הדרמטי של דלתא מחברת ריסוס להטסת נוסעים ב-1929 נבע מ**סיבה לוגיסטית וכלכלית קרה**: מטוסי הריסוס החקלאיים היו מושבתים מפעילות לחלוטין מחוץ לעונת הגידול בקיץ. הדבר יצר נטל כלכלי כבד ובלתי נסבל של הון יקר שמעלה אבק. וולמן החליט לייסד את שירות הנוסעים פשוט כדי **להבטיח את שרידותו הכלכלית של הצי האווירי והטייסים לאורך כל השנה**. הוא גייס הון בסיסי ממשקיעים מקומיים בדרום ארה"ב – חקלאים ואנשי עסקים שהכירו אותו אישית – והקים חברה שנועדה לחבר את הערים הקטנות, המוזנחות והמבודדות של לואיזיאנה ומיסיסיפי לרשת הדרכים של אמריקה המתקדמת. עבור דלתא, המטוס היה ונותר "מחרשה מעופפת" בשירות הקהילה.
+                        <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד: ניצול לוגיסטי הכרחי של הון מושבת</span>
+                        המעבר הדרמטי של דלתא מחברת ריסוס חקלאית נטו להטסת נוסעים סדירה בשנת 1929 נבע מ**סיבה לוגיסטית וכלכלית קרה במיוחד**: מטוסי הריסוס החקלאיים היקרים היו מושבתים מפעילות לחלוטין מחוץ לעונת הגידול בקיץ. הדבר יצר נטל כלכלי כבד ובלתי נסבל עבור החברה – הון יקר שפשוט מעלה אבק רוב השנה. וולמן החליט לייסד את שירות הנוסעים פשוט כדי **להבטיח את שרידותו הכלכלית של הצי האווירי ופרנסת הטייסים לאורך כל עונות השנה**. הוא גייס הון בסיסי מחקלאים מקומיים ואנשי עסקים בדרום, והקים חברה שנועדה תחילה לחבר אך ורק את הערים הקטנות, המוזנחות והמבודדות של לואיזיאנה לרשת הדרכים של אמריקה המתקדמת. עבור דלתא, המטוס היה ונשאר בבסיסו "מחרשה מעופפת" בשירות הקהילה הדרומית.
                     </p>
                 </div>
             </section>
 
-            <!-- Founder Profile -->
             <section class="mb-12">
                 <h4 class="text-xs font-bold text-red-500 uppercase mb-4">פרופיל מייסד: קולט אברמן וולמן (C.E. Woolman)</h4>
                 <div class="founder-profile-box" style="border-right-color: var(--accent-red);">
                     <div class="space-y-6 text-[14px] text-gray-400 font-light text-justify leading-relaxed">
                         <p>
                             <span class="text-white font-bold block mb-1 underline italic">אטימולוגיה של שם המייסד:</span>
-                            <span class="text-red-400 font-bold italic">Collett</span> (קולט) הוא צורת הקטנה צרפתית של <span class="italic">Nicolas</span>, שפירושו מיוונית "ניצחון העם" (<span class="italic">Nike</span> - ניצחון, <span class="italic">Laos</span> - עם). <span class="text-red-400 font-bold italic">Everman</span> (אברמן) מורכב מהשורש הגרמני <span class="italic">Eber</span> (חזיר בר - סמל עתיק לחוסן, כוח הישרדות וחיבור לאדמה) ו-<span class="italic">Man</span> (אדם). <span class="text-red-400 font-bold italic">Woolman</span> (וולמן) הוא שם תעסוקתי אנגלי שפירושו "איש הצמר", המעיד על שורשים חקלאיים ומסורתיים עמוקים. שילוב השמות מסמל בצורה מדויקת להפליא "ניצחון של אדם בעל חוסן חקלאי בשירות העם".
+                            השם <span class="text-red-400 font-bold italic">Collett</span> (קולט) הוא צורת הקטנה צרפתית של השם <span class="italic">Nicolas</span>, שפירושו מיוונית עתיקה "ניצחון העם" (<span class="italic">Nike</span> - ניצחון, <span class="italic">Laos</span> - עם). השם <span class="text-red-400 font-bold italic">Everman</span> מורכב מהשורש הגרמני <span class="italic">Eber</span> (חזיר בר - סמל אירופאי עתיק לחוסן פיזי, כוח הישרדות בתנאים קשים וחיבור עמוק לאדמה ולבוץ) ומהמילה <span class="italic">Man</span>. השם <span class="text-red-400 font-bold italic">Woolman</span> (וולמן) הוא שם תעסוקתי אנגלי קלאסי שפירושו "איש הצמר", המעיד על שורשים חקלאיים, טקסטיל ומסורתיים עמוקים של משפחתו. שילוב כל השמות מסמל בצורה מדויקת להפליא את דמותו של "אדם בעל חוסן חקלאי וקשר לקרקע, הפועל ללא לאות להשגת ניצחון עבור העם והקהילה".
                         </p>
                         <p>
-                            <span class="text-white font-bold block mb-2 underline italic">ילדות וערכים פסיכולוגיים:</span>
-                            וולמן גדל והתחנך באינדיאנה בסביבה חקלאית פוריטנית ושמרנית, שבה עבודת כפיים נתפסה כערך עליון וכחובה מוסרית-דתית. בניגוד לראשי חברות התעופה האחרות שראו במטוס כלי זוהר, צעצוע טכנולוגי או פלטפורמה אימפריאליסטית, המשיכה של וולמן לתעופה הייתה פרקטית, אפרורית ולוגיסטית לחלוטין. הוא למד חקלאות באוניברסיטה, והמטוס שימש עבורו כטרקטור אוניברסלי שנועד לפתור בעיות ארציות.
+                            <span class="text-white font-bold block mb-2 underline italic">ילדות, שדות וערכים פסיכולוגיים בסיסיים:</span>
+                            וולמן גדל והתחנך באינדיאנה בסביבה חקלאית פוריטנית ושמרנית מאוד, שבה עבודת כפיים בבוץ ובשדה נתפסה כערך עליון וכחובה מוסרית-דתית. בניגוד לראשי חברות התעופה האחרות (כמו חואן טריפ המגלומן או וויליאם בואינג המהנדס הקר) שראו במטוס כלי אריסטוקרטי, צעצוע טכנולוגי או כלי אימפריאליסטי פוליטי, המשיכה של וולמן לתעופה הייתה פרקטית, אפרורית, חסרת זוהר ולוגיסטית לחלוטין. הוא למד במכוון חקלאות באוניברסיטה, והמטוס שימש עבורו פשוט כטרקטור אוניברסלי שנועד לפתור בעיות ארציות יומיומיות של חקלאים ועובדי אדמה.
                         </p>
-                        <div class="trauma-highlight" style="border-right-color: var(--accent-red);">
-                            הזהות הניהולית שלו עוצבה סביב ארכיטיפ "מגן הקהילה השבטית". הוא פיתח סלידה עמוקה מגינונים של עושר מופגן, אליטיזם או היררכיה תאגידית קרה. הוא היה ידוע כנשיא חברה שנוהג להתהלך בהאנגרים התחזוקה באמצע הלילה, לבוש בבגדי עבודה פשוטים, ולוחץ ידיים למכונאים מגורזים תוך שהוא קורא להם בשמותיהם הפרטיים ושואל על ילדיהם. האידיאולוגיה השלטת שיצר, "משפחת דלתא" (The Delta Family), לא הייתה ססמה שיווקית, אלא מנגנון הישרדות רגשי: אמונה פטרנליסטית שהחברה חייבת לדאוג לעובדיה מעריסה ועד קבר כדי לייצר ערבות הדדית טוטאלית נגד פגעי הטבע, המשברים הכלכליים, והתחרות האכזרית בחוץ.
+                        <div class="trauma-highlight" style="border-right-color: var(--accent-red); background: rgba(239, 68, 68, 0.05); color:#fca5a5;">
+                            הזהות הניהולית והפסיכולוגית הייחודית שלו עוצבה סביב ארכיטיפ "מגן הקהילה השבטית". הוא פיתח סלידה פנימית עמוקה מגינונים של עושר מופגן, אליטיזם משכיל או היררכיה תאגידית וול-סטריטית קרה. הוא היה ידוע לאורך שנותיו כנשיא חברה שנוהג להתהלך לבדו בהאנגרים של התחזוקה באמצע הלילה, לבוש בבגדי עבודה פשוטים וזולים, ולוחץ ידיים למכונאים מגורזים תוך שהוא קורא להם בשמותיהם הפרטיים ושואל על בריאות ילדיהם. האידיאולוגיה השלטת והעמוקה שיצר, ומוכרת עד היום כ"משפחת דלתא" (The Delta Family), לא הייתה ססמה שיווקית של יחסי ציבור, אלא מנגנון הישרדות רגשי: אמונה פטרנליסטית ודתית כמעט שהחברה (כמו משפחת חקלאים גדולה) חייבת לדאוג לעובדיה מעריסה ועד קבר, כדי לייצר ערבות הדדית טוטאלית נגד פגעי הטבע, המשברים הכלכליים, והתחרות האכזרית בחוץ.
                         </div>
                         <p>
                             <span class="text-white font-bold block mb-2 underline italic">הישגים מרכזיים ומורשת:</span>
                             <ul class="achievement-list" style="color: var(--accent-red);">
-                                <li class="achievement-item"><strong>חלוציות חקלאית-תעופתית:</strong> הקמת חברת הריסוס המסחרית הראשונה בעולם ("Huff Daland Dusters"), שהצילה בפועל את תעשיית החקלאות בדרום ארה"ב מקריסה מוחלטת ויצרה את התשתית הגיאוגרפית של החברה.</li>
-                                <li class="achievement-item"><strong>אדריכלות הרשת המודרנית:</strong> פיתוח מוקדם והמצאה למעשה של מודל רשת ה-"Hub and Spoke" (ציר וחישורים) התעופתי, שחיבר עשרות ערים משניות ועיירות קטנות בדרום דרך מוקד מרכזי יחיד באטלנטה, מודל שלימים הועתק על ידי כל חברות התעופה בעולם.</li>
-                                <li class="achievement-item"><strong>תרבות תאגידית חסינת-איגודים:</strong> עיצוב תרבות "משפחת דלתא", שיצרה נאמנות עובדים מוחלטת, תנאי העסקה פטרנליסטים והטבות רווחה חסרות תקדים לתקופה, מה שמונע עד היום את התאגדותם של רוב עובדי החברה (דיילים ומכונאים) – תופעה יוצאת דופן וייחודית לחלוטין בתעשיית התעופה האמריקאית.</li>
+                                <li class="achievement-item"><strong>חלוציות חקלאית-תעופתית עולמית:</strong> הקמת חברת הריסוס המסחרית הראשונה בעולם ("Huff Daland Dusters"), מהלך אמיץ שהציל בפועל את תעשיית החקלאות והכותנה בדרום ארה"ב מקריסה כלכלית מוחלטת והיווה את הבסיס הפיננסי האיתן לחברה העתידית.</li>
+                                <li class="achievement-item"><strong>אדריכלות הרשת המודרנית של ארה"ב:</strong> פיתוח מוקדם והמצאה למעשה של המודל האולטימטיבי: רשת ה-"Hub and Spoke" (ציר וחישורים) דרך מרכז הפעילות העצום באטלנטה. המודל שחיבר עשרות ערים משניות למוקד מרכזי אחד הועתק לימים על ידי כל עולם התעופה והפך את נמל התעופה של אטלנטה לעמוס בעולם.</li>
+                                <li class="achievement-item"><strong>תרבות תאגידית חסינת-איגודים דורסניים:</strong> עיצוב והטמעת תרבות "משפחת דלתא", שיצרה רמות של נאמנות עובדים מוחלטת ותנאי העסקה פטרנליסטים יוצאי דופן בנדיבותם. תרבות זו מונעת בהצלחה, עד עצם היום הזה ממש, את התאגדותם של רוב עצום מעובדי החברה (כמו עשרות אלפי דיילים ומכונאים) – תופעה חריגה וייחודית לחלוטין בתעשיית התעופה האמריקאית המאוגדת בכבדות.</li>
                             </ul>
                         </p>
                     </div>
                 </div>
             </section>
         </article>
+
+        <div class="section-divider"></div>
 
         <!-- 03. UNITED AIRLINES -->
         <article class="mb-32">
@@ -263,67 +269,63 @@
                 </div>
             </div>
 
-            <!-- Metadata -->
             <div class="glass-module p-6 mb-10 border-r-4 border-indigo-600">
                 <div class="space-y-4 text-[14px] text-gray-300 font-light">
-                    <p><strong class="text-white underline decoration-indigo-600">שנת ייסוד (Varney Air Lines):</strong> 6 באפריל, 1926.</p>
-                    <p><strong class="text-white underline decoration-indigo-600">הבונה/ההוגה:</strong> William Edward Boeing (1881–1956).</p>
+                    <p><strong class="text-white underline decoration-indigo-600">שנת ייסוד (כחברת Varney Air Lines):</strong> 6 באפריל, 1926.</p>
+                    <p><strong class="text-white underline decoration-indigo-600">הבונה/ההוגה (המהנדס הגדול):</strong> William Edward Boeing (1881–1956).</p>
                     <p><strong class="text-white underline decoration-indigo-600">מיקום ייסוד:</strong> בויסי, איידהו / סיאטל, וושינגטון, ארה"ב.</p>
                 </div>
             </div>
 
-            <!-- Expanded Etymology -->
             <section class="mb-12">
                 <h4 class="text-xs font-bold text-indigo-500 uppercase mb-4">אטימולוגיה מורחבת וזהות</h4>
-                <div class="space-y-4 text-sm font-light text-justify leading-relaxed">
-                    <p>
-                        השם <span class="etymology-chip" style="background:rgba(79,70,229,0.1); color:#6366f1; border-color:#6366f133;">United</span> מקורו בלטינית העתיקה <span class="etymology-chip" style="background:none; border:none; padding:0;">Unitas</span>, המסמלת מצב של שלמות קשיחה המורכבת מהלחמה של חלקים רבים ושונים הפועלים כאורגניזם אחד. השורש <span class="italic">Unus</span> (אחד) מסמל במקרה זה את ביטול האינדיבידואליות השברירית לטובת עוצמתה של המערכת המכנית.
-                    </p>
-                    <p>
-                        עבור וויליאם בואינג, המהנדס הקר והמחושב, השם "יונייטד" מעולם לא סימל קלישאה של אחדות חברתית של אנשים או אחים. הוא סימל באופן הנדסי ומילולי את **האחידות המוחלטת של החלקים התעשייתיים**. זהו שם שמשדר עוצמה תעשייתית קרה, אמינות הנדסית בלתי מתפשרת וסטנדרטיזציה קשיחה. המותג נועד להדגיש בפני הציבור האמריקאי את המעבר המנטלי מעידן ה"פרפורמנס האישי" וההרפתקני של הטייס הבודד עם צעיף המשי, אל עידן הביצועים המכניים, הצפויים והבטוחים של המערכת התאגידית המאוחדת.
-                    </p>
+                <div class="space-y-6 text-sm font-light text-justify leading-relaxed">
+                    <div>
+                        <span class="text-white font-bold block mb-1 underline italic">חלק א': United</span>
+                        <p>השם המכונן <span class="etymology-chip" style="background:rgba(79,70,229,0.1); color:#6366f1; border-color:#6366f133;">United</span> מקורו בלטינית העתיקה, מהמילה <span class="etymology-chip" style="background:none; border:none; padding:0;">Unitas</span>, המסמלת מצב של שלמות קשיחה המורכבת מהלחמה, איחוד וקישור של חלקים רבים ושונים הפועלים בסנכרון כאורגניזם אחד. אולם, בעוד שעבור רוב האנשים המילה מסמלת "אחדות" חברתית או אחווה לאומית (כמו "ארצות הברית"), עבור וויליאם בואינג – המהנדס הקר והמחושב בעל החזון התעשייתי – השם מעולם לא סימל קלישאה חברתית. הוא סימל באופן הנדסי ומילולי טהור את **האחידות המוחלטת של החלקים התעשייתיים** (Standardization). זהו שם שנועד מיומו הראשון לשדר לציבור עצומה תעשייתית קרה, אמינות הנדסית בלתי מתפשרת וביטול מוחלט של האינדיבידואליות השברירית של "טייסי הפעלולים" לטובת כוחה של המערכת המכאנית.</p>
+                    </div>
+                    <div>
+                        <span class="text-white font-bold block mb-1 underline italic">חלק ב': Airlines</span>
+                        <p>המילה <span class="italic text-white">Airlines</span> נבחרה בקפידה על פני Airways או Aviation כדי להדגיש את הקישור האוטומטי והמשעמם (במובן החיובי), כמו בפס ייצור תעשייתי, של מטוסי בואינג הפועלים ברצף ליניארי אחד אחרי השני. הדימוי שביקשו להעביר לציבור האמריקאי המפוחד מטיסות היה שמדובר ב"קרונות רכבת מהירים" החוצים את היבשת על קו (Line) ישר, בלתי נראה אך חזק ובטוח כמו פלדה.</p>
+                    </div>
                 </div>
             </section>
 
-            <!-- Expanding Background & Founding Nexus -->
             <section class="mb-12">
-                <h4 class="text-xs font-bold text-indigo-500 uppercase mb-4 border-b border-indigo-900/30 pb-1 flex items-center gap-2">
-                    הקשר הייסוד: רקע וסיבה מורחבים
-                </h4>
+                <h4 class="text-xs font-bold text-indigo-500 uppercase mb-4 border-b border-indigo-900/30 pb-1 flex items-center gap-2">הקשר הייסוד: רקע וסיבה מורחבים</h4>
                 <div class="founding-nexus-box text-sm font-light leading-relaxed text-justify" style="border-right-color: var(--accent-indigo);">
                     <p>
-                        <span class="text-white font-bold block mb-2 underline italic">הרקע: חזון האינטגרציה האנכית וההשתלטות התעשייתית</span>
-                        הרקע להקמת יונייטד איירליינס נעוץ עמוק באובססיה וברצון העז של וויליאם בואינג לשלוט באופן מוחלט בכל פירור ובכל בורג בשרשרת האספקה האווירית. בשנות ה-20, בואינג כבר שלט ביד רמה בפסי הייצור של המטוסים עצמם במפעליו שבסיאטל, ורכש את חברת Pratt & Whitney כדי לשלוט גם בייצור מנועי התעופה. ב-1926 הוא הקים את חברת <span class="text-white font-bold italic">Boeing Air Transport</span> ורכש מתחרים (כמו Varney ו-National Air Transport) כדי להשתלט לוגיסטית על נתיב הדואר היוקרתי והרווחי ביותר באמריקה – הקו הטרנס-יבשתי מניו יורק לשיקגו ועד סן פרנסיסקו.
+                        <span class="text-white font-bold block mb-2 underline italic">הרקע: חזון האינטגרציה האנכית וההשתלטות התעשייתית המוחלטת</span>
+                        הרקע להקמת יונייטד איירליינס כזרוע תפעולית נעוץ עמוק באובססיה וברצון העז של איש העסקים והמהנדס וויליאם בואינג לשלוט באופן מוחלט, מלמעלה למטה, בכל פירור ובכל בורג בשרשרת האספקה האווירית של ארה"ב. בשנות ה-20, בואינג כבר שלט ביד רמה בפסי הייצור של המטוסים עצמם במפעליו המתקדמים שבסיאטל. כדי להעמיק את המונופול, הוא אף רכש את חברת Pratt & Whitney כדי לשלוט גם בייצור מנועי התעופה עצמם. השלב הבא היה טבעי: ב-1926 הוא הקים את חברת <span class="text-white font-bold italic">Boeing Air Transport</span> והחל לרכוש מתחרים קטנים בשוק כדי להשתלט לוגיסטית וגיאוגרפית על נתיב הדואר הממשלתי היוקרתי והרווחי ביותר באמריקה – הקו הטרנס-יבשתי הארוך והיוקרתי שחיבר בין ניו יורק, דרך שיקגו, ועד סן פרנסיסקו.
                     </p>
                     <p class="mt-4">
-                        <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד: בניית המונופול ההנדסי המושלם</span>
-                        הקמת חברת הגג הענקית יונייטד (United Aircraft and Transport Corporation) ב-1931 נבעה מהחזון ליצור **שלמות מערכתית חסרת פשרות**. בואינג שאף לכך שהנוסע או שק הדואר יהיו "לקוחות שבויים" של המהנדס מתחילת המסע ועד סופו. סיבת הייסוד הייתה פשוטה ואכזרית: **שליטה תעשייתית טוטאלית מלמעלה למטה**. המודל היה – מטוס שתוכנן על ידי בואינג, המונע באמצעות מנועים שיוצרו על ידי בואינג, המתופעל על ידי חברת תעופה שבבעלות בואינג, וטס בנתיב מוסדר ששייך לבואינג. זה היה המודל המוקדם, השאפתני והחזק ביותר של תאגיד תעופה גלובלי השולט בכל שלבי הייצור, התחזוקה והתפעול השוטף.
+                        <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד: בניית המונופול ההנדסי המושלם (לפני פירוקו הממשלתי)</span>
+                        הקמת חברת הגג הענקית תחת השם יונייטד (United Aircraft and Transport Corporation) ב-1931 נבעה מהחזון הקיצוני ליצור **שלמות מערכתית חסרת פשרות וחסרת מתחרים**. בואינג שאף לכך שהנוסע או שק הדואר ששולחת הממשלה יהיו "לקוחות שבויים" של המהנדס מתחילת המסע ועד סופו ללא יכולת בחירה אחרת. סיבת הייסוד הייתה פשוטה, מבריקה ואכזרית כלכלית: **שליטה תעשייתית טוטאלית במעגל סגור**. המודל שיצר היה – מטוס שתוכנן ונבנה על ידי פועלי בואינג, המונע באמצעות מנועים שיוצרו בבעלות בואינג, המתופעל ומוטס על ידי חברת תעופה שבבעלות בואינג (יונייטד), וטס בנתיב מוסדר ששייך לבואינג. זה היה המודל המוקדם, השאפתני והחזק ביותר של תאגיד תעופה שאיים להשתלט על שמי אמריקה.
                     </p>
                 </div>
             </section>
 
-            <!-- Founder Profile -->
             <section class="mb-12">
                 <h4 class="text-xs font-bold text-indigo-500 uppercase mb-4">פרופיל מייסד: וויליאם בואינג (William Boeing)</h4>
                 <div class="founder-profile-box" style="border-right-color: var(--accent-indigo);">
                     <div class="space-y-6 text-[14px] text-gray-400 font-light text-justify leading-relaxed">
                         <p>
                             <span class="text-white font-bold block mb-1 underline italic">אטימולוגיה של שם המייסד:</span>
-                            <span class="text-indigo-400 font-bold italic">William</span> (וויליאם) נגזר מגרמנית עתיקה <span class="italic">Willahelm</span> – שילוב עוצמתי של <span class="italic">Willa</span> (רצון מתכתי/תשוקה עזה) ו-<span class="italic">Helm</span> (קסדה/הגנה/שריון). פירושו המילולי הוא "מגן נחוש". השם <span class="text-indigo-400 font-bold italic">Boeing</span> (בואינג) הוא שם משפחה גרמני שורשי (<span class="italic">Böing</span>) המבוסס על השם הפרטי <span class="italic">Bodo</span>, שפירושו בשבטים הגרמניים "שליח" או "מפקד/שליט". שילוב השמות מסמל באופן כמעט נבואי "מפקד ומגן בעל רצון ברזל".
+                            השם <span class="text-indigo-400 font-bold italic">William</span> (וויליאם) נגזר מגרמנית עתיקה והיה נפוץ בקרב הלוחמים, תחת הצורה <span class="italic">Willahelm</span> – שילוב עוצמתי של <span class="italic">Willa</span> (רצון מתכתי, החלטה או תשוקה עזה) ו-<span class="italic">Helm</span> (קסדה, הגנה או שריון). פירושו המילולי והפסיכולוגי הוא "מגן נחוש שאינו נכנע". השם <span class="text-indigo-400 font-bold italic">Boeing</span> (בואינג) הוא שם משפחה גרמני שורשי וכבד (<span class="italic">Böing</span>) המבוסס במקורו על השם הפרטי <span class="italic">Bodo</span>, שפירושו בשבטים הגרמניים העתיקים "שליח", "מפקד" או מי שמביא את הבשורה. שילוב השמות ההיסטורי הזה מסמל באופן כמעט נבואי אדם שהוא "מפקד ומגן בעל רצון ברזל שאינו נשבר גם תחת אש".
                         </p>
                         <p>
-                            <span class="text-white font-bold block mb-2 underline italic">ילדות ושברים פסיכולוגיים:</span>
-                            וויליאם נולד בדטרויט למשפחת מהגרים גרמנית אמידה מאוד של תעשייני עץ וכרייה. חייו המוגנים התנפצו כשאביו מת באופן פתאומי משפעת בזמן שוויליאם היה רק בן 8. הטראומה של אובדן דמות האב החזקה הובילה לכך שאמו שלחה אותו ללמוד בבידוד כמעט מוחלט בפנימייה אירופאית נוקשה ויוקרתית בשוויץ.
+                            <span class="text-white font-bold block mb-2 underline italic">ילדות מהגרים ושברים פסיכולוגיים של אובדן ובידוד:</span>
+                            וויליאם נולד בדטרויט שבמישיגן למשפחת מהגרים גרמנית אמידה מאוד של תעשייני עץ וכרייה שהצליחו בגדול. חייו המוגנים כילד עשיר התנפצו לרסיסים כשאביו האהוב מת באופן פתאומי משפעת בזמן שוויליאם היה רק בן 8. הטראומה של אובדן דמות האב החזקה והשולטת הובילה את אימו להחלטה דרסטית: היא שלחה את הילד הצעיר ללמוד בבידוד כמעט מוחלט הרחק מהבית, בפנימייה אירופאית נוקשה, קרה ויוקרתית בשוויץ.
                         </p>
-                        <div class="trauma-highlight" style="border-right-color: var(--accent-indigo);">
-                            שנות הבידוד הכפוי בשוויץ, הרחק ממשפחתו, יצרו אצלו זהות פסיכולוגית של מהנדס מרוחק, מתבודד ופרפקציוניסט חסר פשרות. הוא לא חיפש קשרים רגשיים, חברים או הרפתקאות; הוא חיפש את השלמות המתמטית והסימטריה שאפשר למצוא רק במכונה הניתנת לשליטה. ליבו הפסיט להאמין בבני אדם והאמין במבנים. כאשר הממשלה האמריקאית, בחקיקה של 1934, פירקה בכוח את מונופול הענק שלו באמתלה של הגבלים עסקיים, בואינג לא ראה בכך רגולציה עסקית שגרתית. הוא ראה בכך נעיצת סכין אישית בעבודת חייו ועלבון עמוק ליושרה ההנדסית שלו. מתוך תחושת בגידה וזעם כבוש, הוא מכר מיד את כל מניותיו, התפטר מכל תפקידיו, ופרש מעסקי התעופה לצמיתות.
+                        <div class="trauma-highlight" style="border-right-color: var(--accent-indigo); background: rgba(79, 70, 229, 0.05); color:#a5b4fc;">
+                            שנות הבידוד הכפוי בשוויץ המושלגת, הרחק ממשפחתו ומארצו, יצרו וקיבעו אצלו זהות פסיכולוגית של מהנדס מרוחק, מתבודד מזהיר ופרפקציוניסט חסר פשרות. הוא למד לא לסמוך על סנטימנטים. הוא לא חיפש קשרים רגשיים, חברים קרובים או הרפתקאות מסמרות שיער כימי החלוצים; הוא חיפש אך ורק את השלמות המתמטית, את הסימטריה ואת הודאות שניתן למצוא ולשלוט בה רק במכונה מכוילת היטב. ליבו פסק להאמין בחולשות של בני אדם והאמין במבנים ומנועים שאינם מאכזבים. לכן, כאשר הממשלה האמריקאית, בחקיקה האגרסיבית של רפורמת דואר האוויר ב-1934, פירקה בכוח החוק את מונופול הענק האנכי והמושלם שלו באמתלה של פגיעה בהגבלים עסקיים, בואינג לא ראה בכך סתם רגולציה עסקית שגרתית שאפשר לעקוף. הוא ראה בכך נעיצת סכין אישית בעבודת חייו ועלבון עמוק ליושרה ההנדסית שהקדיש לה את נפשו. מתוך תחושת בגידה מרה, עלבון וזעם כבוש וקר, הוא מכר מיד את כל מניותיו בתאגיד, התפטר מכל תפקידיו בבת אחת, ופרש מעסקי התעופה לצמיתות.
                         </div>
                         <p>
-                            <span class="text-white font-bold block mb-2 underline italic">הישגים מרכזיים ומורשת:</span>
+                            <span class="text-white font-bold block mb-2 underline italic">הישגים מרכזיים ומורשת הנדסית:</span>
                             <ul class="achievement-list" style="color: #6366f1;">
-                                <li class="achievement-item"><strong>אימפריה תעשייתית:</strong> ייסוד חברת המטוסים בואינג ויצירת תאגיד התעופה האנכי הראשון והיחיד בהיסטוריה ששלט בפיתוח, בייצור המטוסים והמנועים ובתפעול טיסות הנוסעים (עד לפירוקו הממשלתי ב-1934 לישויות נפרדות: בואינג, יונייטד איירליינס, ויונייטד טכנולוגיות).</li>
-                                <li class="achievement-item"><strong>פריצת דרך הנדסית:</strong> דחיפה לפיתוח ה-Boeing 247 בשנת 1933, מטוס שנחשב להיסטוריון טכנולוגי כמטוס הנוסעים המודרני הראשון בהיסטוריה – בנוי כולו ממתכת מחופה, בעל גלגלים מתקפלים ומערכות הפשרה, שהפך את כל המטוסים האחרים בעולם למיושנים ביום שבו המריא.</li>
-                                <li class="achievement-item"><strong>כיבוש היבשת:</strong> כינון ופיתוח נתיב הדואר והנוסעים הטרנס-יבשתי הראשון בארצות הברית (Transcontinental Route), שיצר בפעם הראשונה חיבור לוגיסטי מהיר, אמין וישיר מחוף אל חוף (מניו יורק לסן פרנסיסקו), מה שהיווה את עמוד השדרה של כלכלת אמריקה המודרנית.</li>
+                                <li class="achievement-item"><strong>הקמת האימפריה התעשייתית המושלמת:</strong> ייסוד חברת המטוסים בואינג ויצירת תאגיד התעופה האנכי הראשון והיחיד בהיסטוריה ששלט באופן טוטאלי בכל שרשרת הערך – החל מפיתוח וייצור המנוע והמטוס, ועד לתפעול הטיסה היומיומי מול הנוסע (עד פירוקו הממשלתי הכפוי לישויות נפרדות).</li>
+                                <li class="achievement-item"><strong>פריצת דרך הנדסית היסטורית משנת מציאות:</strong> דחיפה בלתי מתפשרת לפיתוח ה-Boeing 247 בשנת 1933. מטוס זה נחשב בקרב היסטוריונים של הטכנולוגיה כמטוס הנוסעים המודרני האמיתי הראשון בהיסטוריה. הוא נבנה לראשונה כולו ממתכת מחופה (ולא מבד ועץ), עם גלגלים מתקפלים ומערכות הפשרה, שהפכו את כל המטוסים האחרים בעולם למיושנים בין לילה.</li>
+                                <li class="achievement-item"><strong>כיבוש פיזי ולוגיסטי של היבשת:</strong> כינון, ארגון ופיתוח נתיב הדואר והנוסעים הטרנס-יבשתי הראשון בארצות הברית, שיצר בפעם הראשונה חיבור לוגיסטי מהיר, אווירי ואמין מחוף אל חוף, מה שהיווה את עמוד השדרה לכלכלה ולמסחר האמריקאי המודרני במאה ה-20.</li>
                             </ul>
                         </p>
                     </div>
@@ -331,17 +333,94 @@
             </section>
         </article>
 
-        <!-- 04. AIR FRANCE -->
+        <div class="section-divider"></div>
+
+        <!-- 04. KLM ROYAL DUTCH AIRLINES -->
+        <article class="mb-32">
+            <div class="flex items-center gap-4 mb-8">
+                <span class="text-6xl font-black text-white/5">04</span>
+                <div>
+                    <h2 class="text-4xl font-black text-white leading-tight">KLM Royal Dutch</h2>
+                    <p class="text-[11px] text-sky-400 font-bold uppercase tracking-widest italic">The Maritime Heir</p>
+                </div>
+            </div>
+
+            <div class="glass-module p-6 mb-10 border-r-4 border-sky-500">
+                <div class="space-y-4 text-[14px] text-gray-300 font-light">
+                    <p><strong class="text-white underline decoration-sky-500">שנת ייסוד רשמית:</strong> 7 באוקטובר, 1919 (נחשבת לחברת התעופה הוותיקה ביותר בעולם הפועלת עדיין תחת שמה המקורי).</p>
+                    <p><strong class="text-white underline decoration-sky-500">הבונה/ההוגה (אבי התעופה ההולנדית):</strong> Albert Plesman (1889–1953).</p>
+                    <p><strong class="text-white underline decoration-sky-500">מיקום ייסוד:</strong> האג / אמסטרדם, הולנד.</p>
+                </div>
+            </div>
+
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-sky-500 uppercase mb-4">אטימולוגיה מורחבת וזהות</h4>
+                <div class="space-y-6 text-sm font-light text-justify leading-relaxed">
+                    <div>
+                        <span class="text-white font-bold block mb-1 underline italic">חלק א': Koninklijke</span>
+                        <p>המילה הפותחת את ראשי התיבות, <span class="etymology-chip" style="background:rgba(14,165,233,0.1); color:#0ea5e9; border-color:#0ea5e933;">Koninklijke</span>, פירושה בהולנדית "מלכותית". זהו נתון פוליטי מרתק וחריג: המלכה וילהלמינה העניקה לחברה את התואר המלכותי היוקרתי בספטמבר 1919, חודש שלם *לפני* שהחברה בכלל הוקמה ונרשמה רשמית, ומובן שלפני שהיה ברשותה אפילו כלי טיס אחד. זהו ביטוי לעוצמת הגיבוי המדיני המוחלט והחד-משמעי של הכתר ההולנדי במיזם הפרטי לכאורה, במטרה להבטיח את שליטתה האווירית של הולנד בעולם החדש.</p>
+                    </div>
+                    <div>
+                        <span class="text-white font-bold block mb-1 underline italic">חלק ב': Luchtvaart Maatschappij</span>
+                        <p>המילה המרכזית <span class="italic text-white">Luchtvaart</span> פירושה המילוני והמודרני הוא פשוט "תעופה", אך היא מתורגמת מילולית ופואטית כ"שיוט או הפלגה באוויר" (<span class="italic">Lucht</span> = אוויר, <span class="italic">Vaart</span> = הפלגה/שייט או נתיב מים). בחירת המילה אינה מקרית; זוהי ירושה פסיכולוגית ישירה של הזיכרון הלאומי הקולקטיבי מתור הזהב של הולנד במאה ה-17 כמעצמה ימית ואימפריה של ספנות. המילה <span class="italic text-white">Maatschappij</span> פירושה "חברה" או "תאגיד/אגודה". המותג כולו, כבלוק אחד, נועד לשדר להולנדים, שהיו חשדניים כלפי כלי הטיס, שהתעופה החדשה אינה אלא המשך טבעי, היסטורי ומכובד של תפארת "חברת הודו המזרחית ההולנדית" ההיסטורית (VOC) – העברת מטה השליטה הימית של הולנד אל מרחבי האוקיינוס החדש והלא נודע: השמיים.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-sky-500 uppercase mb-4 border-b border-sky-900/30 pb-1 flex items-center gap-2">הקשר הייסוד: רקע וסיבה מורחבים</h4>
+                <div class="founding-nexus-box text-sm font-light leading-relaxed text-justify" style="border-right-color: #0ea5e9;">
+                    <p>
+                        <span class="text-white font-bold block mb-2 underline italic">הרקע: ניטרליות מבודדת ותערוכת ELTA שפקחה עיניים לכתר</span>
+                        הרקע המדויק להקמת KLM נובע ממיקומה החריג של הולנד במלחמת העולם הראשונה שזה עתה הסתיימה. הולנד שמרה בקנאות על ניטרליות מוחלטת ולכן לא נחרבה הפיזית או הכלכלית כמו שכנותיה הבלגיות והצרפתיות, אך המלחמה הקשה הוכיחה לה שהבידוד אינו מספק הגנה כלכלית ואסטרטגית מול עולם משתנה. באוגוסט 1919, קצין צעיר בחיל האוויר, שאפתן, רואה עתידות וחסר מנוח בשם אלברט פלסמן, ארגן את תערוכת התעופה האזרחית הראשונה באמסטרדם שכונתה (ELTA). התערוכה הייתה סנסציה: היא משכה חצי מיליון מבקרים נדהמים בתוך ימים, והוכיחה לכתר, לממשלה ולמשקיעים כי התעופה עברה באופן סופי משלב של כלי נשק הרסני ומפחיד, לשלב של כלי מסחרי בטוח שעתיד לשנות את פני הכלכלה הלאומית ואת התחבורה האנושית.
+                    </p>
+                    <p class="mt-4">
+                        <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד: יצירת חבל ההצלה הלוגיסטי של אימפריה מרוחקת</span>
+                        הסיבה הגיאופוליטית והכלכלית העליונה להקמת KLM לא הייתה מעולם, כפי שנהוג לחשוב, להפעיל טיסות תיירות קצרות באירופה, אלא **הצורך הנואש והקיומי של הולנד הקטנה לתחזק את אחיזתה המנהלית באימפריה הקולוניאלית העצומה והמרוחקת שלה**, ובראשה איי הודו המזרחית ההולנדית (אינדונזיה של ימינו), מקור העושר של המדינה. מסע ימי מנמל רוטרדם לבטאוויה (ג'קרטה) לקח אז שבועות ארוכים והיה תלוי לחלוטין בחסדי מצב הרוח וההסכמים מול הצי הבריטי השולט בימים. המטוס, לעומת זאת, הציע פתרון קסם: קו תקשורת, משלוח דואר רשמי ומנהל ישיר שאורכו ימים ספורים בלבד, ללא שום תלות בנמלי ים זרים. KLM נוסדה ממשלות כדי לשמש כ"כבל הפלדה הלוגיסטי" שיקשור ויבטח את המושבות העשירות בנפט ובתבלינים בחזרה אל המולדת השטוחה והפגיעה באירופה.
+                    </p>
+                </div>
+            </section>
+
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-sky-500 uppercase mb-4">פרופיל מייסד: אלברט פלסמן (Albert Plesman)</h4>
+                <div class="founder-profile-box" style="border-right-color: #0ea5e9;">
+                    <div class="space-y-6 text-[14px] text-gray-400 font-light text-justify leading-relaxed">
+                        <p>
+                            <span class="text-white font-bold block mb-1 underline italic">אטימולוגיה של שם המייסד ("האבא של התעופה ההולנדית"):</span>
+                            השם הפרטי <span class="text-sky-400 font-bold italic">Albert</span> (אלברט) מקורו בשם הגרמאני העתיק <span class="italic">Adalbert</span>, שמשמעותו מורכבת מ"אציל" או מעמד גבוה (Adal) ו"מזהיר/בהיר" (Beraht). שם המשפחה <span class="text-sky-400 font-bold italic">Plesman</span> (פלסמן) הוא שם הולנדי מובהק ושורשי הנטוע עמוק בטופוגרפיה המקומית השטוחה, שפירושו המילולי הוא "איש של בריכות מים", או במונחים מקומיים "איש הפולדר" – אדם שחי סמוך לאגמים המיובשים (<span class="italic">Plas</span> = בריכה/אגם רדוד). השילוב של השמות מייצג באופן פואטי ומדויק להפליא "אצילות ומנהיגות הנולדת היישר מתוך אדמת הביצות והמים ההולנדית".
+                        </p>
+                        <p>
+                            <span class="text-white font-bold block mb-2 underline italic">ילדות צנועה, עבודה קשה ושברים פסיכולוגיים גיאופוליטיים:</span>
+                            פלסמן לא נולד לאצולה או לכסף גדול, למרות התואר המלכותי של חברתו. הוא נולד בהאג, והיה בנו השביעי של סוחר ביצים פשוט, קפדן וישר דרך. בניגוד לדימוי האליטיסטי, הזוהר והרומנטי של רוב חלוצי התעופה באירופה (שהיו בניהם של אצילים צרפתים או תעשיינים גרמנים), הוא היה איש עבודה שפלס את דרכו בשיניים, במשמעת ובמאמץ אדיר למעמד קצונה דרך האקדמיה הצבאית. החרדה הקיומית שהניעה אותו הייתה עמוקה יותר מפרנסה פשוטה, היא הייתה לאומית.
+                        </p>
+                        <div class="trauma-highlight" style="border-right-color: #0ea5e9; background: rgba(14, 165, 233, 0.05); color:#bae6fd;">
+                            הטראומה העמוקה שהניעה את פלסמן לכל אורך דרכו, מעבר לחינוכו הנוקשה מבית, הייתה "תסביך המדינה הקטנה" (Small State Complex). הוא הבין באנליטיות קרה שעבור מדינה שטוחה, זעירה ונטולת הגנה טבעית כמו הולנד, אשר מוקפת באימפריות אגרסיביות ואלימות (כמו גרמניה ממזרח ואנגליה ממערב), הישרדות לאומית וריבונית אינה מובטחת על ידי בניית צבא יבשה (שיירמס מיד במלחמה), אלא אך ורק על ידי שמירה על עליונות לוגיסטית מוחלטת ושליטה מהירה במסחר העולמי. כדי לפצות על הפגיעות הגיאוגרפית הזו, הוא פיתח אישיות ניהולית אוטוריטרית, נוקשה, חסרת פשרות וריכוזית עד אימה. הוא כונה בחיבה אך ביראה "האבא של KLM" ושלט בה ביד ברזל פטרנליסטית. הוא דרש מאנשיו שלמות תפעולית אבסולוטית, מתוך אמונה דתית וכבדת משקל שכל התרסקות מטוס או תקלה טכנית לא רק תעלה כסף לחברה, אלא תהווה פגיעה אסטרטגית ותסכן את הלגיטימציה של הולנד כולה כמעצמה מכובדת בקרב אומות העולם.
+                        </div>
+                        <p>
+                            <span class="text-white font-bold block mb-2 underline italic">הישגים מרכזיים ומורשת הולנדית מעופפת:</span>
+                            <ul class="achievement-list" style="color: #0ea5e9;">
+                                <li class="achievement-item"><strong>כבישת הנתיב לאינדונזיה (The Batavia Route):</strong> פתיחת קו הטיסה אמסטרדם-בטאוויה (ג'קרטה) באוקטובר 1924, שהיה במשך שנים ארוכות הנתיב האווירי הסדיר הארוך והמורכב ביותר בעולם (כ-14,000 ק"מ מעל מדבריות והרים). הוא הוכיח לראשונה שחברת תעופה אזרחית יכולה לגשר בין יבשות, לתחזק אימפריה ולהפעיל לוגיסטיקה בין-לאומית רציפה.</li>
+                                <li class="achievement-item"><strong>שבירת הפרוטקציוניזם האירופאי השמרני:</strong> בניגוד למתחרותיו הגדולות כמו אייר פראנס ולופטהנזה שחויבו פוליטית לקנות מטוסים נחותים מתוצרת מקומית כדי לעודד את התעשייה שלהן, פלסמן ניהל את KLM כחברה מסחרית טהורה ורציונלית. הוא רכש באומץ את מטוסי ה-Douglas DC-2 וה-DC-3 האמריקאיים בשנות ה-30 (שהיו עליונים טכנולוגית). ההחלטה הקיצונית הזו הפכה את KLM לחברה היעילה, הרווחית והמתקדמת ביותר באירופה, על אפם וחמתם של הפוליטיקאים היבשתים.</li>
+                                <li class="achievement-item"><strong>תחייה מתוך חורבות הנאציזם (1945):</strong> לאחר שהנאצים כבשו את הולנד באכזריות, החריבו לחלוטין את נמל התעופה סכיפהול ועצרו את פלסמן עצמו כעציר פוליטי, הוא סירב להיכנע. מיד עם תום המלחמה, הוא נסע אישית וללא משאבים לארה"ב, רכש בזול עודפי מטוסי תובלה צבאיים, והקים את KLM מחדש מהאפר בתוך חודשים ספורים למען קימום האומה.</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <div class="section-divider"></div>
+
+        <!-- 05. AIR FRANCE -->
         <article class="mb-32">
             <div class="flex items-center gap-3 mb-8">
-                <span class="text-6xl font-black text-blue-900/20">.04</span>
+                <span class="text-6xl font-black text-blue-900/20">05</span>
                 <div>
                     <h2 class="text-4xl font-black text-white leading-tight">Air France</h2>
                     <p class="text-[11px] text-blue-500 font-bold uppercase tracking-widest italic">The Sovereign Wing</p>
                 </div>
             </div>
 
-            <!-- Metadata -->
             <div class="glass-module p-6 mb-10 border-r-4 border-blue-500">
                 <div class="space-y-4 text-[14px] text-gray-300 font-light">
                     <p><strong class="text-white underline decoration-blue-500">שנת ייסוד רשמית (הלאמה/מיזוג):</strong> 7 באוקטובר, 1933.</p>
@@ -350,58 +429,55 @@
                 </div>
             </div>
 
-            <!-- Expanded Etymology -->
             <section class="mb-12">
                 <h4 class="text-xs font-bold text-blue-500 uppercase mb-4">אטימולוגיה מורחבת וזהות</h4>
-                <div class="space-y-4 text-sm font-light text-justify leading-relaxed">
-                    <p>
-                        השם <span class="text-white font-bold italic underline">Air France</span> אינו ניסיון לשיווק מסחרי, אלא מהווה הצהרת ריבונות וטריטוריאליות מוחלטת של המדינה. השורש הבלשני ההיסטורי של המילה <span class="italic">France</span> נגזר מהשורש הגרמני הקדום של שבטי הפרנקים <span class="etymology-chip">Frank</span>, שפירושו החוקי היה "אדם חופשי" שאינו משועבד. המותג הלאומי הזה נועד לשדר כלפי חוץ כי העם הצרפתי הוא הריבון החופשי והיחיד של המרחב האווירי שלו, וכי כל טיסה היא הארכה של אדמת הרפובליקה.
-                    </p>
-                    <p>
-                        הלוגו ההיסטורי והמפורסם של החברה, ה-<span class="text-blue-500 font-bold italic underline underline-offset-4">Hippocampe ailé</span> (סוס-הים המכונף), שירשה החברה מחברת Air Orient, נושא משמעות עמוקה. סוס הים מסמל במיתולוגיה את הכוח המקשר בין השמיים למצולות המים. האטימולוגיה היוונית של המילה <span class="etymology-chip" style="background:rgba(59,130,246,0.1); color:#60a5fa; border:none;">Hippocampus</span> (מורכב מ-Hippos - סוס, ו-Kampos - זחל ים מפלצתי) מייצגת באופן פסיכולוגי את היכולת ההנדסית והרוחנית לשלוט במרחבים הלא-יציבים והמסוכנים ביותר של הטבע – האוקיינוס והשמיים – והפיכתם לנתיב סלול, בטוח ומעודן של תרבות ויוקרה צרפתית גלובלית.
-                    </p>
+                <div class="space-y-6 text-sm font-light text-justify leading-relaxed">
+                    <div>
+                        <span class="text-white font-bold block mb-1 underline italic">חלק א': Air</span>
+                        <p>המילה <span class="italic font-bold text-white">Air</span> פשוטה לכאורה, אך בהקשר הצרפתי היא מציינת את טריטוריית הפעולה הריבונית החדשה. השילוב הצרפתי אינו ניסיון לשיווק מסחרי (כמו שמות של חברות אמריקאיות שניסו למשוך צרכנים), אלא מהווה מהרגע הראשון הצהרת ריבונות ממלכתית, קרה וטריטוריאלית מוחלטת של המדינה כלפי השמיים. האוויר שייך למדינה, והמדינה מפעילה אותו.</p>
+                    </div>
+                    <div>
+                        <span class="text-white font-bold block mb-1 underline italic">חלק ב': France & The Hippocampe</span>
+                        <p>השורש הבלשני ההיסטורי והעמוק של המילה <span class="italic text-white">France</span> נגזר מהשורש הגרמני הקדום של שבטי הפרנקים <span class="etymology-chip">Frank</span>, שפירושו החוקי והמהותי ביותר היה "אדם חופשי" שאינו משועבד לאיש או למלך זר. המותג הלאומי הזה נועד לשדר לעולם, ובמיוחד ליריבים פוליטיים, כי העם הצרפתי הוא הריבון החופשי והיחיד של המרחב האווירי שלו, וכי כל טיסה היא למעשה פיסת אדמה מעופפת ואקס-טריטוריאלית של הרפובליקה. בנוסף, הלוגו ההיסטורי של החברה, ה-<span class="text-blue-500 font-bold italic underline">Hippocampe ailé</span> (סוס-הים המכונף) הלקוח מחברת Air Orient שמוזגה, מסמל באופן מיתולוגי את הכוח לשלוט בשני המרחבים המסוכנים, הפראיים והלא-יציבים ביותר בטבע – האוקיינוס העמוק (סוס הים) והשמיים הגבוהים (הכנפיים).</p>
+                    </div>
                 </div>
             </section>
 
-            <!-- Expanding Background & Founding Nexus -->
             <section class="mb-12">
-                <h4 class="text-xs font-bold text-blue-500 uppercase mb-4 border-b border-blue-900/30 pb-1 flex items-center gap-2">
-                    הקשר הייסוד: רקע וסיבה מורחבים
-                </h4>
+                <h4 class="text-xs font-bold text-blue-500 uppercase mb-4 border-b border-blue-900/30 pb-1 flex items-center gap-2">הקשר הייסוד: רקע וסיבה מורחבים</h4>
                 <div class="founding-nexus-box text-sm font-light leading-relaxed text-justify" style="border-right-color: var(--accent-blue);">
                     <p>
-                        <span class="text-white font-bold block mb-2 underline italic">הרקע: אימפריאליזם גיאופוליטי בסכנת קריסה</span>
-                        הרקע המדויק להקמת אייר פראנס נעוץ עמוק באסטרטגיה הגיאופוליטית הצרפתית. בשנות ה-30 המוקדמות, צרפת הייתה עדיין מעצמה עולמית בעלת רשת קולוניאלית עצומה שנפרסה על פני הגלובוס, אולם מבחינה תחבורתית האימפריה הייתה מנותקת ומפורקת. חמש חברות התעופה העיקריות שפעלו אז (בהן ענקיות כמו L'Aéropostale שבה טס אנטואן דה סנט-אכזופרי, CIDNA, ו-Air Orient) דממו אחת אחרי השנייה והיו על סף פשיטת רגל והתרסקות כלכלית. הממשלה הבינה שקריסת חברות התעופה אינה רק בעיה כלכלית – היא איום ישיר על הריבונות והקשר של צרפת עם המושבות שלה בצפון אפריקה, בדרום אמריקה ובהודו-סין.
+                        <span class="text-white font-bold block mb-2 underline italic">הרקע: אימפריאליזם גיאופוליטי בסכנת קריסה מוחלטת והתפוררות</span>
+                        הרקע המדויק להקמת אייר פראנס כחברת ענק נעוץ עמוק באסטרטגיה הצרפתית החרדתית של אותה תקופה. בשנות ה-30, הרפובליקה הצרפתית הייתה עדיין מעצמה עולמית אדירה בעלת רשת קולוניאלית עצומה שחלשה על צפון אפריקה, מדגסקר, הודו-סין ודרום אמריקה. אך מנגד, האימפריה הייתה מנותקת ומפולגת לוגיסטית. חמש חברות התעופה הפרטיות שפעלו אז (ביניהן חברת Aéropostale המיתולוגית של אנטואן דה סנט-אכזופרי) דממו אחת אחרי השנייה, סבלו מתאונות מחרידות, והיו על סף פשיטת רגל בגלל חוסר התאמה כלכלית. הממשלה בפריז הבינה שקריסת החברות היא אינה רק אסון כלכלי; זהו איום קיומי ישיר על הריבונות והקשר הפיזי עם המושבות שמזינות את הכלכלה הצרפתית.
                     </p>
                     <p class="mt-4">
-                        <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד: בניית ה"חוט המקשר" התרבותי והצבאי</span>
-                        הקמתה של אייר פראנס באוקטובר 1933 נבעה מהצורך הנואש והקריטי ב**שימור העוצמה הצרפתית הגלובלית אל מול כוחן העולה של גרמניה ובריטניה**. המדינה התערבה באגרסיביות וכפתה את המיזוג של כל חמש החברות הפושטות רגל למונופול לאומי יחיד כדי ליצור את מה שנקרא "החוט המקשר" (Le Trait d'Union) – עמוד שדרה לוגיסטי אחד שיחבר ישירות בין הבירה פריז לקצות האימפריה. סיבת הייסוד המהותית הייתה **דיפלומטיה של השמיים**: הפיכת כל מטוס צרפתי לשגריר מעופף של יוקרה, תרבות וקולינריה, המשמש כזרוע ארוכה של ה"Grandeur" (הגדולה הלאומית) הצרפתית, המציגה בפני העולם חזית תרבותית מאוחדת ובלתי שבירה.
+                        <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד: בניית ה"חוט המקשר" התרבותי והצבאי בכפייה שלטונית</span>
+                        הקמת אייר פראנס נבעה מהצורך הנואש והקריטי ב**שימור העוצמה והנוכחות הצרפתית הגלובלית אל מול כוחן העולה, המאורגן והמאיים של גרמניה הנאצית ובריטניה**. המדינה התערבה באגרסיביות פוליטית חסרת תקדים וכפתה, דרך משרד התעופה, את המיזוג של חמש החברות הפושטות רגל למונופול לאומי אחד יחיד תחת דגל הטריקולור. המטרה הייתה ליצור את מה שנקרא בצרפתית "החוט המקשר" (Le Trait d'Union) – עמוד שדרה לוגיסטי מהיר ואחד שיחבר ישירות בין הבירה פריז לקצות האימפריה. סיבת הייסוד המהותית הייתה **דיפלומטיה אקטיבית של השמיים**: הפיכת כל מטוס צרפתי לשגריר מעופף של יוקרה קולינרית, אופנה וכוח ("Grandeur"), המציג בפני העולם ובפני המושבות חזית צרפתית מאוחדת ובלתי שבירה.
                     </p>
                 </div>
             </section>
 
-            <!-- Ideology & Founder Profile -->
             <section class="mb-12">
                 <h4 class="text-xs font-bold text-blue-500 uppercase mb-4">פרופיל הבונה: פייר קוט (Pierre Cot) - אדריכל הלאמת השמיים</h4>
                 <div class="founder-profile-box" style="border-right-color: #3b82f6;">
                     <div class="space-y-6 text-[14px] text-gray-400 font-light text-justify leading-relaxed">
                         <p>
-                            <span class="text-white font-bold block mb-1 underline italic">אטימולוגיה של שם ההוגה:</span>
-                            <span class="text-blue-400 font-bold italic">Pierre</span> (פייר) נגזר מהיוונית העתיקה <span class="italic">Petros</span> (פטרוס) שפירושו "סלע יצוק", "אבן בסיס" או "קרקע מוצקה". השם <span class="text-blue-400 font-bold italic">Cot</span> (קוט) נגזר משורשי צרפתית עתיקה ומייצג טופוגרפיה, שפירושו "בקתה קטנה המשמשת מקלט" או "גבעה מבוצרת". השם הכולל מסמל בצורה מטפורית "סלע יציב המהווה מקלט ומבנה הגנתי".
+                            <span class="text-white font-bold block mb-1 underline italic">אטימולוגיה של שם ההוגה והשר החזק:</span>
+                            השם <span class="text-blue-400 font-bold italic">Pierre</span> (פייר) נגזר באופן ישיר מהיוונית העתיקה <span class="italic">Petros</span> שפירושו פשוט וחד: "סלע יצוק", "אבן בסיס" או "קרקע מוצקה". השם <span class="text-blue-400 font-bold italic">Cot</span> (קוט) נגזר משורשי השפה הצרפתית העתיקה המייצגים טופוגרפיה, ופירושו המילולי הוא "בקתה קטנה המשמשת מקלט", מחסה או "גבעה מבוצרת קטנה". השם הכולל מסמל בצורה מטפורית מבריקה לחייו הפוליטיים של האיש: "סלע יציב המהווה מקלט ומבנה הגנתי עבור הלאום מול סופות האויב".
                         </p>
                         <p>
-                            <span class="text-white font-bold block mb-2 underline italic">ילדות, טראומה וגיבוש תפיסת עולם רדיקלית:</span>
-                            קוט נולד בסבואה שבהרי האלפים הצרפתיים למשפחה קתולית, שמרנית ובורגנית להחריד. המסלול המוגן שלו נקטע באלימות כשהתגייס כחייל פשוט במלחמת העולם הראשונה, שם שירת בחפירות וחווה מקרוב את הטבח ההמוני, חוסר האונים וזוועות מכונת המלחמה התעשייתית בקרב ורדן העקוב מדם.
+                            <span class="text-white font-bold block mb-2 underline italic">ילדות מוגנת, שוחות הדם וגיבוש תפיסת עולם רדיקלית שמאלית:</span>
+                            פייר קוט נולד באזור סבואה השליו שבהרי האלפים הצרפתיים למשפחה קתולית, שמרנית ובורגנית להחריד. המסלול המוגן והאליטיסטי שייעדו לו הוריו נקטע באלימות ובדם כשהתגייס כחייל פשוט לצבא צרפת במלחמת העולם הראשונה, שם שירת בחפירות וחווה מקרוב ולעומק את הטבח ההמוני, חוסר האונים וזוועות מכונת המלחמה התעשייתית בקרב ורדן העקוב מדם שהשמיד דור שלם של צעירים צרפתים.
                         </p>
-                        <div class="trauma-highlight" style="border-right-color: #3b82f6;">
-                            טראומת שוחות המלחמה והמוות ההמוני דחפה את קוט להקצנה פוליטית חריפה שמאלה ולהכרה היסטורית שהמרחב האווירי הוא כלי האסטרטגי העליון של העתיד. הוא סלד מקפיטליסטים פרטיים ומיצרני נשק ("סוחרי המוות" כפי שקרא להם). הוא ראה בתעופה – הצבאית והאזרחית כאחד – לא רק אמצעי תחבורה לעשירים, אלא מנגנון הגנה חיוני שחייב להיות מולאם תחת שליטת המדינה והעם, כדי להגן על הרפובליקה מפני גלי הפשיזם העולים באירופה (איטליה וגרמניה) וככלי עליון לאיחוד האימפריה. לאחר החורבן הנוסף של מלחמת העולם השנייה, אייר פראנס הפכה עבור האומה הצרפתית ועבור תלמידיו של קוט לסמל האולטימטיבי לשיקום הכבוד, הגאווה והריבונות הצרפתית שרמוסו והושפלו תחת הכיבוש הנאצי.
+                        <div class="trauma-highlight" style="border-right-color: #3b82f6; background: rgba(59, 130, 246, 0.05); color:#93c5fd;">
+                            טראומת שוחות המלחמה, החנק והמוות ההמוני של חבריו דחפה את קוט הצעיר להקצנה פוליטית חריפה שמאלה ולהכרה היסטורית אחת שעליה ביסס את חייו: המרחב האווירי הוא הכלי האסטרטגי העליון של העתיד, מי ששולט בו שולט בחיים ובמוות. בעקבות המלחמה, הוא פיתח סלידה יוקדת ומלאת בוז מקפיטליסטים פרטיים ומיצרני נשק פרטיים (אותם כינה בפומבי ובבוז "סוחרי המוות" שמרוויחים מדם חיילים). הוא ראה בתעופה – הצבאית והאזרחית כאחד – לא סתם אמצעי תחבורה שעשועי לעשירים או דואר, אלא מנגנון הגנה לאומי חיוני וקדוש שחייב להיות מולאם תחת שליטת המדינה והעם בלבד. זאת, כדי להגן על הרפובליקה הצרפתית השברירית מפני גלי הפשיזם העולים באלימות באיטליה (מוסוליני) ובגרמניה (היטלר). לאחר החורבן של מלחמת העולם השנייה, אייר פראנס הפכה עבור האומה ולתלמידיו לסמל האולטימטיבי של שיקום הכבוד, הגאווה והריבונות שרמוסו והושפלו תחת הכיבוש הנאצי.
                         </div>
                         <p>
-                            <span class="text-white font-bold block mb-2 underline italic">הישגים מרכזיים ומורשת:</span>
+                            <span class="text-white font-bold block mb-2 underline italic">הישגים מרכזיים ומורשת פוליטית אווירית:</span>
                             <ul class="achievement-list" style="color: #3b82f6;">
-                                <li class="achievement-item"><strong>כפיית מיזוג לאומי:</strong> שימוש בכוח פוליטי ברוטלי כשר התעופה כדי להלאים ולכפות את המיזוג של חמש חברות התעופה הכושלות והקמת חברת הלאום המונופוליסטית והמאוחדת – "אייר פראנס" (1933).</li>
-                                <li class="achievement-item"><strong>עצמאות הכוח האווירי:</strong> יסוד חיל האוויר הצרפתי (Armée de l'Air) כזרוע צבאית פוליטית ומבצעית עצמאית לחלוטין (מופרדת מצבא היבשה והצי) ב-1934, מתוך הבנה כי העליונות האווירית היא המפתח לניצחון.</li>
-                                <li class="achievement-item"><strong>אידיאולוגיה מיושמת:</strong> הלאמה רדיקלית וארגון מחדש של תעשיית האווירונאוטיקה הצרפתית כולה לחברות ממשלתיות אזוריות, תוך שהוא נוקט עמדה אנטי-פשיסטית אקטיבית ואף שולח בחשאי מטוסים צרפתיים לחמש את הכוחות הרפובליקניים שלחמו נגד פרנקו במלחמת האזרחים בספרד.</li>
+                                <li class="achievement-item"><strong>כפיית מיזוג לאומי ברוטלי:</strong> שימוש בכוח פוליטי ברוטלי וחסר עכבות כשר התעופה בממשלת "החזית העממית" כדי להלאים ולכפות על בעלי הון פרטיים את המיזוג של חמש חברות התעופה הכושלות, והקמת חברת הלאום המונופוליסטית המפוארת – "אייר פראנס" ב-1933.</li>
+                                <li class="achievement-item"><strong>עצמאות הכוח האווירי הצבאי:</strong> ייסוד וניתוק חיל האוויר הצרפתי (Armée de l'Air) כזרוע צבאית, פוליטית ומבצעית עצמאית לחלוטין (המופרדת לראשונה מצבא היבשה והצי) ב-1934, מתוך הבנה אסטרטגית מוקדמת שעליונות אווירית היא המפתח הבלעדי לניצחון במלחמות העתיד.</li>
+                                <li class="achievement-item"><strong>אידיאולוגיה מיושמת וסיוע אנטי-פשיסטי:</strong> הלאמה רדיקלית וארגון מחדש של תעשיית האווירונאוטיקה הצרפתית כולה לחברות ממשלתיות, תוך נקיטת עמדה אקטיבית נועזת ושליחת מטוסים צרפתיים (טייסים וציוד) בחשאי, בניגוד להסכמי אי-התערבות, כדי לחמש את הכוחות הרפובליקניים שלחמו נגד פשיזם במלחמת האזרחים בספרד.</li>
                             </ul>
                         </p>
                     </div>
@@ -409,74 +485,148 @@
             </section>
         </article>
 
-        <!-- 05. LUFTHANSA -->
+        <div class="section-divider"></div>
+
+        <!-- 06. LUFTHANSA -->
         <article class="mb-32">
             <div class="flex items-center gap-3 mb-8">
-                <span class="text-6xl font-black text-yellow-900/20">.05</span>
+                <span class="text-6xl font-black text-yellow-900/20">06</span>
                 <div>
                     <h2 class="text-4xl font-black text-white leading-tight">Lufthansa</h2>
                     <p class="text-[11px] text-yellow-500 font-bold uppercase tracking-widest italic">The Phoenix of Berlin</p>
                 </div>
             </div>
 
-            <!-- Metadata -->
             <div class="glass-module p-6 mb-10 border-r-4 border-yellow-600">
                 <div class="space-y-4 text-[14px] text-gray-300 font-light">
                     <p><strong class="text-white underline decoration-yellow-500">שנת ייסוד ראשונית (רפובליקת ויימאר):</strong> 6 בינואר, 1926.</p>
-                    <p><strong class="text-white underline decoration-yellow-500">שנת הקמה מחדש (לאחר המלחמה):</strong> 6 בינואר, 1953.</p>
+                    <p><strong class="text-white underline decoration-yellow-500">שנת הקמה מחדש (לאחר המלחמה והחרם):</strong> 6 בינואר, 1953.</p>
                     <p><strong class="text-white underline decoration-yellow-500">הבונה והאדריכל המודרני:</strong> Hans Bongers (1898–1981).</p>
                     <p><strong class="text-white underline decoration-yellow-500">מיקום ייסוד מחדש:</strong> קלן, מערב גרמניה.</p>
                 </div>
             </div>
 
-            <!-- Expanded Etymology -->
             <section class="mb-12">
                 <h4 class="text-xs font-bold text-yellow-500 uppercase mb-4">אטימולוגיה מורחבת וזהות</h4>
-                <div class="space-y-4 text-[14px] font-light text-justify leading-relaxed">
-                    <p>
-                        השם <span class="etymology-chip" style="background:rgba(234,179,8,0.1); color:#eab308; border-color:#eab30833;">Lufthansa</span> הוא אחד ההלחמים ההיסטוריים והעמוקים ביותר בעולם התעופה, המשלב מודרניות מדעית עם גאווה ימי-ביניימית. המילה <span class="etymology-chip" style="background:none; border:none; padding:0;">Luft</span> נגזרת מהשורש הגרמני והפרוטו-גרמאני <span class="italic">Luftus</span> (אוויר/מרחב השמיים). אולם, השורש <span class="etymology-chip" style="background:none; border:none; padding:0;">Hansa</span> הוא נושא המשמעות הכבדה ביותר במותג.
-                    </p>
-                    <p>
-                        מקור המילה <span class="italic text-yellow-500 font-bold">Hansa</span> הוא בגרמנית עתיקה (גותית) המציינת "קבוצה מלוכדת", "לוחמים" או מפלגה, אך מבחינה היסטורית היא מתייחסת ישירות ל"ליגת ההאנזה" (Hanseatic League) – ברית סחר ימית עוצמתית, עשירה ושולטת של ערי נמל בים הבלטי מימי הביניים. המותג נועד לשדר למודע של הצרכן שהתעופה היא **ברית הסחר החופשית המודרנית** של גרמניה החדשה. הלוגו האיקוני של העגור (Kranich) במעופו מסמל את המשמעת, הסדר והנאמנות הקשוחה ללוח הזמנים ולמסלול הנדידה, ערכים הנטועים עמוק בנפש ובאופי הלאומי הגרמני המקדש דיוק ארגוני מעל לכל אינדיבידואליזם.
-                    </p>
+                <div class="space-y-6 text-[14px] font-light text-justify leading-relaxed">
+                    <div>
+                        <span class="text-white font-bold block mb-1 underline italic">חלק א': Luft</span>
+                        <p>השם <span class="etymology-chip" style="background:rgba(234,179,8,0.1); color:#eab308; border-color:#eab30833;">Lufthansa</span> הוא אחד ההלחמים ההיסטוריים והעמוקים ביותר בעולם התעופה, המשלב מודרניות מדעית וטכנית עם גאווה ימי-ביניימית לאומית עמוקה. המילה <span class="italic font-bold text-white">Luft</span> נגזרת פשוטו כמשמעו מהשורש הגרמני והפרוטו-גרמאני העתיק <span class="italic">Luftus</span> שפירושו המדויק הוא אוויר, מרחב או שמיים ריבוניים (מכאן גם נגזר שמו של חיל האוויר הגרמני, הלופטוואפה).</p>
+                    </div>
+                    <div>
+                        <span class="text-white font-bold block mb-1 underline italic">חלק ב': Hansa & The Crane</span>
+                        <p>השורש <span class="italic text-yellow-500 font-bold">Hansa</span> הוא נושא המשמעות התרבותית הכבדה ביותר. מקור המילה בגרמנית עתיקה המציינת "קבוצה מלוכדת" או "מפלגה/אגודה", אך מבחינה היסטורית היא מתייחסת באופן ישיר וגאה ל"ליגת ההאנזה" (Hanseatic League) – ברית סחר ימית עוצמתית, עשירה ושולטת של ערי נמל אירופאיות בים הבלטי בימי הביניים. המותג נועד לשדר לתודעת הצרכן שהתעופה היא **ברית הסחר החופשית והמודרנית** של גרמניה החדשה, המביאה שגשוג ולא מלחמה. בנוסף, הלוגו האיקוני של העגור (Kranich) במעופו, ששרד מחברת Aero Lloyd, מסמל פסיכולוגית את המשמעת, הסדר, האלגנטיות והנאמנות הקשוחה למסלול הנדידה, ערכים הנטועים עמוק בנפש הלאומית הגרמנית המקדשת דיוק, סדר, וארגון מופתי מעל לכל אינדיבידואליזם חולף.</p>
+                    </div>
                 </div>
             </section>
 
-            <!-- Expanding Background & Founding Nexus -->
             <section class="mb-12">
-                <h4 class="text-xs font-bold text-yellow-500 uppercase mb-4 border-b border-yellow-900/30 pb-1 flex items-center gap-2">
-                    הקשר הייסוד: רקע וסיבה מורחבים
-                </h4>
+                <h4 class="text-xs font-bold text-yellow-500 uppercase mb-4 border-b border-yellow-900/30 pb-1 flex items-center gap-2">הקשר הייסוד: רקע וסיבה מורחבים</h4>
                 <div class="founding-nexus-box text-sm font-light leading-relaxed text-justify" style="border-right-color: var(--accent-gold);">
                     <p>
-                        <span class="text-white font-bold block mb-2 underline italic">הרקע: חורבן פעמיים – ויימאר ו"שעת האפס"</span>
-                        הרקע להקמת לופטהנזה נגוע בטראומה לאומית כפולה. בגלגולה הראשון ב-1926 היא הוקמה כדי להציל את עשרות חברות התעופה של רפובליקת ויימאר שקרסו תחת היפר-אינפלציה וחובות כבדים לאחר מלחמת העולם הראשונה, תוך איחודן (Aero Lloyd ו-Junkers). אולם, ב-1945, עם קריסת הרייך השלישי, החברה חוסלה לחלוטין על ידי בעלות הברית, צי המטוסים הוחרם, ונאסר על גרמניה, ב"שעת האפס" (Stunde Null), להטיס מטוסים או לעסוק באווירונאוטיקה כלל. גרמניה הפכה למרחב אווירי כבוש.
+                        <span class="text-white font-bold block mb-2 underline italic">הרקע: חורבן כפול והשפלה – ויימאר ו"שעת האפס"</span>
+                        הרקע להקמת לופטהנזה נגוע בטראומה לאומית כפולה ומשתקת. בגלגולה הראשון ב-1926 היא הוקמה כמונופול ממשלתי שנועד להציל את עשרות חברות התעופה של רפובליקת ויימאר שקרסו תחת היפר-אינפלציה חונקת וחובות פיצויים של מלחמת העולם הראשונה (תחת השם המלא Deutsche Luft Hansa). אולם, הטרגדיה האמיתית הכתה ב-1945. עם קריסת הרייך השלישי (שניצל את החברה לצרכיו הצבאיים), החברה חוסלה, פורקה והושמדה לחלוטין, מבחינה פיזית ומשפטית, על ידי בעלות הברית המנצחות. צי המטוסים הוחרם, ונאסר על גרמניה לחלוטין, בתקופה קודרת שנקראה "שעת האפס" (Stunde Null), להטיס מטוסים, לאמן טייסים או לעסוק באווירונאוטיקה מכל סוג שהוא. גרמניה הפכה למרחב אווירי כבוש, משפיל ודומם שהוטסו בו רק מטוסים אמריקאים, רוסים ובריטים.
                     </p>
                     <p class="mt-4">
-                        <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד: פיוס בינלאומי ושיקום דרך עליונות הנדסית</span>
-                        הקמתה הסודית מחדש שהחלה להתהוות לקראת 1953 נבעה מסיבה קיומית אסטרטגית: **החזרת הרפובליקה הפדרלית (גרמניה המערבית) לתוך משפחת העמים הלגיטימית**. האנס בונגרס, פקיד בכיר בלופטהנזה הישנה, פעל במחשכים כדי לתכנן את תחיית החברה בזמן שגרמניה עדיין הייתה תחת כיבוש ואמברגו. סיבת הייסוד הייתה פוליטית-כלכלית: הוכחה מוחשית כי **הדיוק, הסדר וההנדסה הגרמנית, שהחריבו את אירופה, יכולים כעת לשמש כגשר לשלום, פיוס וסחר גלובלי משגשג**. לופטהנזה החדשה נוסדה כעמוד התווך המרכזי של ה"נס הכלכלי הגרמני" (Wirtschaftswunder), במטרה ברורה להוכיח שהגרמנים יכולים וראויים להוביל את העולם שוב, אך הפעם בדרכי שלום, דמוקרטיה וטכנולוגיה אזרחית מתקדמת.
+                        <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד (מחדש): פיוס בינלאומי ושיקום הכבוד הלאומי דרך עליונות הנדסית</span>
+                        הקמתה הסודית מחדש של לופטהנזה, שהחלה להתהוות לקראת 1953, נבעה מסיבה קיומית אסטרטגית ועליונה של קנצלר גרמניה המערבית, קונראד אדנאואר: **החזרת הרפובליקה הפדרלית (גרמניה המערבית) לתוך משפחת העמים הלגיטימית, התרבותית והכלכלית**. האנס בונגרס פעל תחילה במחשכים כדי לתכנן את תחיית החברה בזמן שגרמניה עדיין הייתה תחת אמברגו וללא זכויות תעופה. סיבת הייסוד הייתה פוליטית וכלכלית כאחד: הוכחה מוחשית לעולם ולעצמם כי **הדיוק, הסדר וההנדסה הגרמנית, שהחריבו את אירופה עד עפר, יכולים וראויים כעת לשמש כגשר טכנולוגי מתקדם לשלום, פיוס וסחר גלובלי משגשג**. לופטהנזה החדשה נוסדה כעמוד התווך המרכזי של "הנס הכלכלי" הגרמני (Wirtschaftswunder), תוך זניחה מוחלטת של המיליטריזם לטובת טכנולוגיה אזרחית ושירותית שתציב את גרמניה שוב כמעצמה מובילה ומועילה.
                     </p>
                 </div>
             </section>
 
-            <!-- Founder Profile -->
             <section class="mb-12">
                 <h4 class="text-xs font-bold text-yellow-500 uppercase mb-4">פרופיל מייסד: האנס בונגרס (Hans Bongers)</h4>
                 <div class="founder-profile-box" style="border-right-color: var(--accent-gold);">
                     <div class="space-y-6 text-[14px] text-gray-400 font-light text-justify leading-relaxed">
                         <p>
                             <span class="text-white font-bold block mb-1 underline italic">אטימולוגיה של שם האדריכל המחדש:</span>
-                            <span class="text-yellow-500 font-bold italic">Hans</span> (האנס) הוא הצורה הגרמנית המקוצרת והשכיחה של <span class="italic">Johannes</span> (יוחנן), שפירושו ממקורות עבריים "ה' חנון" או "חסד האל". השם <span class="text-yellow-500 font-bold italic">Bongers</span> (בונגרס) הוא שם משפחה ממוצא גרמני/הולנדי תעסוקתי קדום, שפירושו המילולי הוא "האדם שעובד במטעים" או "שומר המטעים והפרדסים" (נגזרת של המילה <span class="italic">Boomgaard</span>). השם מסמל באופן ציורי ומדויק להפליא "שמירה אדוקה על השפע והצמיחה בחסדי האל", בדיוק כפי ששמר בונגרס על נבטי התעופה הגרמנית.
+                            השם הפרטי <span class="text-yellow-500 font-bold italic">Hans</span> (האנס) הוא הצורה הגרמנית המקוצרת, העממית והאהובה של <span class="italic">Johannes</span> (יוחנן - ה' חנון או חסד האל). השם <span class="text-yellow-500 font-bold italic">Bongers</span> (בונגרס) הוא שם משפחה ממוצא גרמני/הולנדי תעסוקתי קדום מאוד, שפירושו המילולי והשורשי הוא "האדם שעובד במטעים" או "שומר הפרדסים" (נגזרת של המילה <span class="italic">Boomgaard</span>). השם הכולל מסמל באופן ציורי, מעשי ומדויק להפליא את עבודת חייו: "שמירה אדוקה על השפע והצמיחה, וטיפוח מחדש של פרדס חרב, בחסדי האל ובעבודה קשה", בדיוק כפי ששמר בונגרס על נבטי התעופה הגרמנית ההרוסה שלא ינבלו בצל הכיבוש הזר.
                         </p>
-                        <div class="trauma-highlight" style="border-right-color: var(--accent-gold);">
-                            הטראומה העמוקה של בונגרס הייתה הצפייה בהחרבתה המוחלטת של גרמניה והשמדת לופטהנזה המקורית ב-1945, חברה שהקדיש לה את רוב חייו הבוגרים כרואה החשבון הראשי וכמנהל בכיר. הוא ראה בחיסול התעופה הגרמנית לא רק סנקציה מלחמתית, אלא פצע שותת דם בזהות ובכבוד הלאומי. במשך שנים הוא פעל בסתר מתחת לרדאר של רשויות הכיבוש מתוך "משרד בונגרס" הידוע לשמצה בקלן. משרד קטן זה שימש כמרכז מודיעין לוגיסטי ותכנוני, שבו אסף מהנדסים, טייסים ואסטרטגים מובטלים כדי לשרטט רשתות נתיבים ומודלים עסקיים על הנייר, בעוד הגרמנים היו עדיין תחת איסור טיסה מוחלט. עבורו, לופטהנזה הייתה יותר מחברת טיסות; היא הייתה הגשר של גרמניה החדשה והמובסת לחזור לזירה הבינלאומית כראש מורם.
+                        <div class="trauma-highlight" style="border-right-color: var(--accent-gold); background: rgba(251, 191, 36, 0.05); color:#fde68a;">
+                            הטראומה העמוקה של בונגרס (רואה חשבון ומנהל בכיר בחברה המקורית) הייתה הצפייה חסרת האונים בהחרבתה המוחלטת של גרמניה והשמדתה הפיזית וביזתה של לופטהנזה המקורית ב-1945, חברה שהקדיש לה את רוב חייו הבוגרים ובנה במו ידיו. הוא ראה בחיסול התעופה הגרמנית, גם אם היה בגדר סנקציה מלחמתית מוצדקת מצד בעלות הברית, פצע שותת דם בזהות ובגאווה הלאומית. במשך שנים ארוכות לאחר המלחמה הוא פעל בסתר מתחת לרדאר רשויות הכיבוש מתוך מה שכונה בזהירות "משרד בונגרס" (Büro Bongers) הידוע לשמצה בקלן. שם אסף מהנדסים, טייסים ואסטרטגים מובטלים שאיבדו את עולמם, כדי לשרטט רשתות נתיבים ותוכניות עסקיות על הנייר, בעוד הגרמנים היו עדיין תחת איסור טיסה מוחלט וקשוח. עבורו, לופטהנזה הייתה הרחק מעבר למאזן הכנסות של חברת טיסות; היא הייתה הגשר הפסיכולוגי, ההנדסי והלאומי של גרמניה החדשה והמובסת לחזור לזירה הבינלאומית, למסחר ולדיפלומטיה בראש מורם.
                         </div>
                         <p>
-                            <span class="text-white font-bold block mb-2 underline italic">הישגים מרכזיים ומורשת:</span>
+                            <span class="text-white font-bold block mb-2 underline italic">הישגים מרכזיים ומורשת ארגונית:</span>
                             <ul class="achievement-list" style="color: #eab308;">
-                                <li class="achievement-item"><strong>מבצע התחייה ("Büro Bongers"):</strong> ניהול סמוי ומדוקדק של "משרד בונגרס" והוצאה לפועל של המהלך הפוליטי והכלכלי המבריק של הקמת חברת התעופה הלאומית מחדש כנגד כל הסיכויים (שפעלה תחילה תחת השם הזמני LUAG ב-1953 לפני שרכשה את הזכויות לשם ההיסטורי).</li>
-                                <li class="achievement-item"><strong>פוליטיקה של רכש (Lockheed Constellation):</strong> קבלת החלטה אסטרטגית שוברת-גאווה אך חכמה, לרכוש במכוון מטוסי קונסטליישן אמריקאיים מתקדמים עם הקמת החברה מחדש. המהלך אפשר ללופטהנזה לעקוף מיד את המתחרות האירופאיות שלה (שניסו לפתח מטוסים בעצמן ונכשלו), והבטיח את תמיכתן של בעלות הברית בחברה החדשה.</li>
-                                <li class="achievement-item"><strong>הפיכת פרנקפורט לצומת עולמי:</strong> ביסוס, תכנון מוקדם ופיתוח של שדה התעופה המרכזי בפרנקפורט (במקום ברלין המחולקת) כבסיס האם האסטרטגי, מה שהפך אותו לאחד ממנועי הכלכלה וצומתי התעופה הגדולים והחשובים ביותר בעולם עד ימינו.</li>
+                                <li class="achievement-item"><strong>מבצע התחייה הסמוי ("Büro Bongers"):</strong> ניהול סמוי, מתוחכם ומדוקדק של תכנון התעופה הגרמנית והוצאה לפועל של הקמת חברת התעופה מחדש ב-1953 כנגד כל הסיכויים. הוא פעל תחילה תחת שם זמני ואפור (LUAG - חברת התעופה האזרחית), כדי לא לעורר זעם בינלאומי, ורק בהמשך קנה את הזכויות החוקיות לשם, לצבעים וללוגו ההיסטורי של לופטהנזה.</li>
+                                <li class="achievement-item"><strong>פוליטיקה של רכש שוברת-גאווה אך מנצחת:</strong> קבלת החלטה אסטרטגית קשה ששברה את הגאווה ההנדסית הגרמנית: במקום לנסות לייצר מטוסים מקומיים חדשים, הוא הורה לרכוש במכוון מטוסי "לוקהיד קונסטליישן" (Lockheed Constellation) אמריקאיים מתקדמים עם הקמת החברה. המהלך אפשר ללופטהנזה לעקוף מיד טכנולוגית את המתחרות האירופאיות (שניסו לפתח מטוסים בעצמן ונכשלו ברובן) והבטיח את תמיכת הממשל האמריקאי בחזרתה לשמיים.</li>
+                                <li class="achievement-item"><strong>הפיכת פרנקפורט לצומת לוגיסטי עולמי (Hub):</strong> עקב חלוקתה של ברלין (בירת התעופה המסורתית) למזרח ומערב על ידי חומות וכיבוש רוסי, בונגרס הוביל את הביסוס והפיתוח של שדה התעופה המרכזי בעיר פרנקפורט כבסיס האם האסטרטגי החדש של החברה. החלטה זו הפכה את פרנקפורט לאחד ממנועי הכלכלה וצומתי התעופה הגדולים, המקושרים והחשובים ביותר בעולם עד לימינו אנו.</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <div class="section-divider"></div>
+
+        <!-- 07. PAN AMERICAN WORLD AIRWAYS -->
+        <article class="mb-32">
+            <div class="flex items-center gap-4 mb-8">
+                <span class="text-6xl font-black text-white/5">07</span>
+                <div>
+                    <h2 class="text-4xl font-black text-white leading-tight tracking-tighter">Pan Am</h2>
+                    <p class="text-[11px] text-sky-400 font-bold uppercase tracking-[0.2em] italic">The Imperial Pioneer of the Skies</p>
+                </div>
+            </div>
+
+            <div class="glass-module p-6 mb-10 border-r-4 border-sky-600">
+                <div class="space-y-4 text-[14px] text-gray-300 font-light">
+                    <p><strong class="text-white underline decoration-sky-600/50 underline-offset-4">שנת ייסוד רשמית:</strong> 19 באוקטובר, 1927 (החברה הגדולה פשטה רגל ופורקה סופית בדצמבר 1991).</p>
+                    <p><strong class="text-white underline decoration-sky-600/50 underline-offset-4">הבונה ואדריכל הגלובליזציה:</strong> Juan Terry Trippe (1899–1981).</p>
+                    <p><strong class="text-white underline decoration-sky-600/50 underline-offset-4">מיקום ייסוד:</strong> קי ווסט, פלורידה (לצורך טיסות להוואנה), לימים העברת המטה המפורסם לניו יורק (בניין Pan Am).</p>
+                </div>
+            </div>
+
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-sky-500 uppercase mb-4">אטימולוגיה מורחבת וזהות</h4>
+                <div class="space-y-6 text-[14px] font-light text-justify leading-relaxed">
+                    <div>
+                        <span class="text-white font-bold block mb-1 underline italic">חלק א': Pan</span>
+                        <p>השם <span class="text-white font-bold italic underline decoration-sky-600">Pan American</span> (פאן-אמריקן - שפירושו המילולי "כל אמריקה") לא היה שם שיווקי מסחרי קלאסי שניסה לפתות לקוחות על ידי תחושת מהירות או נוחות, אלא נבחר כהצהרה דיפלומטית וגיאופוליטית אגרסיבית וטהורה. הקידומת <span class="italic font-bold text-white">Pan</span> (מיוונית עתיקה שפירושה "הכל", "המקיף" או "האיחוד של") נועדה לשדר וליישם בפועל את חזון "דוקטרינת מונרו" האמריקאית (Monroe Doctrine): האמונה שאמריקה הצפונית, המרכזית והדרומית כאחד – היבשת כולה – מאוחדות תחת הגמוניה, השפעה, טכנולוגיה ומרות אמריקאית (של ארה"ב), כנגד כל איום או ניסיון התערבות, קולוניאליזם או חדירה של מעצמות אירופאיות זרות אל תוך מה שארה"ב תפסה כ"חצר האחורית" שלה.</p>
+                    </div>
+                    <div>
+                        <span class="text-white font-bold block mb-1 underline italic">חלק ב': World Airways & The Blue Globe</span>
+                        <p>התוספת <span class="italic text-white">World Airways</span> שהתווספה לשמה ככל שהתפשטה בעולם, והסמל האייקוני של החברה שעוצב כ"כדור הארץ הכחול" (The Blue Globe המקווקו בקווי רוחב), היוו יחד את הסמל המסחרי המוכר והנוכח ביותר בעולם במאה ה-20 (שני אולי רק לקוקה-קולה בתחום הפצת התרבות האמריקאית). הסמל, נטול סממנים אמריקאים כמו נשרים או כוכבים, שידר מסר פשוט אך מגלומני מאין כמותו: העולם, עם כל הגבולות שלו, אינו כוכב לכת מסתורי וקשה להשגה; הוא מהווה רשת נתיבים ברורה, גלובלית, הנשלטת ומתופעלת על ידי ציפורי הפלדה שלנו. הוויתור האסטרטגי על זהות לאומית מגבילה ומיושנת לטובת כדור ארץ כחול ואוניברסלי הפך את המותג לנציג הרשמי, האלגנטי והאזרחי של האנושות כולה בשחקים, וסימל את תור הזהב האולטימטיבי של עידן התעופה (The Jet Age).</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-sky-500 uppercase mb-4 border-b border-sky-900/30 pb-1 flex items-center gap-2">הקשר הייסוד: רקע וסיבה מורחבים</h4>
+                <div class="founding-nexus-box text-[14px] font-light leading-relaxed text-justify" style="border-right-color: #0284c7;">
+                    <p>
+                        <span class="text-white font-bold block mb-2 underline italic">הרקע: חרדה דיפלומטית ומודיעינית עמוקה מדריסת רגל גרמנית בדרום אמריקה</span>
+                        בשנות ה-20 המאוחרות, ממשלת ארה"ב (במיוחד משרד המלחמה ומחלקת המדינה) הייתה שרויה בחרדה גיאופוליטית אמיתית והיסטרית. חברות תעופה אירופאיות, ובעיקרן מהנדסים וטייסים גרמנים יוצאי צבא (שהקימו בין היתר את חברת SCADTA המוצלחת בקולומביה), החלו להתפשט במהירות ולקבוע עובדות בשטח במרכז ודרום אמריקה, סוללים נתיבים, ממפים שטחים ובונים שדות תעופה. הממשל האמריקאי ראה במטוסים, טייסים ואנשי עסקים אלו איום ביטחוני ומודיעיני ישיר ואסון פוטנציאלי על תעלת פנמה האסטרטגית (נכס הצוללות העיקרי של ארה"ב) ועל אזור ההשפעה של ארה"ב. הממשל והצבא חיפשו נואשות גורם אמריקאי פרטי אמין, שיסכים לבנות "חומה אווירית" אמריקאית אזרחית שתהדוף את החדירה האירופאית מדרום. 
+                    </p>
+                    <p class="mt-4">
+                        <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד: יצירת זרוע דיפלומטית וצבאית אמריקאית המסווה כחברת סחר (The Chosen Instrument)</span>
+                        היזם והטייס חואן טריפ ניצל בערמומיות את הפחד והפאניקה הממשלתית הזו, והקים את פאן אמריקן (תחילה לטיסות קצרות להוואנה) מתוך סיבה כפולה, משתלמת ומתוחכמת: **השגת מונופול ממשלתי חסר תקדים ומוחלט על כלל קווי דואר החוץ הבינלאומיים של ארה"ב (FAM - Foreign Air Mail) בתמורה להגנה נוקשה על האינטרס הלאומי האמריקאי בעולם**. פאן אמריקן לא הייתה מעולם סתם חברה פרטית שמחפשת רווח רבעוני; היא הוגדרה באופן לא רשמי, אך מחייב לחלוטין, כ"המכשיר הנבחר" (The Chosen Instrument) של מחלקת המדינה האמריקאית. טריפ ניהל למעשה מדיניות חוץ פרטית, חתם על הסכמים ישירים מול דיקטטורים בדרום אמריקה, ראשי מדינות ונשיאים בעולם כאילו היה ראש מדינה בעצמו. הוא סלל את הנתיבים הטרנס-אוקייניים היקרים והמסוכנים ביותר (בפסיפיק לאסיה ובאטלנטי לאירופה) ששימשו בפועל, ולקראת מלחמת העולם השנייה, כתשתית צבאית, מודיעינית ולוגיסטית אמריקאית לכל דבר ועניין, הכל במסווה של צי מטוסים אזרחי, מהודר ויפהפה שחצה את הגלובוס.
+                    </p>
+                </div>
+            </section>
+
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-sky-500 uppercase mb-4">פרופיל מייסד: חואן טריפ (Juan Trippe)</h4>
+                <div class="founder-profile-box" style="border-right-color: #0284c7;">
+                    <div class="space-y-6 text-[14px] text-gray-400 font-light text-justify leading-relaxed">
+                        <p>
+                            <span class="text-white font-bold block mb-1 underline italic text-[13px]">אטימולוגיה של שם המייסד:</span>
+                            למרות שמו הפרטי בעל הניחוח הלטיני, חואן לא היה היספני כלל, אלא גבר אנגלו-סקסי פרוטסטנטי לבן (WASP) נצר למשפחת ספנות ועסקים ניו-יורקית עשירה ומכובדת מאוד. אימו, באופן שרירותי למדי, קראה לו <span class="text-sky-400 font-bold italic">Juan</span> (הגרסה הספרדית ל"יוחנן" - שפירושו המקורי "ה' חנון" או "חנן אותו האל") כהוקרה וזיכרון לדודתה האהובה (חואניטה) שגרה בקובה. אך השם הספרדי הזה, שניתן במקרה, התגלה בדיעבד כנשק הדיפלומטי החזק, המועיל והפותח-דלתות ביותר של טריפ: בעוד שגנרלים ודיפלומטים אמריקאים שחצנים בשמות אנגליים נתקלו בעוינות וחשדנות תמידית באמריקה הלטינית, טריפ נתפס כאחד משלהם והתקבל בארמונות הנשיאות בספרד ובדרום אמריקה בזרועות פתוחות ובחיבה בזכות שמו ה"לטיני" בלבד. שם המשפחה שלו, <span class="text-sky-400 font-bold italic">Trippe</span>, הוא ממקור אנגלי עתיק שמשמעותו המילולית "נוסע", "הולך בדרך" או "מטייל" (ומכאן גם נגזרה המילה האנגלית המודרנית Trip). השם הזה, שהיה קיים דורות לפני שהומצא המטוס, הפך להיות נבואה פסיכולוגית מדהימה: מדובר ב"נוסע הדיפלומטי בעל החסד", האדם שהקדיש את חייו כדי להסיע ולהטיס את האנושות כולה ממקום למקום.
+                        </p>
+                        <p>
+                            <span class="text-white font-bold block mb-2 underline italic text-[13px]">ילדות עשירה, תסכול מהסחר הימי ועיצוב אופי הגלובליזציה האגרסיבית:</span>
+                            חואן נולד ב-1899 לתוך עושר אריסטוקרטי מובהק וסיים את לימודיו באוניברסיטת ייל היוקרתית (שם גם הקים חוג תעופה). משפחתו הענפה עשתה את הונה העצום בסחר ימי כבד. אך כנער וכאיש צעיר, טריפ ראה באוניות הקיטור הענקיות וברכבות אמצעי תחבורה איטי להחריד, מוגבל פיזית לקווי חוף ולפסי מתכת, ומיושן עד ייאוש. הפסיכולוגיה שלו הייתה מובהקת של "בונה אימפריות" (Empire Builder) מגלומן במובן הקלאסי של המילה. הוא לא רצה לנהל "עוד עסק" שמרני שמשלם דיבידנדים; הוא רצה, פשוטו כמשמעו, לשלוט בגיאוגרפיה הפיזית של כדור הארץ כולו באמצעות שימוש במטוסים, כלים שיכולים לחצות אוקיינוסים ומתעלמים לחלוטין מגבולות וממחסומים טבעיים שניצבו בפני האנושות משחר ההיסטוריה.
+                        </p>
+                        <div class="trauma-highlight" style="border-right-color: #0284c7; background: rgba(2, 132, 199, 0.05); color:#bae6fd;">
+                            הזהות הניהולית והפסיכולוגית של טריפ הייתה אריסטוקרטית-טכנולוגית לחלוטין: הוא שלט בחברת פאן אמריקן כדיקטטור אלגנטי, קר רוח ומרוחק שאינו סופר פקידי תעופה אלא מתייעץ וחותם עסקאות ישירות פנים אל פנים מול נשיאי ארה"ב, מלכים ורוזנים בחדר הסגלגל ובארמונותיהם. האובססיה העמוקה, חסרת התקדים והמוחלטת שלו הייתה רעיון "כיווץ כדור הארץ" (Shrinking the Globe). כדי להשיג זאת, הוא היה ניגש ליצרניות המטוסים, דורש מהן דרישות טכנולוגיות שנחשבו אז לבלתי אפשריות ולגבול המדע הבדיוני (כמו מטוס שיוכל לחצות אוקיינוס, או מטוס שיישא מאות אנשים), ומאלץ את בכירי המהנדסים לפרוץ שוב ושוב את חוקי גבולות הפיזיקה, המבנה, הרעש והדלק, רק כדי לספק את חזונו. למרות האליטיזם האישי המופגן שלו כמעמד עליון (WASP), האידיאולוגיה האמיתית והמהפכנית שלו הייתה הנגשת העולם לכולם: הוא האמין שפאן אם חייבת להיות זו שתהפוך את הטיסה ממותרות בלעדית של עשירים, למוצר עממי שמעמד הביניים האמריקאי יכול להרשות לעצמו, כיוון שרק דרך טיסות המונים תוכל ארה"ב להבטיח את נוכחותה ודומיננטיות תרבותית בכל פינה ופינה על הפלנטה.
+                        </div>
+                        <p>
+                            <span class="text-white font-bold block mb-2 underline italic text-[13px]">הישגים מרכזיים ומורשת הנדסית ותרבותית המשנה עולם:</span>
+                            <ul class="achievement-list" style="color: var(--accent-sky);">
+                                <li class="achievement-item"><strong>אדריכלו והוגהו של ה-Boeing 747:</strong> חואן טריפ הוא למעשה האיש ההיסטורי והיחיד שחתם ב-1966 על צ'ק דמיוני (שהימר על עתיד חברתו), מה שהכריח את חברת בואינג לבנות את ה"ג'מבו ג'ט" הענק (מטוס רחב גוף עם שתי מעברים ששינה לחלוטין את הכלכלה העולמית ותנועת התיירות), וזאת רק בגלל שטריפ דרש מבואינג "לספק לי מטוס גדול פי שניים שיוזיל את עלות הכרטיסים בחצי".</li>
+                                <li class="achievement-item"><strong>עידן הסירות המעופפות (The Clippers):</strong> יוזם ודוחף פיתוח מטוסי המים הענקיים של שנות ה-30 (כמו מרטין M-130 ובואינג 314 קליפר המפורסמים) שהתגברו בחוכמה על המחסור האדיר במסלולי נחיתה בינלאומיים בימים ההם, ואיפשרו לראשונה בהיסטוריה האנושית טיסות אזרחיות טרנס-אוקייניות (מעל האוקיינוס השקט הרחב והאטלנטי הסוער). במקביל הוא הקים מאפס רשת מלונות עולמית (InterContinental) ותשתיות על איים נידחים באוקיינוס השקט (כמו מידווי ווויק) רק כדי לארח את נוסעיו העייפים במהלך מסעותיהם.</li>
+                                <li class="achievement-item"><strong>המצאת "מחלקת תיירים" (Tourist Class):</strong> בניגוד מוחלט להסכמת הקרטל הבינלאומי (IATA) שניסה לשמור על מחירי טיסה גבוהים ואליטיסטיים, טריפ היה המנכ"ל הראשון שהכניס באומץ, ב-1948, את הקונספט של מחלקת תיירים מוזלת בצפיפות גבוהה בטיסותיו לפורטו ריקו וללונדון. בכך הוא למעשה חתך את המחיר ביותר ממחצית ופתח לראשונה את שערי הטיסה הבינלאומית והתיירות לאזרח ולמשפחה האמריקאית הפשוטה.</li>
                             </ul>
                         </p>
                     </div>
@@ -488,14 +638,14 @@
         <footer class="mt-24 border-t border-white/5 pt-12 pb-20 text-center">
             <div class="inline-block p-1 rounded-full bg-cyan-600 mb-6 shadow-lg shadow-cyan-900/20">
                 <div class="bg-black rounded-full px-8 py-2">
-                    <span class="text-[11px] font-black text-cyan-400 uppercase tracking-[0.4em]">Integrated Intelligence Standard • V4</span>
+                    <span class="text-[11px] font-black text-cyan-400 uppercase tracking-[0.4em]">Integrated Intelligence Standard • V8 Final Expansion</span>
                 </div>
             </div>
             <p class="text-[10px] text-gray-700 font-bold uppercase tracking-[0.2em] leading-relaxed">
                 RESEARCH CONCLUDED BY META-COGNITIVE AGENT<br>
                 OPTIMIZED FOR SAMSUNG S25 ULTRA INTERFACE<br>
-                STATUS: MASSIVE EXPANSION APPLIED (PHASE 01 COMPLETE)<br>
-                © 2026 | ZERO SHORTCUTS POLICY
+                STATUS: MAXIMUM DEPTH & ETYMOLOGY RESTORED (ZERO SHORTCUTS)<br>
+                © 2026 | AVIATION MATRIX
             </p>
         </footer>
 

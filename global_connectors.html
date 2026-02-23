@@ -14,6 +14,11 @@
             --accent-gold: #fbbf24;
             --accent-blue: #3b82f6;
             --accent-crimson: #991b1b;
+            --accent-rose: #f43f5e;
+            --accent-sky: #38bdf8;
+            --accent-yellow: #eab308;
+            --accent-teal: #0f766e;
+            --accent-green: #16a34a;
         }
         body {
             font-family: 'Assistant', sans-serif;
@@ -38,9 +43,8 @@
             border-radius: 32px;
         }
         .etymology-chip {
-            background: rgba(16, 185, 129, 0.07);
-            color: var(--accent-emerald);
-            border: 1px solid rgba(16, 185, 129, 0.2);
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             font-family: monospace;
             padding: 2px 8px;
             border-radius: 6px;
@@ -52,36 +56,45 @@
             margin: 2rem 0;
         }
         .founding-nexus-box {
-            background: rgba(16, 185, 129, 0.03);
+            background: rgba(255, 255, 255, 0.02);
             border-right: 2px solid var(--accent-emerald);
             padding: 1.25rem;
             margin: 1.5rem 0;
             border-radius: 0 12px 12px 0;
         }
         .trauma-highlight {
-            background: rgba(239, 68, 68, 0.05);
-            border-right: 2px solid #ef4444;
-            padding: 1.1rem;
+            padding: 1.25rem;
             border-radius: 0 12px 12px 0;
             font-style: italic;
             font-size: 0.95rem;
-            color: #fca5a5;
-            box-shadow: 10px 0 30px rgba(239, 68, 68, 0.1);
+            box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
+        }
+        .achievement-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: #cbd5e1;
+        }
+        .achievement-item::before {
+            content: '•';
+            color: inherit;
+            font-weight: bold;
         }
         .section-divider {
             height: 1px;
-            background: linear-gradient(to left, transparent, rgba(16, 185, 129, 0.3), transparent);
+            background: linear-gradient(to left, transparent, rgba(255, 255, 255, 0.1), transparent);
             margin: 4rem 0;
         }
     </style>
 </head>
 <body class="pb-40">
 
-    <!-- Top Status Bar -->
     <nav class="sticky top-0 z-50 bg-black/90 backdrop-blur-lg border-b border-white/5 p-4">
         <div class="s25-container flex justify-between items-center">
             <a href="index.html" class="text-emerald-500 text-[10px] font-black tracking-widest uppercase">← Back to Index</a>
-            <span class="text-[10px] text-gray-600 font-bold uppercase tracking-[0.3em]">Phase 02 | Full Intelligence Dossier</span>
+            <span class="text-[10px] text-gray-600 font-bold uppercase tracking-[0.3em]">Phase 02 | Absolute Intelligence</span>
         </div>
     </nav>
 
@@ -93,61 +106,74 @@
         </header>
 
         <!-- 01. EMIRATES -->
-        <article class="mb-48">
+        <article class="mb-32">
             <div class="flex items-center gap-4 mb-8">
-                <span class="text-7xl font-black text-white/5">01</span>
+                <span class="text-6xl font-black text-white/5">01</span>
                 <div>
                     <h2 class="text-4xl font-black text-white leading-tight tracking-tighter">Emirates</h2>
                     <p class="text-[11px] text-emerald-400 font-bold uppercase tracking-[0.2em] italic">The Royal Sovereign Blueprint</p>
                 </div>
             </div>
 
-            <div class="glass-module p-6 mb-12">
-                <div class="space-y-5 text-[15px] text-gray-300 font-light">
+            <div class="glass-module p-6 mb-10 border-r-4 border-emerald-600">
+                <div class="space-y-4 text-[14px] text-gray-300 font-light">
                     <p><strong class="text-white underline decoration-emerald-500/50 underline-offset-4">שנת ייסוד רשמית:</strong> 25 באוקטובר, 1985 (טיסה ראשונה לקראצ'י).</p>
                     <p><strong class="text-white underline decoration-emerald-500/50 underline-offset-4">החזיונר והמייסד:</strong> Sheikh Mohammed bin Rashid Al Maktoum (יליד 1949).</p>
                     <p><strong class="text-white underline decoration-emerald-500/50 underline-offset-4">מיקום ייסוד:</strong> דובאי, איחוד האמירויות הערביות.</p>
                 </div>
             </div>
 
-            <section class="mb-14">
-                <h4 class="text-xs font-bold text-emerald-500 uppercase mb-5 border-b border-emerald-900/30 pb-1 flex items-center gap-2">הקשר הייסוד: רקע וסיבה מורחבים</h4>
-                <div class="founding-nexus-box text-[15px] font-light leading-relaxed text-justify">
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-emerald-500 uppercase mb-4">אטימולוגיה מורחבת וזהות</h4>
+                <div class="space-y-6 text-[14px] font-light text-justify leading-relaxed">
+                    <div>
+                        <span class="text-white font-bold block mb-1 underline italic">חלק א': Emirates (אמירויות)</span>
+                        <p>השם נגזר באופן ישיר מהשורש השמי העתיק <span class="etymology-chip" style="color:var(--accent-emerald);">א-מ-ר</span> (אמיר/Amir). בערבית קדומה ובשפות שמיות אחרות, המשמעות של "אמיר" היא מפקד, בעל סמכות, זה שנותן את הפקודה (Amr). בחירת השם במקרה זה לא הייתה מקרית או תמימה; דובאי (אמירות אחת מתוך שבע) בחרה בחוצפה יזמית לנכס לעצמה את המותג של כלל "איחוד האמירויות" הפדרלי, כדי לשדר זהות לאומית כוללת ועוצמתית כלפי חוץ, אף על פי שהחברה הייתה (ועודנה) בבעלות בלעדית של ממשלת דובאי ומשפחת המלוכה שלה בלבד.</p>
+                    </div>
+                    <div>
+                        <span class="text-white font-bold block mb-1 underline italic">חלק ב': סמליות הלוגו והצבע</span>
+                        <p>הלוגו האייקוני של החברה, המציג את המילה "אמירויות" בערבית (طيران الإمارات) בעיצוב קליגרפי זורם, נוצר כדי לסמל את דיונות חולות המדבר ואת משבי הרוח המקומיים. הצבעים הנבחרים – אדום עמוק וזהב – מייצגים את סמלי המלוכה ההיסטוריים של משפחת אל-מכתום, ובמקביל את העושר הכלכלי העצום המופק מהמדבר הצחיח. אמירויות לא רק מטיסה נוסעים, היא מטיסה אתוס של יוקרה ערבית מודרנית שאינה כפופה או מתנצלת בפני המערב.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-emerald-500 uppercase mb-4 border-b border-emerald-900/30 pb-1 flex items-center gap-2">הקשר הייסוד: רקע וסיבה מורחבים</h4>
+                <div class="founding-nexus-box text-[14px] font-light leading-relaxed text-justify" style="border-right-color: var(--accent-emerald);">
                     <p>
-                        <span class="text-white font-bold block mb-2 underline italic">הרקע: המצור האווירי של Gulf Air</span>
-                        בראשית שנות ה-80, דובאי הייתה צומת מסחרי מתעורר אך חסר ריבונות אווירית. היא הייתה תלויה לחלוטין בחברת <span class="italic text-white">Gulf Air</span>, שהייתה בבעלות משותפת של בחריין, קטר ואבו דאבי. כשהשייח' מוחמד החליט ליישם מדיניות "שמיים פתוחים" כדי להפוך את דובאי למרכז סחר, שאר המדינות ב-Gulf Air ראו בכך איום על המונופול שלהן והגיבו בצמצום דרסטי של טיסותיהן לדובאי. זה היה ניסיון חנק כלכלי שנועד להכניע את שאיפותיה של האמירות.
+                        <span class="text-white font-bold block mb-2 underline italic">הרקע: המצור האווירי של Gulf Air וסחיטה פוליטית אזורית</span>
+                        בראשית שנות ה-80, דובאי הייתה צומת מסחרי מתעורר ושוקק חיים, אך במקביל הייתה פגיעה להחריד ונטולת ריבונות אווירית עצמאית. היא הייתה תלויה באופן מוחלט בחברת התעופה האזורית <span class="italic text-white">Gulf Air</span>, שהייתה בבעלות פוליטית משותפת של מדינות המפרץ המתחרות (בחריין, קטר ואבו דאבי). כאשר השייח' מוחמד (אז שר ההגנה הצעיר) החליט ליישם מדיניות של "שמיים פתוחים" כדי להפוך את דובאי למרכז סחר חופשי לכולם, שאר המדינות ב-Gulf Air ראו בכך איום ישיר על המונופול שלהן. הן הגיבו באיום קרטליסטי אגרסיבי: צמצום דרסטי של טיסותיהן לדובאי בניסיון לחנוק אותה כלכלית ולהכניע את מדיניותה.
                     </p>
                     <p class="mt-4">
-                        <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד: ריבונות אסטרטגית מוחלטת</span>
-                        הסיבה הייתה **הישרדות ריבונית**. השייח' הבין שדובאי לעולם לא תהיה "עיר עולם" אם השער שלה לעולם נשלט על ידי אינטרסים של מדינות יריבות. הוא הורה להקים חברה תוך 5 חודשים, עם תקציב זעום של 10 מיליון דולר, ודרש רווחיות ללא סובסידיות כדי להוכיח שהמודל היזמי של דובאי חזק יותר מהמודל המדינתי השמרני.
+                        <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד: ריבונות אסטרטגית והצהרת עצמאות כלכלית</span>
+                        הסיבה המיידית להקמת אמירויות הייתה בראש ובראשונה **הישרדות ריבונית ולאומית**. השייח' מוחמד הבין בצלילות שדובאי לעולם לא תוכל להפוך ל"עיר עולם" (Global City) או למרכז פיננסי, אם הברז הלוגיסטי העיקרי שלה (השמיים) נשלט על ידי אינטרסים של מדינות זרות וקנאת שכנותיה. בתגובה לאולטימטום של Gulf Air, הוא הורה למוריס פלנגן (מומחה תעופה בריטי) להקים חברת תעופה מקומית ועצמאית לחלוטין. הוא הקציב לו 5 חודשים בלבד, תקציב זעום במונחי תעופה של 10 מיליון דולר, וזוג מטוסים חכורים מפקיסטן (PIA). הדרישה המחמירה ביותר שלו הייתה שהחברה תהיה רווחית ללא סובסידיות ממשלתיות מתמשכות, כדי להוכיח שהמודל היזמי והחופשי של דובאי עליון על מודל הנפט השמרני והמפונק של שכנותיה.
                     </p>
                 </div>
             </section>
 
-            <section class="mb-14">
-                <h4 class="text-xs font-bold text-emerald-500 uppercase mb-5">אטימולוגיה וזהות</h4>
-                <div class="space-y-4 text-[15px] font-light text-justify leading-relaxed">
-                    <p>
-                        השם <span class="text-white font-bold italic underline decoration-emerald-500">Emirates</span> (אמירויות) נגזר מהשורש השמי <span class="etymology-chip">א-מ-ר</span> (אמיר/Amir). בערבית קדומה, "אמיר" הוא המפקד, זה שנותן את הפקודה (Amr). בחירת השם נועדה לנכס את הזהות של כל איחוד האמירויות למותג אחד המזוהה עם דובאי ויוקרה קיצונית.
-                    </p>
-                </div>
-            </section>
-
-            <section class="mb-14">
-                <h4 class="text-xs font-bold text-emerald-500 uppercase mb-5">פרופיל מייסד: השייח' מוחמד אל-מכתום</h4>
-                <div class="founder-profile-box">
-                    <div class="space-y-7 text-[15px] text-gray-400 font-light text-justify leading-relaxed">
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-emerald-500 uppercase mb-4">פרופיל מייסד: השייח' מוחמד אל-מכתום</h4>
+                <div class="founder-profile-box" style="border-right-color: var(--accent-emerald);">
+                    <div class="space-y-6 text-[14px] text-gray-400 font-light text-justify leading-relaxed">
                         <p>
                             <span class="text-white font-bold block mb-1 underline italic text-[13px]">אטימולוגיה של שם המייסד:</span>
-                            <span class="text-emerald-400 font-bold italic">Mohammed</span> (ראוי לשבח מהשורש ח.מ.ד). <span class="text-emerald-400 font-bold italic">Rashid</span> (מודרך נכונה). <span class="text-emerald-400 font-bold italic">Al Maktoum</span> נגזר מהשורש השמי <span class="italic font-mono">K-T-M</span> שפירושו "נסתר", "שמור" או "סודי". השם משקף "שליט ראוי לשבח בעל חכמה שמורה וסודית".
+                            <span class="text-emerald-400 font-bold italic">Mohammed</span> (מוחמד - מהשורש השמי ח.מ.ד, "הראוי לשבח רב"). <span class="text-emerald-400 font-bold italic">Rashid</span> (ראשיד - "המודרך נכונה/החכם בדרכו"). השם המעניין ביותר הוא שם השושלת, <span class="text-emerald-400 font-bold italic">Al Maktoum</span> (אל-מכתום), הנגזר מהשורש השמי כ.ת.מ (כמו המילה 'כתם' או 'להכתים/להסתיר'), שפירושו המילולי הוא "הנסתר", "השמור" או "הסודי". השם המלא משקף היטב את אופיו: "שליט ראוי לשבח בעל חכמה שמורה, שקטה, נסתרת ואסטרטגית".
                         </p>
                         <p>
-                            <span class="text-white font-bold block mb-2 underline italic text-[13px]">ילדות ועיצוב פסיכולוגי:</span>
-                            נולד ב-1949 בבית משפחתו בשינדגה, בתקופה שבה דובאי הייתה כפר דייגים מוכה עוני בצל קריסת שוק הפנינים. בילדותו הוא ישן בחדרים ללא חשמל וחווה את המאבק היומיומי של אביו לשמר את דובאי כנמל חופשי מול יהירות האימפריה הבריטית הגוועת.
+                            <span class="text-white font-bold block mb-2 underline italic text-[13px]">ילדות, שברים ועיצוב פסיכולוגי של הישרדות:</span>
+                            הוא נולד ב-1949 בבית משפחתו בשינדגה, תקופה שבה דובאי הייתה בקושי יותר מכפר דייגים ושוליים מוכה עוני, שחי בצל קריסתו המוחלטת של שוק הפנינים המסורתי (עקב המצאת הפנינה המתורבתת ביפן). בילדותו הוא ישן בחדרים ללא חשמל מוסדר, וחווה יום-יום את המאבק הדיפלומטי של אביו וסבו לשמר את דובאי כנמל חופשי ופתוח מול העוני מבית והשליטה של האימפריה הבריטית הגוועת מבחוץ. מאוחר יותר נשלח ללמוד בבריטניה, שם נחשף בהלם לפער הטכנולוגי והתשתיתי העצום שבין המערב המפותח למולדתו המדברית.
                         </p>
-                        <div class="trauma-highlight">
-                            הטראומה המכוננת שלו היא "אימת ההיעלמות". הוא ראה איך דובאי כמעט נמחקה מההיסטוריה כשהעולם מצא תחליף לפנינים שלה. האידיאולוגיה שלו היא "המקום הראשון או לא כלום" – הוא בנה את Emirates כ"חליפת שריון" כלכלית כדי שדובאי לעולם לא תחזור להיות כפר תלוי בחסדים.
+                        <div class="trauma-highlight" style="border-right-color: var(--accent-emerald); background: rgba(16,185,129,0.05); color:#a7f3d0;">
+                            הטראומה המכוננת של חייו ושל הנהגתו היא "אימת ההיעלמות הכלכלית". הוא ראה במו עיניו כילד כיצד דובאי כמעט נמחקה מדפי ההיסטוריה וגוועה ברעב כשהעולם פשוט מצא תחליף טכנולוגי לפנינים שלה. האידיאולוגיה השלטת שלו, כתוצאה מכך, היא "המקום הראשון או לא כלום" (הוא נוהג לומר בראיונות ש"אף אחד לא זוכר את מי שהגיע למקום השני"). הוא בנה את חברת אמירויות כ"חליפת שריון" וכמנוע גידור כלכלי עצום, במטרה ברורה להבטיח שגם כשהנפט של האזור ייגמר (ולדובאי עצמה יש מעט מאוד ממנו) – דובאי תהיה כה חיונית לעולם, שהיא לעולם לא תחזור להיות כפר תלוי בחסדים.
                         </div>
+                        <p>
+                            <span class="text-white font-bold block mb-2 underline italic text-[13px]">הישגים מרכזיים ומורשת ארכיטקטונית:</span>
+                            <ul class="achievement-list" style="color: var(--accent-emerald);">
+                                <li class="achievement-item"><strong>פריצת המצור האווירי:</strong> הקמת חברת התעופה כמעט מכלום בשנת 1985 בתוך 5 חודשים, כנגד כל הסיכויים והאיומים של Gulf Air, והפיכתה לחברה רווחית בתוך תשעה חודשים בלבד מיום הקמתה.</li>
+                                <li class="achievement-item"><strong>אדריכלות מודל ה-A380 כסמל לאומי:</strong> דחיפה, מימון ורכישה מאסיבית של מטוס הסופר-ג'מבו הכפול (Airbus A380). הוא וצוותו היו היחידים בעולם שהוכיחו שמטוס כה עצום ויקר יכול להיות רווחי, על ידי הפיכתו ל"מלון מעופף" יוקרתי המחבר אנשים מכל קצוות העולם דרך נקודת מעבר אחת בטוחה.</li>
+                                <li class="achievement-item"><strong>פיתוח מגה-צומת עולמי (Mega-Hub):</strong> בניית נמל התעופה הבינלאומי של דובאי (DXB) והפיכתו (עקיפת הית'רו בלונדון) לנמל התעופה העמוס ביותר בעולם לנוסעים בינלאומיים, תוך שילובו המוחלט במערך תיירות, מלונאות וסחר גלובלי (מודל דובאי).</li>
+                            </ul>
+                        </p>
                     </div>
                 </div>
             </section>
@@ -156,61 +182,74 @@
         <div class="section-divider"></div>
 
         <!-- 02. SINGAPORE AIRLINES -->
-        <article class="mb-48">
+        <article class="mb-32">
             <div class="flex items-center gap-4 mb-8">
-                <span class="text-7xl font-black text-white/5">02</span>
+                <span class="text-6xl font-black text-white/5">02</span>
                 <div>
                     <h2 class="text-4xl font-black text-white leading-tight tracking-tighter">Singapore Airlines</h2>
                     <p class="text-[11px] text-blue-400 font-bold uppercase tracking-[0.2em] italic">The Gem of Meritocratic Survival</p>
                 </div>
             </div>
 
-            <div class="glass-module p-6 mb-12 border-r-4 border-blue-600">
-                <div class="space-y-5 text-[15px] text-gray-300 font-light">
-                    <p><strong class="text-white underline decoration-blue-600/50 underline-offset-4">שנת ייסוד (כעצמאית):</strong> 1 באוקטובר, 1972.</p>
+            <div class="glass-module p-6 mb-10 border-r-4 border-blue-600">
+                <div class="space-y-4 text-[14px] text-gray-300 font-light">
+                    <p><strong class="text-white underline decoration-blue-600/50 underline-offset-4">שנת ייסוד (כעצמאית לחלוטין):</strong> 1 באוקטובר, 1972.</p>
                     <p><strong class="text-white underline decoration-blue-600/50 underline-offset-4">הבונה והחזיונר הלאומי:</strong> Lee Kuan Yew (1923–2015).</p>
-                    <p><strong class="text-white underline decoration-blue-600/50 underline-offset-4">מיקום ייסוד:</strong> סינגפור (מדינת אי זעירה).</p>
+                    <p><strong class="text-white underline decoration-blue-600/50 underline-offset-4">מיקום ייסוד:</strong> סינגפור (מדינת אי זעירה בדרום מזרח אסיה).</p>
                 </div>
             </div>
 
-            <section class="mb-14">
-                <h4 class="text-xs font-bold text-blue-500 uppercase mb-5 border-b border-blue-900/30 pb-1 flex items-center gap-2">הקשר הייסוד: רקע וסיבה מורחבים</h4>
-                <div class="founding-nexus-box text-[15px] font-light leading-relaxed text-justify" style="border-right-color: var(--accent-blue);">
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-blue-500 uppercase mb-4">אטימולוגיה מורחבת וזהות</h4>
+                <div class="space-y-6 text-[14px] font-light text-justify leading-relaxed">
+                    <div>
+                        <span class="text-white font-bold block mb-1 underline italic">חלק א': Singapore</span>
+                        <p>השם <span class="text-white font-bold italic underline decoration-blue-500">Singapore</span> נגזר מהמילה העתיקה בסנסקריט <span class="etymology-chip" style="color:var(--accent-blue);">Simhapura</span>. השורש <span class="italic font-bold">Simha</span> מסמל אריה, והשורש <span class="italic font-bold">Pura</span> פירושו עיר או מבצר. משמעות השם היא "עיר האריות". זהו שם קדום ועוצמתי המשדר עזות, אצילות, הרתעה וכוח טריטוריאלי בתוך סביבה ג'ונגלית אלימה ומוקפת אויבים היסטוריים.</p>
+                    </div>
+                    <div>
+                        <span class="text-white font-bold block mb-1 underline italic">חלק ב': Airlines & The SilverKris</span>
+                        <p>הזהות התאגידית של החברה מבוססת באופן עמוק על סמלים של כבוד ודיוק קטלני. הלוגו המפורסם על זנב המטוס, ה-"SilverKris" (פגיון הכסף), נגזר מהקריס (Kris) – פגיון מלאי ואינדונזי מסורתי, גלי וא-סימטרי המהווה סמל היסטורי לכבוד אישי, כוח פנימי ומיומנות קרבית קטלנית ומדויקת. המותג האנושי של החברה, ה-"Singapore Girl" (הדיילת האייקונית הלבושה בחליפת הסרונג-קבייה שעיצב פייר בלמן), נבנה כנשק שיווקי פסיכולוגי גאוני: הוא מציג לעולם המערבי חזות של הכנעה, רוגע ושירות אסיאתי מסורתי רך, אך למעשה מסתיר מאחוריו מנגנון אימונים קשוח להחריד, מקצוענות חסרת פשרות ודיוק מתמטי קר שאף חברה מערבית לא הצליחה לשחזר.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-blue-500 uppercase mb-4 border-b border-blue-900/30 pb-1 flex items-center gap-2">הקשר הייסוד: רקע וסיבה מורחבים</h4>
+                <div class="founding-nexus-box text-[14px] font-light leading-relaxed text-justify" style="border-right-color: var(--accent-blue);">
                     <p>
-                        <span class="text-white font-bold block mb-2 underline italic">הרקע: המדינה שגורשה אל הים (1965)</span>
-                        ב-1965 סינגפור גורשה מהפדרציה של מלזיה – המדינה הראשונה בהיסטוריה שקיבלה עצמאות בניגוד לרצונה המוחלט. ללא מים, ללא שטח, ללא הגנה וללא משאבים, האי הקטן עמד בפני איום קיומי. חברת התעופה המשותפת (MSA) התפרקה ב-1972 בשל סכסוך אידיאולוגי עמוק: מלזיה רצתה נתיבים פנימיים זולים לקירוב כפרים, בעוד סינגפור – המדינה שאין לה "פנים" – רצתה נתיבים בינלאומיים יוקרתיים שיחברו אותה לעולם הגדול.
+                        <span class="text-white font-bold block mb-2 underline italic">הרקע: המדינה שגורשה אל הים (טראומת 1965)</span>
+                        הרקע המדויק להקמת סינגפור איירליינס כחברה עצמאית קשור בטראומה הלאומית הגדולה של שנת 1965, שבה סינגפור גורשה בבושת פנים מהפדרציה של מלזיה – זהו המקרה היחיד בהיסטוריה המודרנית של אומה שקיבלה עצמאות לחלוטין בניגוד לרצונה ולתכנוניה. האי הקטן, שגודלו כגודל מטרופולין תל אביב, מצא את עצמו בוקר אחד לבדו: ללא משאבי טבע, ללא עורף חקלאי או יבשתי, מוקף במדינות עוינות, ואפילו ללא מקורות מים מתוקים עצמאיים. חברת התעופה המשותפת שהייתה קיימת עד אז (MSA - Malaysia-Singapore Airlines) עמדה בפני התרסקות ופירוק ב-1972 בשל סכסוך אידיאולוגי עמוק על מטרת התעופה.
                     </p>
                     <p class="mt-4">
-                        <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד: המטוס כחבל הצלה קיומי</span>
-                        לי קואן יו הבין שסינגפור חייבת להיות מקום שהעולם "צריך" כדי לשרוד. סיבת הייסוד הייתה **הפיכת הנידחות הגיאוגרפית ליתרון לוגיסטי (Global Hub)**. החברה נוסדה כדי להוכיח שהמזרח הרחוק יכול להציב סטנדרטים של שלמות הנדסית ושירותית שיעלו על כל חברה מערבית. היא הוקמה ללא סובסידיות מהיום הראשון כדי לכפות עליה מריטוקרטיה אכזרית – המצוינות היא תנאי לחיים, והבינוניות היא גזר דין מוות לאומי.
+                        <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד: המטוס כחבל הצלה קיומי אל העולם הגדול</span>
+                        ממשלת מלזיה דרשה מחברת התעופה המשותפת (MSA) להתמקד בטיסות ובנתיבים פנימיים וזולים כדי לקרב כפרים נידחים בג'ונגלים. לעומתה, לסינגפור הזעירה לא היה בכלל "פנים" לקרב. ראש הממשלה לי קואן יו הבין שעל מנת שסינגפור תשרוד את הגירוש, היא חייבת ליצור נתיבים בינלאומיים ארוכים ויוקרתיים שידלגו מעל שכנותיה העוינות ויחברו אותה ישירות לבירות העולם. סיבת הייסוד הייתה **הפיכת הנידחות והקוטן הגיאוגרפי ליתרון לוגיסטי גלובלי (Global Hub)**. סינגפור איירליינס הוקמה כהוכחה חיה לכך שמדינת אי זעירה וחסרת משאבים יכולה להציב סטנדרטים של שלמות הנדסית, טכנולוגית ושירותית שיכו שוק על ירך את חברות התעופה המערביות העייפות (כמו Pan Am או British Airways). הממשלה קבעה בחוק איסור על מתן סובסידיות לחברה, כדי לכפות עליה "מריטוקרטיה אכזרית" מהיום הראשון – החובה להיות הטובה והרווחית בעולם, או להיכחד.
                     </p>
                 </div>
             </section>
 
-            <section class="mb-14">
-                <h4 class="text-xs font-bold text-blue-500 uppercase mb-5">אטימולוגיה וזהות</h4>
-                <div class="space-y-4 text-[15px] font-light text-justify leading-relaxed">
-                    <p>
-                        השם <span class="text-white font-bold italic underline decoration-blue-500">Singapore</span> נגזר מהסנסקריט <span class="etymology-chip">Simhapura</span>. השורש <span class="italic font-bold">Simha</span> (אריה) ו-<span class="italic font-bold">Pura</span> (עיר). "עיר האריות". הלוגו, ה-"SilverKris", נגזר מהפגיון המסורתי, המסמל כבוד אישי ומיומנות. המותג נבנה סביב ה-"Singapore Girl", דמות שמסמלת הכנעה אסיאתית חיצונית המסתירה מקצוענות ודיוק מתמטי חסר פשרות.
-                    </p>
-                </div>
-            </section>
-
-            <section class="mb-14">
-                <h4 class="text-xs font-bold text-blue-500 uppercase mb-5">פרופיל מייסד: לי קואן יו</h4>
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-blue-500 uppercase mb-4">פרופיל מייסד: לי קואן יו (Lee Kuan Yew)</h4>
                 <div class="founder-profile-box" style="border-right-color: var(--accent-blue);">
-                    <div class="space-y-7 text-[15px] text-gray-400 font-light text-justify leading-relaxed">
+                    <div class="space-y-6 text-[14px] text-gray-400 font-light text-justify leading-relaxed">
                         <p>
-                            <span class="text-white font-bold block mb-1 underline italic text-[13px]">אטימולוגיה של שם המייסד:</span>
-                            השם <span class="text-blue-400 font-bold italic">Lee</span> (שזיף - שם משפחה סיני עתיק 李). <span class="text-blue-400 font-bold italic">Kuan</span> (אור/מבריק 光). <span class="text-blue-400 font-bold italic">Yew</span> (אבות/מסורת 耀). השם המלא מסמל "האור המבריק הממשיך את תהילת האבות".
+                            <span class="text-white font-bold block mb-1 underline italic text-[13px]">אטימולוגיה של שם המייסד (אדריכל האומה):</span>
+                            השם <span class="text-blue-400 font-bold italic">Lee</span> (לי) הוא שם משפחה סיני עתיק ונפוץ מאוד (李) שפירושו המקורי "עץ שזיף", סמל טבעי המסמל פריחה חזקה ושורשיות. השם הפרטי <span class="text-blue-400 font-bold italic">Kuan</span> (קואן - 光) פירושו בסינית "אור", "מבריק", "תהילה" או דבר שמאיר את דרכו. השם <span class="text-blue-400 font-bold italic">Yew</span> (יו - 耀) פירושו "לזרוח", "להתבלט" או להתחבר בגאווה למורשת אבות. השם המלא והמורכב משמעותו הפואטית היא "האור המבריק הממשיך להאיר את תהילת האבות והעתיד".
                         </p>
                         <p>
-                            <span class="text-white font-bold block mb-2 underline italic text-[13px]">ילדות ועיצוב זהות:</span>
-                            נולד ב-1923 בסינגפור הבריטית למשפחה משכילה. הטראומה המכוננת שלו הייתה הכיבוש היפני האכזרי ב-1942. הוא ראה איך היפנים הכניעו את הבריטים ה"בלתי מנוצחים" בתוך ימים והבין שהעולם מכבד רק כוח ודיוק. הוא למד משפטים בקיימברידג', שם הצטיין אך פיתח בוז עמוק לליברליזם המערבי שראה בו סימן לחולשה תפעולית.
+                            <span class="text-white font-bold block mb-2 underline italic text-[13px]">ילדות, אימת הכיבוש ועיצוב זהות נוקשה של שרידות:</span>
+                            לי נולד ב-1923 בסינגפור (שהייתה אז מושבת כתר בריטית בטוחה ושלווה) למשפחה משכילה ממוצא סיני שהעריצה את התרבות הבריטית. הוא התחנך מילדותו על ערכי הנימוס, העליונות והחוק המערבי. אולם, כל תפיסת עולמו התמימה התנפצה לרסיסים ב-1942 עם הפלישה של הצבא היפני לאי. הבריטים, שנתפסו כ"בלתי מנוצחים" וכמגנים הטבעיים של סינגפור, נכנעו באופן מחפיר תוך ימים ספורים. לי הצעיר חווה מקרוב ובאימה את האכזריות, הכיבוש והטבח ההמוני שביצעו היפנים באוכלוסייה המקומית (טבח ה-Sook Ching). 
                         </p>
-                        <div class="trauma-highlight" style="border-right-color: var(--accent-blue); background:rgba(59, 130, 246, 0.05);">
-                            ב-1965, כשבכה בשידור חי מול האומה על הגירוש ממלזיה, הוא נשבע שסינגפור לעולם לא תהיה חסרת אונים שוב. האידיאולוגיה שלו הייתה "מריטוקרטיה אכזרית": רק המצוינים ביותר ישרדו. הוא בנה את חברת התעופה כזרוע המודיעינית והכלכלית של המדינה – מטוס שהוא הוכחה שישראל של המזרח (סינגפור) היא יהלום בלתי שביר.
+                        <div class="trauma-highlight" style="border-right-color: var(--accent-blue); background:rgba(59, 130, 246, 0.05); color:#93c5fd;">
+                            הטראומה המכוננת ביותר של חייו הייתה "בגידת החלשים והסומכים". הוא הבין בדרך הקשה ביותר שהעולם אינו פועל לפי חוקים מוסריים אנגליים או הבטחות קולוניאליות ריקות, אלא נשלט אך ורק מתוך כוח, דיוק, אכזריות ויעילות. הוא המשיך ללמוד משפטים באוניברסיטת קיימברידג' היוקרתית, שם הצטיין אך פיתח בוז שקט לליברליזם, לרכות ולדקדנס המערבי שראה בו סימן לחולשה וריקבון תפעולי שיביא עליו חורבן. ב-1965, כשבכה בשידור חי מול האומה על הגירוש ממלזיה, נשבע בליבו שסינגפור לעולם לא תהיה נתונה שוב לחסדי מדינות אחרות. הוא בנה את חברת התעופה כזרוע מודיעינית, כלכלית ודיפלומטית שכל מהותה מבוססת על מריטוקרטיה אכזרית ופרפקציוניזם דרוויניסטי (רק הטובים ביותר שורדים ומתקדמים). המטוס המצוחצח היה הוכחה לעולם שישראל של המזרח (כפי שראה את סינגפור) היא יהלום בלתי שביר.
                         </div>
+                        <p>
+                            <span class="text-white font-bold block mb-2 underline italic text-[13px]">הישגים מרכזיים ומורשת ארגונית:</span>
+                            <ul class="achievement-list" style="color: var(--accent-blue);">
+                                <li class="achievement-item"><strong>מדינה כחברה / חברה כמדינה (Singapore Inc.):</strong> עיצוב קווי היסוד של SIA כחברה עצמאית לחלוטין שמחויבת לרווחיות ללא תלות ממשלתית מיומה הראשון – פילוסופיה של כור היתוך ששילבה קפיטליזם תחרותי טהור עם שליטה וניהול ריבוני ארוך טווח.</li>
+                                <li class="achievement-item"><strong>בניית נמל התעופה צ'אנגי המיתולוגי:</strong> ההחלטה האסטרטגית והיקרה של ממשלתו להעביר את נמל התעופה הישן (פאיאה לבר) אל שטח ענק חדש שיובש פיזית מהים בצ'אנגי. המהלך יצר את רכזת התעופה (Hub) המתקדמת, הנקייה, היעילה והמוערכת ביותר בעולם, המהווה מודל חיקוי גלובלי.</li>
+                                <li class="achievement-item"><strong>מיתוג חסר פשרות וצי צעיר:</strong> יישום מדיניות קשוחה של רכישת ציי מטוסים חדישים ומכירתם לאחר שנים ספורות, מה שהבטיח לסינגפור איירליינס להחזיק באופן קבוע בצי הצעיר ביותר בעולם, וביסס אותה כסמל למצוינות, בטיחות וחדשנות טכנולוגית בלתי מנוצחת.</li>
+                            </ul>
+                        </p>
                     </div>
                 </div>
             </section>
@@ -219,61 +258,74 @@
         <div class="section-divider"></div>
 
         <!-- 03. TURKISH AIRLINES -->
-        <article class="mb-48">
+        <article class="mb-32">
             <div class="flex items-center gap-4 mb-8">
-                <span class="text-7xl font-black text-white/5">03</span>
+                <span class="text-6xl font-black text-white/5">03</span>
                 <div>
                     <h2 class="text-4xl font-black text-white leading-tight tracking-tighter">Turkish Airlines</h2>
-                    <p class="text-[11px] text-red-600 font-bold uppercase tracking-[0.2em] italic">The Eurasian Bridge of Modernity</p>
+                    <p class="text-[11px] text-red-500 font-bold uppercase tracking-[0.2em] italic">The Eurasian Bridge of Modernity</p>
                 </div>
             </div>
 
-            <div class="glass-module p-6 mb-12 border-r-4 border-red-800">
-                <div class="space-y-5 text-[15px] text-gray-300 font-light">
-                    <p><strong class="text-white underline decoration-red-800/50 underline-offset-4">שנת ייסוד רשמית:</strong> 20 במאי, 1933 (תחת משרד ההגנה הלאומי).</p>
-                    <p><strong class="text-white underline decoration-red-800/50 underline-offset-4">הבונה והחזיונר:</strong> Mustafa Kemal Atatürk (1881–1938).</p>
-                    <p><strong class="text-white underline decoration-red-800/50 underline-offset-4">מיקום ייסוד:</strong> אנקרה, טורקיה.</p>
+            <div class="glass-module p-6 mb-10 border-r-4 border-red-800">
+                <div class="space-y-4 text-[14px] text-gray-300 font-light">
+                    <p><strong class="text-white underline decoration-red-800/50 underline-offset-4">שנת ייסוד רשמית:</strong> 20 במאי, 1933 (נוסדה תחת משרד ההגנה הלאומי הטורקי).</p>
+                    <p><strong class="text-white underline decoration-red-800/50 underline-offset-4">הבונה והחזיונר הלאומי:</strong> Mustafa Kemal Atatürk (1881–1938).</p>
+                    <p><strong class="text-white underline decoration-red-800/50 underline-offset-4">מיקום ייסוד:</strong> אנקרה, הרפובליקה הטורקית החדשה.</p>
                 </div>
             </div>
 
-            <section class="mb-14">
-                <h4 class="text-xs font-bold text-red-600 uppercase mb-5 border-b border-red-900/30 pb-1 flex items-center gap-2">הקשר הייסוד: רקע וסיבה מורחבים</h4>
-                <div class="founding-nexus-box text-[15px] font-light leading-relaxed text-justify" style="border-right-color: var(--accent-crimson);">
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-red-600 uppercase mb-4">אטימולוגיה מורחבת וזהות</h4>
+                <div class="space-y-6 text-[14px] font-light text-justify leading-relaxed">
+                    <div>
+                        <span class="text-white font-bold block mb-1 underline italic">חלק א': Turkish (Türk)</span>
+                        <p>השם <span class="text-white font-bold italic underline decoration-red-800">Turkish</span> (במקור: TÜRK HAVA YOLLARI) נגזר מהשורש הטורקי והמרכז-אסיאתי העתיק שפירושו המילולי והקדום הוא "חזק", "עוצמתי" או "זה שנוצר בבגרותו". בחירת המילה "טורקי" למותג הלאומי נבחרה ב-1933 באופן מכוון, פוליטי וטעון מאוד כחלק ממהפכת הלאומיות. היא נועדה למחוק ולהחליף לחלוטין את הזהות ה"עות'מאנית" (שהייתה מבוססת על דת אסלאמית ואימפריה רב-לאומית מתפוררת) בזהות "טורקית" אתנית, חילונית ומודרנית שגאה במקורותיה ההיסטוריים.</p>
+                    </div>
+                    <div>
+                        <span class="text-white font-bold block mb-1 underline italic">חלק ב': The Wild Goose Logo</span>
+                        <p>הלוגו האיקוני והעגול של החברה, ה-Wild Goose (אווז הבר/Greylag Goose), שעבר מודרניזציה לצורתו הגיאומטרית האלגנטית הנוכחית, נבחר בקפידה רבה. אווז הבר ידוע כעוף נודד עקשן שיכול לעוף בגבהים קיצוניים, לחצות יבשות באופן טבעי ולשרוד בתנאי מזג אוויר סוערים וקשים במיוחד. הוא מסמל עבור האומה הטורקית המתחדשת חוסן, טווח פעולה גלובלי, ויכולת לגשר מעל משוברים טבעיים והרים – סמל מושלם לחברה שמגשרת פיזית בין יבשות אירופה ואסיה.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-red-600 uppercase mb-4 border-b border-red-900/30 pb-1 flex items-center gap-2">הקשר הייסוד: רקע וסיבה מורחבים</h4>
+                <div class="founding-nexus-box text-[14px] font-light leading-relaxed text-justify" style="border-right-color: var(--accent-crimson);">
                     <p>
-                        <span class="text-white font-bold block mb-2 underline italic">הרקע: חורבן והשפלת האימפריה</span>
-                        לאחר מלחמת העולם הראשונה, טורקיה הייתה מדינה מרוסקת, חקלאית ואנאלפביתית שאיבדה את כל נכסיה הגיאופוליטיים והפכה ל"איש החולה של אירופה". התשתיות היבשתיות היו הרוסות, ואנטוליה הייתה מנותקת לחלוטין מהעולם ומהמודרנה. הריבונות הטורקית הייתה בסכנה תחת הסכמי שלום משפילים שניסו לפרק את המדינה.
+                        <span class="text-white font-bold block mb-2 underline italic">הרקע: חורבן האימפריה העות'מאנית והשפלה דיפלומטית עולמית</span>
+                        לאחר תבוסתה במלחמת העולם הראשונה, טורקיה מצאה את עצמה מרוסקת לחלוטין. מאימפריה אדירה ורב-יבשתית ששלטה במזרח התיכון, צפון אפריקה ואירופה, היא הפכה למדינה חקלאית נחשלת, מוקטנת ומוכה שהוגדרה בזלזול כ"איש החולה של אירופה". התשתיות היבשתיות שלה היו הרוסות, אנטוליה (מרכז טורקיה הגיאוגרפי) הייתה מנותקת לחלוטין מהמערב ומהמודרנה, ורמת האנאלפביתיות בקרב העם הייתה עצומה. הריבונות הטורקית עצמה הייתה בסכנה קיומית חמורה תחת הסכמי שלום משפילים (כמו הסכם סוור) שניסו לפרק, לבזז ולחלק את אדמתה בין המעצמות האירופאיות השונות.
                     </p>
                     <p class="mt-4">
-                        <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד: "העתיד נמצא בשחקים" (İstikbal Göklerdedir)</span>
-                        הסיבה הייתה **חילון ומודרניזציה רדיקלית**. אתאטורק האמין שהתעופה היא הכלי המהיר ביותר להוציא את העם הטורקי מהבורות והבידוד הדתי והתרבותי. החברה הוקמה תחת משרד ההגנה הלאומי כדי לאחד את המרחב הטורקי העצום ולהפוך את טורקיה לצומת דרכים מודרני בין אירופה לאסיה, ובכך לבצר את ריבונותה הלאומית כנגד המעצמות הקולוניאליות שתמיד ניסו לחלק אותה.
+                        <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד: מודרניזציה רדיקלית - "העתיד נמצא בשחקים"</span>
+                        מוסטפא כמאל (אתאטורק) הקים את "מנהל קווי התעופה הממלכתיים" (הבסיס לטרקיש איירליינס המודרנית) כחלק מ**פרויקט חילון ומודרניזציה רדיקלי ואלים שכפה על עמו**. סיבת הייסוד הייתה פוליטית ותרבותית עמוקה: אתאטורק (שטבע באותן שנים את האמרה ההיסטורית "העתיד נמצא בשחקים" - İstikbal Göklerdedir) האמין שהתעופה היא הכלי המהיר, החזק והדרמטי ביותר לחבר את רחבי המדינה הקרועה והענקית, וחשוב מכך – להכריח את העם הטורקי לצאת באחת מהפיגור הטכנולוגי והשמרנות הדתית. החברה, שהוקמה תחילה תחת כנפי משרד ההגנה הלאומי, נועדה להפוך את טורקיה ל"גשר פלדה" מודרני, איתן ובלתי תלוי בין אירופה לאסיה.
                     </p>
                 </div>
             </section>
 
-            <section class="mb-14">
-                <h4 class="text-xs font-bold text-red-600 uppercase mb-5">אטימולוגיה וזהות</h4>
-                <div class="space-y-4 text-[15px] font-light text-justify leading-relaxed">
-                    <p>
-                        השם <span class="text-white font-bold italic underline decoration-red-800">Turkish</span> נגזר מהשורש הטורקי העתיק שפירושו "חזק" או "עוצמתי". המילה נבחרה ב-1933 כחלק ממהפכת הלאומיות של אתאטורק שביקשה להחליף את הזהות ה"עות'מאנית" (הדתית) בזהות "טורקית" (האתנית-חילונית). הלוגו של אווז הבר (Wild Goose) מסמל נדידה חוצת גבולות ויכולת הישרדות בתנאים קיצוניים.
-                    </p>
-                </div>
-            </section>
-
-            <section class="mb-14">
-                <h4 class="text-xs font-bold text-red-600 uppercase mb-5">פרופיל מייסד: מוסטפא כמאל אתאטורק</h4>
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-red-600 uppercase mb-4">פרופיל מייסד: מוסטפא כמאל אתאטורק</h4>
                 <div class="founder-profile-box" style="border-right-color: var(--accent-crimson);">
-                    <div class="space-y-7 text-[15px] text-gray-400 font-light text-justify leading-relaxed">
+                    <div class="space-y-6 text-[14px] text-gray-400 font-light text-justify leading-relaxed">
                         <p>
                             <span class="text-white font-bold block mb-1 underline italic text-[13px]">אטימולוגיה של שם המייסד:</span>
-                            השם <span class="text-red-400 font-bold italic">Mustafa</span> (הנבחר - מהשורש הערבי ס.ט.פ). <span class="text-red-400 font-bold italic">Kemal</span> (שלמות/בשלות - שם שניתן לו בשל מצוינותו במתמטיקה). <span class="text-red-400 font-bold italic">Atatürk</span> (אבי הטורקים - Ata/אב, Türk/חזק). השם המלא משקף את הפיכתו למנהיג המוחלט, הנבחר והמושלם של האומה המודרנית.
+                            השם <span class="text-red-400 font-bold italic">Mustafa</span> (מוסטפא) נגזר מהשורש הערבי ס.ט.פ ופירושו המסורתי הוא "הנבחר" או "הטהור". השם <span class="text-red-400 font-bold italic">Kemal</span> (כמאל) פירושו "שלמות", "בגרות" או "מצוינות" (זהו תואר כבוד שניתן לו בנערותו על ידי מורהו הצבאי בשל כישרונו יוצא הדופן ושלמותו במתמטיקה). השם <span class="text-red-400 font-bold italic">Atatürk</span> (אתאטורק) הוא שם משפחה מיוחד שניתן לו באופן רשמי וייחודי על ידי הפרלמנט הטורקי ב-1934, שפירושו המילולי "אבי הטורקים" (Ata = אב/מייסד, Türk = הטורקי). השם המלא והמפואר משקף את המעבר ההיסטורי מנער נבחר ומוכשר למעמד של אל מודרני ומקים האומה.
                         </p>
                         <p>
-                            <span class="text-white font-bold block mb-2 underline italic text-[13px]">ילדות ועיצוב פסיכולוגי:</span>
-                            נולד בסלוניקי. אביו נפטר כשהיה ילד, והוא גדל בצל הדעיכה המושפלת של האימפריה העות'מאנית. הוא חווה את התפוררות הצבא העות'מאני בקרבות פנים אל פנים, דבר שהוליד אצלו בוז עמוק למסורת הדתית הישנה שראה בה גורם לנסיגה תרבותית.
+                            <span class="text-white font-bold block mb-2 underline italic text-[13px]">ילדות צבאית, אובדן ועיצוב אכזרי של מציאות:</span>
+                            הוא נולד בסלוניקי (עיר נמל שהייתה אז בשליטה עות'מאנית) למשפחה מהמעמד הבינוני-נמוך. הוא התייתם מאביו בגיל צעיר מאוד, נשלח לחינוך צבאי קפדני וגדל בצל הדעיכה המתמדת, הכואבת והאיטית של האימפריה העות'מאנית. כקצין צעיר ומבריק, הוא נלחם בחזיתות האכזריות ביותר שניצבו בפני האימפריה (מלחמת איטליה-טורקיה בלוב, מלחמות הבלקן, ומערכת גליפולי המדממת וההירואית במלחמת העולם הראשונה שבה בלם את הבריטים). 
                         </p>
-                        <div class="trauma-highlight" style="border-right-color: #991b1b; background: rgba(153, 27, 27, 0.05);">
-                            הטראומה שלו היא "השפלה לאומית". הוא ראה את המולדת שלו הופכת למגרש משחקים של מעצמות זרות בגלל חוסר בטכנולוגיה. האידיאולוגיה שלו הייתה קמליזם: חילון מוחלט, רציונליזם וטכנולוגיה. הוא בנה את חברת התעופה כסמל ליכולתה של טורקיה להיות "הגשר המודרני" המקשר בין תרבויות, תוך שמירה על עליונות צבאית ואזרחית מוחלטת.
+                        <div class="trauma-highlight" style="border-right-color: #991b1b; background: rgba(153, 27, 27, 0.05); color:#fca5a5;">
+                            הטראומה שהניעה את פועלו כל חייו הייתה "ההשפלה הלאומית העמוקה מול עליונות המערב". הוא ראה מקרוב ובידיים חשופות כיצד אימפריה עצומה קורסת מול עיניו כיוון שהיא מפגרת טכנולוגית, נשענת על פטליזם דתי ומתעלמת מהמדע המודרני. הוא הבין שצבאות לא מנצחים רק באומץ לב של חיילים, אלא ברכבות, ארטילריה מתקדמת, לוגיסטיקה ומטוסים. האידיאולוגיה שפיתח וכפה, הקמליזם, דרשה עקירה כפויה ורדיקלית של מסורות העבר (החלפת האלפבית הערבי ללטיני, ביטול מוסד הח'ליפות, איסור חוקי על לבוש מסורתי במוסדות) לטובת אימוץ מוחלט של רציונליזם, מדע והנדסה. התעופה, עבורו, לא הייתה רק עוד אמצעי תחבורה – היא הייתה החיסון הטכנולוגי נגד החולשה הטורקית ונגד השתלטות זרה.
                         </div>
+                        <p>
+                            <span class="text-white font-bold block mb-2 underline italic text-[13px]">הישגים מרכזיים ומורשת תעופתית לאומית:</span>
+                            <ul class="achievement-list" style="color: var(--accent-crimson);">
+                                <li class="achievement-item"><strong>ייסוד "האגודה האווירונאוטית הטורקית" (Türk Tayyare Cemiyeti):</strong> גוף אזרחי שהוקם ב-1925 כדי לאסוף באופן אקטיבי כספים מהציבור הרחב לפיתוח הכוח האווירי הטורקי, מה שהיווה את התשתית הערכית, החומרית והטכנולוגית להקמת חברת התעופה הלאומית מאוחר יותר.</li>
+                                <li class="achievement-item"><strong>הפיכת התעופה לכלי סוציולוגי ופמיניסטי:</strong> מינוי וקידום בתו המאומצת, סביהה גקצ'ן (Sabiha Gökçen), לטייסת הקרב (והטייסת האזרחית) הראשונה בטורקיה ואחת הראשונות בעולם. מהלך שנועד לשבור באגרסיביות טאבו חברתי איסלמי ולהוכיח שהאישה הטורקית המודרנית והחילונית שווה לגבר ומסוגלת לשלוט בטכנולוגיה החדישה והמסוכנת ביותר.</li>
+                                <li class="achievement-item"><strong>עיצוב הדוקטרינה הגיאו-אסטרטגית המודרנית:</strong> הנחת התשתית התחבורתית והמחשבתית (הפיכת טורקיה למרכז מעבר) שאפשרה ליורשיו להפוך את איסטנבול (כיום עם נמל התעופה איסטנבול החדש) לנקודת הקישור (Hub) הגדולה והמשפיעה ביותר בעולם בין אירופה, אסיה ואפריקה, המגשימה את חזונו לטורקיה כגשר העולם.</li>
+                            </ul>
+                        </p>
                     </div>
                 </div>
             </section>
@@ -282,61 +334,74 @@
         <div class="section-divider"></div>
 
         <!-- 04. ANA - ALL NIPPON AIRWAYS -->
-        <article class="mb-48">
+        <article class="mb-32">
             <div class="flex items-center gap-4 mb-8">
-                <span class="text-7xl font-black text-white/5">04</span>
+                <span class="text-6xl font-black text-white/5">04</span>
                 <div>
-                    <h2 class="text-4xl font-black text-white leading-tight tracking-tighter">ANA</h2>
-                    <p class="text-[11px] text-blue-400 font-bold uppercase tracking-[0.2em] italic">The Blue Wing of Japanese Reconstruction</p>
+                    <h2 class="text-4xl font-black text-white leading-tight tracking-tighter">ANA (All Nippon)</h2>
+                    <p class="text-[11px] text-sky-400 font-bold uppercase tracking-[0.2em] italic">The Blue Wing of Japanese Reconstruction</p>
                 </div>
             </div>
 
-            <div class="glass-module p-6 mb-12 border-r-4 border-blue-400">
-                <div class="space-y-5 text-[15px] text-gray-300 font-light">
-                    <p><strong class="text-white underline decoration-blue-400/50 underline-offset-4">שנת ייסוד רשמית:</strong> 27 בדצמבר, 1952 (עם הסרת איסור הטיסה לאחר המלחמה).</p>
-                    <p><strong class="text-white underline decoration-blue-400/50 underline-offset-4">הבונה והחזיונר:</strong> Masuichi Midoro (1886–1967).</p>
-                    <p><strong class="text-white underline decoration-blue-400/50 underline-offset-4">מיקום ייסוד:</strong> טוקיו, יפן.</p>
+            <div class="glass-module p-6 mb-10 border-r-4 border-sky-400">
+                <div class="space-y-4 text-[14px] text-gray-300 font-light">
+                    <p><strong class="text-white underline decoration-sky-400/50 underline-offset-4">שנת ייסוד רשמית:</strong> 27 בדצמבר, 1952 (מיד עם הסרת איסור הטיסה שהוטל על יפן לאחר המלחמה).</p>
+                    <p><strong class="text-white underline decoration-sky-400/50 underline-offset-4">הבונה והחזיונר:</strong> Masuichi Midoro (1886–1967).</p>
+                    <p><strong class="text-white underline decoration-sky-400/50 underline-offset-4">מיקום ייסוד:</strong> טוקיו, יפן.</p>
                 </div>
             </div>
 
-            <section class="mb-14">
-                <h4 class="text-xs font-bold text-blue-400 uppercase mb-5 border-b border-blue-900/30 pb-1 flex items-center gap-2">הקשר הייסוד: רקע וסיבה מורחבים</h4>
-                <div class="founding-nexus-box text-[15px] font-light leading-relaxed text-justify" style="border-right-color: #3b82f6;">
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-sky-400 uppercase mb-4">אטימולוגיה מורחבת וזהות</h4>
+                <div class="space-y-6 text-[14px] font-light text-justify leading-relaxed">
+                    <div>
+                        <span class="text-white font-bold block mb-1 underline italic">חלק א': All & Nippon</span>
+                        <p>השם <span class="text-white font-bold italic underline decoration-sky-400">Nippon</span> (ניפון) נגזר מהשורשים הסינו-יפניים העתיקים <span class="italic font-bold">Ni</span> (日 - שמש) ו-<span class="italic font-bold">Hon</span> (本 - מקור/שורש). המשמעות הרשמית והגאה היא "מקור השמש" (או ארץ השמש העולה). בחירת המילה האנגלית <span class="text-white font-bold italic">All</span> (כל) נועדה לשדר גישה פאן-יפנית מכלילה – קריאה לאיחוד של כל כוחות השוק האזרחיים, היזמים וההון הפרטי המקומי לטובת מאמץ משותף של קימום המולדת הפצועה, ללא הבדלי מעמד.</p>
+                    </div>
+                    <div>
+                        <span class="text-white font-bold block mb-1 underline italic">חלק ב': The Triton Blue</span>
+                        <p>הצבע שנבחר כזהות החברה, הכחול הבהיר (<span class="italic">Triton Blue</span>) והלבן, נושא עמו משמעות פסיכולוגית והיסטורית קריטית ליפן של אחרי מלחמת העולם השנייה. בניגוד ברור וישיר לצבע האדום (צבע השמש המרכזי) שאפיין את דגלי המלחמה, התוקפנות והאימפריאליזם היפני הקטלני, הצבע הכחול נבחר במכוון על ידי המייסדים כדי לסמל שלווה, אזרחות, תקווה חדשה, שמים נקיים ומרחב פתוח וחופשי של יפן החדשה – דמוקרטית, סוחרת ופציפיסטית המבקשת פיוס.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-sky-400 uppercase mb-4 border-b border-sky-900/30 pb-1 flex items-center gap-2">הקשר הייסוד: רקע וסיבה מורחבים</h4>
+                <div class="founding-nexus-box text-[14px] font-light leading-relaxed text-justify" style="border-right-color: var(--accent-sky);">
                     <p>
-                        <span class="text-white font-bold block mb-2 underline italic">הרקע: יפן ה"מקורקעת" והמושפלת</span>
-                        לאחר התבוסה ב-1945, כוחות הברית (GHQ) הטילו איסור מוחלט על יפן להפעיל כל כלי טיס. יפן הייתה משותקת אווירית עד סוף 1952. הרקע להקמה היה תום הכיבוש והצורך הנואש בשיקום הכלכלה האזרחית של מדינה שהייתה הרוסה ומנודה ממשפחת העמים. בעוד JAL הוקמה כחברה ממשלתית מנופחת, ANA נולדה מהצורך ביוזמה פרטית וגמישה שתחזיר את הגאווה היפנית.
+                        <span class="text-white font-bold block mb-2 underline italic">הרקע: יפן ה"מקורקעת" והמושפלת תחת שלטון זר</span>
+                        לאחר התבוסה המוחלטת באוגוסט 1945 ושתי פצצות האטום שהוטלו עליה, המפקד העליון של כוחות הברית (GHQ - בפיקודו של הגנרל האמריקאי דאגלס מקארתור) הטיל איסור מוחלט על ממשלת יפן, תעשייתה ואזרחיה לייצר, לתפעל או להחזיק כל כלי טיס באשר הוא. יפן המקורקעת הייתה משותקת אווירית לחלוטין והשמיים נשלטו על ידי מטוסים אמריקאים. הרקע האמיתי להקמת החברה היה חתימת הסכם סן פרנסיסקו ב-1952, שהחזיר סוף סוף ליפן את הריבונות והתיר לה לחזור לשמיים. בעוד שממשלת יפן מיהרה להקים מחדש את חברת JAL כחברה ממשלתית מונופוליסטית ומנופחת שייצגה את "הממסד הישן", נוצר צורך דחוף ומיידי ביזמות פרטית, מהירה וקלילה שתשרת את האזרח הפשוט במדינה ההרוסה.
                     </p>
                     <p class="mt-4">
-                        <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד: תחייה אזרחית מול מונופול מדינתי</span>
-                        סיבת הייסוד הייתה **שבירת הריכוזיות הממשלתית והוכחת הריבונות האזרחית**. ANA (שהוקמה במקור כחברת מסוקים פרטית) ייצגה את היזמות החופשית של יפן החדשה. היא נוסדה כדי להוכיח שהעם היפני יכול לבנות מחדש את חייו דרך טכנולוגיה ושירות אזרחי טהור, ללא ההקשר הצבאי שהוביל לחורבן המדינה. סיבת הייסוד הייתה דמוקרטיזציה של השמיים לטובת האזרח הפשוט וחיבור האיים המבודדים.
+                        <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד: תחייה אזרחית ושבירת המונופול השלטוני</span>
+                        סיבת הייסוד ההיסטורית של ANA הייתה בבסיסה **התרסה אזרחית פרטית נגד הריכוזיות הממשלתית**. ANA החלה את דרכה בתור חברת מסוקים קטנה וצנועה מאוד שפיזרה עלונים מהאוויר והדבירה יתושים. היא נוסדה כדי להוכיח שהעם היפני והיזם הפרטי יכולים לבנות מחדש את הכלכלה ולשרוד ללא חסות ממשלתית מוחלטת או שליטה מהבירוקרטיה הישנה. החברה סיפקה תחבורה זולה, מהירה ונגישה שחיברה לראשונה את האיים המבודדים והמרוחקים (כמו הוקאידו וקיושו) אל מרכז הכוח בטוקיו, והייתה עמוד תווך מרכזי בהשבת כבודו של היזם האזרחי היפני.
                     </p>
                 </div>
             </section>
 
-            <section class="mb-14">
-                <h4 class="text-xs font-bold text-blue-400 uppercase mb-5">אטימולוגיה וזהות</h4>
-                <div class="space-y-4 text-[15px] font-light text-justify leading-relaxed">
-                    <p>
-                        השם <span class="text-white font-bold italic underline decoration-blue-400">Nippon</span> נגזר מהשורשים הסינו-יפניים <span class="italic">Ni</span> (שמש) ו-<span class="italic">Hon</span> (מקור). "מקור השמש". בחירת המילה "All" נועדה לשדר פאן-יפניות – איחוד של כל כוחות השוק המקומיים לטובת המולדת. הצבע הכחול (Triton Blue) נבחר כדי לסמל שלווה, תקווה ומרחב פתוח – ניגוד מוחלט לאדום הצבאי של ימי המלחמה.
-                    </p>
-                </div>
-            </section>
-
-            <section class="mb-14">
-                <h4 class="text-xs font-bold text-blue-400 uppercase mb-5 flex items-center gap-2"><span>פרופיל מייסד: מסואיצ'י מידורו</span></h4>
-                <div class="founder-profile-box" style="border-right-color: #3b82f6;">
-                    <div class="space-y-7 text-[15px] text-gray-400 font-light text-justify leading-relaxed">
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-sky-400 uppercase mb-4">פרופיל מייסד: מסואיצ'י מידורו (Masuichi Midoro)</h4>
+                <div class="founder-profile-box" style="border-right-color: var(--accent-sky);">
+                    <div class="space-y-6 text-[14px] text-gray-400 font-light text-justify leading-relaxed">
                         <p>
                             <span class="text-white font-bold block mb-1 underline italic text-[13px]">אטימולוגיה של שם המייסד:</span>
-                            השם <span class="text-blue-400 font-bold italic">Masuichi</span> (שפע ראשון - Masu/גידול, Ichi/ראשון). <span class="text-blue-400 font-bold italic">Midoro</span> (מים עמוקים או ירוק כהה - מתוך הצירוף 美土路). השם מסמל "שפע ראשון הנובע מעומק המקור המסתורי והפורה".
+                            השם <span class="text-sky-300 font-bold italic">Masuichi</span> מורכב מהאותיות והקאנג'י היפניות המסמלות "שפע/גידול" (Masu) ו"ראשון/אחד" (Ichi) – ומשמעותו היא "הראשון להביא שפע" או "זה שמוביל צמיחה". שם המשפחה <span class="text-sky-300 font-bold italic">Midoro</span> מבוסס על קאנג'י המציין דרך עפר, יופי ואדמה (美土路), אם כי לעיתים הוא מתורגם כמים עמוקים או ירוק כהה. השם המלא והפיוטי משקף אדם המהווה "הדרך היפה הראשונה המביאה שפע, צמיחה וריפוי לאדמה".
                         </p>
                         <p>
-                            <span class="text-white font-bold block mb-2 underline italic text-[13px]">ילדות ועיצוב פסיכולוגי:</span>
-                            מידורו נולד ביפן הקיסרית בסוף המאה ה-19. הוא היה עיתונאי בכיר (נשיא Asahi Shimbun) שראה מקרוב כיצד הממשלה והצבא השתמשו בתעופה ככלי למוות והרס. בילדותו חווה את המעבר המהיר של יפן ממדינה פיאודלית למעצמה תעשייתית רצחנית.
+                            <span class="text-white font-bold block mb-2 underline italic text-[13px]">ילדות, תצפית עיתונאית והכרה היסטורית בטראומה:</span>
+                            מידורו נולד ב-1886, בשיאה של תקופת מייג'י ביפן שהפכה תוך דור ממדינה פיאודלית לאימפריה מודרנית ורעבה לכיבושים. בניגוד לרוב יזמי התעופה האחרים ברחבי העולם שהיו מהנדסים, אנשי צבא או טייסים, הוא היה עיתונאי בכיר, הוגה דעות ומבריק שהגיע עד לתפקיד נשיא העיתון הארצי הגדול (Asahi Shimbun). כעיתונאי חוקר, הוא ראה מקרוב וסיקר במשך עשרות שנים את צמיחתו של המיליטריזם היפני החונק והריכוזי.
                         </p>
-                        <div class="trauma-highlight" style="border-right-color: #3b82f6; background: rgba(59, 130, 246, 0.05);">
-                            הטראומה שלו היא "השימוש לרעה בטכנולוגיה". הוא ראה את המטוסים הופכים למכונות התאבדות (קמיקזה). האידיאולוגיה שלו הייתה "תעופה לשלום": שימוש במטוס כדי לחבר את יפן לעולם ולעזור לאזרחים לבנות מחדש את חייהם. הוא האמין שדייקנות ויעילות הם הדרך היפנית לכפר על עוולות העבר ולבנות עתיד דמוקרטי ושקוף.
+                        <div class="trauma-highlight" style="border-right-color: var(--accent-sky); background: rgba(56, 189, 248, 0.05); color:#bae6fd;">
+                            הטראומה העמוקה של מידורו, שהפכה למצפן של החברה, הייתה התובנה המייסרת של "השימוש האפל בטכנולוגיה". הוא ראה כיצד התעופה היפנית, שהחלה כחלום מדעי רומנטי, נוכסה לחלוטין על ידי הצבא, השתתפה בפשעי מלחמה, והפכה למכונת השמדה ולנשק התאבדות ציני (קמיקזה) שהחריב את המדינה והביא עליה את שואת הגרעין. האידיאולוגיה שעיצבה את ANA תחת הנהגתו החדשה הייתה "תעופה לשלום ואזרחות": החזרת המטוס לידי האזרח התמים ככלי תקשורת, מסחר, חיים ופיוס בינלאומי. הוא האמין שיעילות, דייקנות ושירות כנוע וקפדני (קונספט ה-Omotenashi) הם הדרך הראויה היחידה ליפן לכפר על עוולות האימפריאליזם ולבנות לעצמה עתיד מסחרי ולגיטימי בקרב העמים.
                         </div>
+                        <p>
+                            <span class="text-white font-bold block mb-2 underline italic text-[13px]">הישגים מרכזיים ומורשת:</span>
+                            <ul class="achievement-list" style="color: var(--accent-sky);">
+                                <li class="achievement-item"><strong>ממסוקים קלים למעצמה מסחרית:</strong> ניווט מבריק של החברה מראשיתה הצנועה כחברת הפעלת מסוקים קטנה מאוד (Nippon Helicopter and Aeroplane) למעבר אמיץ ומסוכן למטוסי נוסעים קבועי כנף (כמו ה-Douglas DC-3) שחיברו את יפן הפנימית והצילו אותה מבידוד תעבורתי.</li>
+                                <li class="achievement-item"><strong>שבירת המונופול הלאומי הכבד:</strong> מידורו ניהל קרב עיקש וארוך מול הבירוקרטיה היפנית השמרנית וחברת JAL הממשלתית שזכתה להעדפה, עד שהפך את ANA לחברת התעופה המקומית הגדולה, החזקה והמשפיעה ביותר ביפן, המושתתת על הון ותחרות פרטית.</li>
+                                <li class="achievement-item"><strong>עיצוב תרבות הבטיחות היפנית:</strong> הטמעת תרבות של בטיחות ואמינות היסטרית בארגון, מתוך הבנה פסיכולוגית כי חברה פרטית ביפן של אחרי המלחמה לא תוכל לשרוד איבוד אמון של הציבור הנוסע אפילו פעם אחת.</li>
+                            </ul>
+                        </p>
                     </div>
                 </div>
             </section>
@@ -345,62 +410,75 @@
         <div class="section-divider"></div>
 
         <!-- 05. QATAR AIRWAYS -->
-        <article class="mb-48">
+        <article class="mb-32">
             <div class="flex items-center gap-4 mb-8">
-                <span class="text-7xl font-black text-white/5">05</span>
+                <span class="text-6xl font-black text-white/5">05</span>
                 <div>
                     <h2 class="text-4xl font-black text-white leading-tight tracking-tighter">Qatar Airways</h2>
-                    <p class="text-[11px] text-emerald-500 font-bold uppercase tracking-[0.2em] italic">The Soft Power Hammer of the Gulf</p>
+                    <p class="text-[11px] text-rose-500 font-bold uppercase tracking-[0.2em] italic">The Soft Power Hammer of the Gulf</p>
                 </div>
             </div>
 
-            <div class="glass-module p-6 mb-12 border-r-4 border-emerald-500">
-                <div class="space-y-5 text-[15px] text-gray-300 font-light">
-                    <p><strong class="text-white underline decoration-emerald-500/50 underline-offset-4">שנת ייסוד (מחדש):</strong> 20 בינואר, 1997 (תחת ההנהגה המודרנית).</p>
-                    <p><strong class="text-white underline decoration-emerald-500/50 underline-offset-4">החזיונר המדיני:</strong> Sheikh Hamad bin Khalifa Al Thani (יליד 1952).</p>
-                    <p><strong class="text-white underline decoration-emerald-500/50 underline-offset-4">הבונה והאדריכל:</strong> Akbar Al Baker (CEO המיתולוגי).</p>
-                    <p><strong class="text-white underline decoration-emerald-500/50 underline-offset-4">מיקום ייסוד:</strong> דוחה, קטר.</p>
+            <div class="glass-module p-6 mb-10 border-r-4 border-rose-800">
+                <div class="space-y-4 text-[14px] text-gray-300 font-light">
+                    <p><strong class="text-white underline decoration-rose-800/50 underline-offset-4">שנת ייסוד (הקמה מחדש למודל יוקרה):</strong> 1997 (תחת ההנהגה והחזון המודרני).</p>
+                    <p><strong class="text-white underline decoration-rose-800/50 underline-offset-4">החזיונר המדיני והפוליטי:</strong> Sheikh Hamad bin Khalifa Al Thani (יליד 1952).</p>
+                    <p><strong class="text-white underline decoration-rose-800/50 underline-offset-4">הבונה והאדריכל העסקי:</strong> Akbar Al Baker (מנכ"ל מיתולוגי 1997-2023).</p>
+                    <p><strong class="text-white underline decoration-rose-800/50 underline-offset-4">מיקום ייסוד:</strong> דוחה, מדינת קטר.</p>
                 </div>
             </div>
 
-            <section class="mb-14">
-                <h4 class="text-xs font-bold text-emerald-500 uppercase mb-5 border-b border-emerald-900/30 pb-1 flex items-center gap-2">הקשר הייסוד: רקע וסיבה מורחבים</h4>
-                <div class="founding-nexus-box text-[15px] font-light leading-relaxed text-justify">
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-rose-600 uppercase mb-4">אטימולוגיה מורחבת וזהות</h4>
+                <div class="space-y-6 text-[14px] font-light text-justify leading-relaxed">
+                    <div>
+                        <span class="text-white font-bold block mb-1 underline italic">חלק א': Qatar (קטר)</span>
+                        <p>השם <span class="text-white font-bold italic underline decoration-rose-600">Qatar</span> (קטר/قطر) אינו המצאה מודרנית; הוא מתועד היסטורית כבר אצל המלומד פליניוס הזקן הרומאי במאה הראשונה לספירה תחת השם <span class="italic">Catharrei</span>. ככל הנראה מקורו מגיע מהמילה היוונית <span class="italic">Cathari</span> שפירושה המילולי הוא "טהור/מזוקק", או לחלופין מהשורש השמי והערבי הקדום ק.ט.ר (قطر) המציין טפטוף של מים או גשם (דבר שנחשב לאוצר נדיר ויקר ערך בחצי האי הערבי הצחיח).</p>
+                    </div>
+                    <div>
+                        <span class="text-white font-bold block mb-1 underline italic">חלק ב': סמליות הראם (Oryx) והצבע</span>
+                        <p>סמל החברה המפורסם, הראם הערבי (Arabian Oryx), נבחר מתוך כוונה ברורה ועמוקה: זוהי חיה אצילית ואלגנטית למראה, אך היא בעיקר סמל של הישרדות עילאית ועיקשת בתנאי המדבר הקיצוניים והצחיחים ביותר בעולם. צבע החברה, הבורדו העמוק (Burgundy / Maroon קטרי), אינו רק אלמנט עיצובי יפהפה; הוא הצבע הייחודי של דגל קטר עצמו, המסמל מבחינה היסטורית את הדם (הכהה, שקרש בשמש היוקדת) שנשפך במלחמות האיחוד של המדינה הקטנה במאה ה-19, בניגוד מופגן לאדום הבוהק והבהיר של המדינות השכנות (כמו בחריין).</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-rose-600 uppercase mb-4 border-b border-rose-900/30 pb-1 flex items-center gap-2">הקשר הייסוד: רקע וסיבה מורחבים</h4>
+                <div class="founding-nexus-box text-[14px] font-light leading-relaxed text-justify" style="border-right-color: var(--accent-rose);">
                     <p>
-                        <span class="text-white font-bold block mb-2 underline italic">הרקע: המדינה הקטנה שמחפשת קול ריבוני</span>
-                        במשך עשורים, קטר הייתה "מדינה לוויינית" של ערב הסעודית ואיחוד האמירויות. היא הייתה תלויה ב-Gulf Air וחיה בצל השכנות הגדולות והמאיימות. ב-1995 השייח' חמד ביצע הפיכה שקטה כנגד אביו והחליט שקטר תהיה המדינה המשפיעה ביותר במזרח התיכון דרך "עוצמה רכה" (Soft Power) – לא דרך צבא מסורתי, אלא דרך תקשורת (אל-ג'זירה) ותעופה שתכניע את המערב ביוקרה וביכולת ביצוע.
+                        <span class="text-white font-bold block mb-2 underline italic">הרקע: מדינה זעירה בצל ענקים מחניקים</span>
+                        במשך עשרות שנים ארוכות, קטר – שהייתה ענייה יחסית ודלת אוכלוסין – תפקדה כמעין "מדינת חסות לוויינית" של ערב הסעודית החזקה והשמרנית, וחיה בצל האיום והעושר המסנוור של איחוד האמירויות (דובאי). ב-1995 התרחש במדינה מפנה דרמטי שטלטל את המזרח התיכון: השייח' חמד ביצע הפיכה שקטה ומפתיעה נגד אביו ותפס את השלטון. הוא החליט שקטר, למרות גודלה הזעיר (ובעזרת עתודות הגז העצומות שלה), לא תהיה עוד מדינת צללים הנשלטת מבחוץ. הדרך להבטיח את שרידותה לא הייתה דרך הצטיידות בצבא מסורתי שכמובן יובס מיד על ידי סעודיה או איראן, אלא דרך **"עוצמה רכה" (Soft Power)** אגרסיבית וחשיפה גלובלית מתמדת שתהפוך אותה לחסינה. 
                     </p>
                     <p class="mt-4">
-                        <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד: ביטוח לאומי דרך תלות גלובלית</span>
-                        סיבת הייסוד הייתה **מיתוג קטר כצומת עולמי בלתי ניתן להחלפה**. חברת התעופה נוסדה כדי להפוך את דוחה למרכז עולמי של ספורט, דיפלומטיה ועסקים. המטרה הייתה ליצור חברת "5 כוכבים" שתקנה לקטר לגיטימציה בינלאומית וביטחון לאומי דרך תלות של מנהיגי העולם בנמל התעופה בדוחה. זהו מודל של "הגנה אקטיבית" – מדינה קטנה שאי אפשר להשמיד כי היא משרתת את כל העולם בו-זמנית.
+                        <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד: פוליסת ביטוח קיומית דרך יוקרה ותלות גלובלית</span>
+                        סיבת הייסוד וההקמה מחדש של קטר איירליינס כחברת "5 כוכבים" ב-1997 הייתה אסטרטגיה גיאופוליטית טהורה של **ביטוח לאומי דרך תלות גלובלית**. המדינה הקטנה בנתה את חברת התעופה כזרוע דיפלומטית חזקה יותר מכל שגרירות או נשק. המטרה האסטרטגית: להפוך את בירתה דוחה למרכז לוגיסטי הכרחי ולשער כניסה שאי אפשר לעקוף למסחר, תיירות, ספורט עולמי (מונדיאל) ואקדמיה. הרציונל היה הישרדותי וקר: אם חצי מעולם העסקים והפוליטיקה העולמי עובר מדי יום בדוחה וטס בקטר איירליינס, אף מדינה שכנה (כמו סעודיה או איחוד האמירויות) לא תעז או תוכל לפלוש אליה מבלי להסתבך ישירות עם המעצמות הגדולות שזקוקות לקטר בטוחה ומתפקדת היטב.
                     </p>
                 </div>
             </section>
 
-            <section class="mb-14">
-                <h4 class="text-xs font-bold text-emerald-500 uppercase mb-5">אטימולוגיה וזהות</h4>
-                <div class="space-y-4 text-[15px] font-light text-justify leading-relaxed">
-                    <p>
-                        השם <span class="text-white font-bold italic underline decoration-emerald-500">Qatar</span> מקורו כנראה במילה היוונית <span class="italic">Cathari</span> שפירושו "טהור", או בשורש הערבי המציין טפטוף מים (ק.ט.ר). הלוגו של הראם (Oryx) נבחר כמייצג של חוסן והישרדות בתנאי המדבר הקיצוניים. צבע הבורדו (Maroon) מסמל את הדגל הלאומי ואת הדם שנשפך במלחמות האיחוד של קטר.
-                    </p>
-                </div>
-            </section>
-
-            <section class="mb-14">
-                <h4 class="text-xs font-bold text-emerald-500 uppercase mb-5 flex items-center gap-2"><span>פרופיל הבונה: אכבר אל-באקר</span></h4>
-                <div class="founder-profile-box">
-                    <div class="space-y-7 text-[15px] text-gray-400 font-light text-justify leading-relaxed">
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-rose-600 uppercase mb-4">פרופיל הבונה: אכבר אל-באקר (Akbar Al Baker)</h4>
+                <div class="founder-profile-box" style="border-right-color: var(--accent-rose);">
+                    <div class="space-y-6 text-[14px] text-gray-400 font-light text-justify leading-relaxed">
                         <p>
-                            <span class="text-white font-bold block mb-1 underline italic text-[13px]">אטימולוגיה של שם הבונה:</span>
-                            <span class="text-emerald-400 font-bold italic">Akbar</span> (הגדול ביותר/העצום ביותר - מהשורש הערבי כ.ב.ר). <span class="text-emerald-400 font-bold italic">Al Baker</span> (הראשון/המוקדם/המשכים קום - שם של שושלת סוחרים עתיקה מהשורש ב.כ.ר). השם המלא מסמל "הגדול מבין הראשונים והחלוצים".
+                            <span class="text-white font-bold block mb-1 underline italic text-[13px]">אטימולוגיה של שם הבונה המבצעי:</span>
+                            השם הפרטי <span class="text-rose-400 font-bold italic">Akbar</span> (אכבר) פירושו בערבית "הגדול ביותר" או "העצום מכולם" (מהשורש כ.ב.ר, כמו באללה אכבר). שם המשפחה <span class="text-rose-400 font-bold italic">Al Baker</span> (אל-באקר) מקורו בשושלת סוחרים עתיקה במפרץ, הנגזרת מהשורש ב.כ.ר שמשמעותו "הראשון", "המשכים קום" או "החלוץ הפורץ קדימה". השם המלא נושא אירוניה נבואית ומרמז על אישיות של מי שהפך ל"הגדול והחזק מבין החלוצים הראשונים בתחומו".
                         </p>
                         <p>
-                            <span class="text-white font-bold block mb-2 underline italic text-[13px]">ילדות ועיצוב פסיכולוגי:</span>
-                            אל-באקר גדל במשפחת סוחרים קטרית שמרנית. הוא ידוע באישיות תוקפנית, פרפקציוניסטית וחסרת רחמים. הוא למד כלכלה ומנהל עסקים בהודו, שם ספג תרבות עסקית של תחרות קשה והבנה שמי שלא מוביל – נמחק. בילדותו חווה את קטר כפינה מבודדת וענייה, דבר שהוליד אצלו רעב פראי להוכיח את עליונות האומה בכל מחיר.
+                            <span class="text-white font-bold block mb-2 underline italic text-[13px]">ילדות, חינוך ועיצוב הזהות הלוחמנית:</span>
+                            אל-באקר גדל במשפחת סוחרים קטרית אמידה ושמרנית, אך את עיקר חינוכו והשכלתו הכלכלית (לימודי כלכלה ומנהל עסקים) רכש במכוון בהודו. השהייה בתת-היבשת התחרותית והצפופה חשפה אותו לתרבות עסקית דרוויניסטית וחסרת רחמים. בילדותו ונעוריו הוא חווה את קטר כפינה מבודדת, חולית ונטולת כל חשיבות עולמית מול המערב, דבר שיצר אצלו רעב פראי ואגו צורב להוכיח לכל העולם את עליונותה הפיזית והשירותית של ארצו – בכל מחיר כספי שיידרש.
                         </p>
-                        <div class="trauma-highlight">
-                            הזהות שלו היא של "לוחם עסקי". הוא רואה בענף התעופה זירת קרב גיאופוליטית שבה הוא חייב להשפיל את המערב במגרש שלו. האובססיה שלו לפרטים (הוא ידוע בכך שהוא בודק אישית את רמת הניקיון בשירותים לפני המראות נשיאותיות) היא מנגנון של כיבוש כלכלי המבוסס על שלמות תפעולית חסרת פשרות.
+                        <div class="trauma-highlight" style="border-right-color: var(--accent-rose); background: rgba(244, 63, 94, 0.05); color:#fecdd3;">
+                            הטראומה העסקית-פסיכולוגית שלו נובעת מ"תסביך הנחיתות ההיסטורי של המפרץ" מול המערב הוותיק. הזהות שלו היא של "לוחם עסקי פרנואיד". הוא ראה בענף התעופה זירת קרב גיאופוליטית שבה הוא מחוייב לא רק לנצח את החברות האירופאיות והאמריקאיות הוותיקות, אלא **להשפיל אותן טכנולוגית ושירותית עד עפר**. האובססיה הקיצונית שלו לפרטים – המגיעה עד כדי פיטורי עובדים ודיילות על קמטים במדים ובדיקה אישית של הניקיון בשירותים לפני קבלת מטוס חדש מיצרנית כמו בואינג או איירבוס – היא מנגנון של כיבוש כלכלי. מבחינתו, כל פגם קטן הוא פגיעה אנושה בכבוד הלאומי הקטרי ובחזון העוצמה הרכה של האמיר.
                         </div>
+                        <p>
+                            <span class="text-white font-bold block mb-2 underline italic text-[13px]">הישגים מרכזיים ומורשת ארגונית:</span>
+                            <ul class="achievement-list" style="color: var(--accent-rose);">
+                                <li class="achievement-item"><strong>מטמורפוזה ארגונית פלאית:</strong> לקיחת חברת תעופה קטנה וכושלת של 4 מטוסים משומשים ב-1997, והפיכתה (ללא מעצורים תקציביים מהאמיר) למפלצת התעופה היוקרתית והמעוטרת ביותר בעולם שזכתה בתואר "חברת התעופה הטובה בעולם" פעמים רבות, המחזיקה בצי מטוסי ענק חדישים.</li>
+                                <li class="achievement-item"><strong>המצאת ה-Qsuite והגדרת יוקרה:</strong> עיצוב מחדש של מודל העסקים בעולם התעופה (Business Class) על ידי הצגת מחלקת עסקים מהפכנית עם דלתות סגורות לחלוטין המקבילה למחלקה ראשונה בחברות אחרות, ובכך כפיית סטנדרט חדש ששבר את המודלים של החברות המתחרות בעולם.</li>
+                                <li class="achievement-item"><strong>ניצחון המצור הגיאופוליטי (2017):</strong> ניווט החברה בחוכמה במהלך התקופה הקשה שבה סעודיה, איחוד האמירויות, בחריין ומצרים הטילו מצור אווירי מוחלט על קטר וסגרו את שמיהן בפניה. אל-באקר מצא מיד נתיבים חלופיים דרך איראן, המשיך לטוס ללא הפסקה, והוכיח שקטר אכן בנתה לעצמה פוליסת ביטוח אווירית עצמאית שאי אפשר לשבור.</li>
+                            </ul>
+                        </p>
                     </div>
                 </div>
             </section>
@@ -409,61 +487,74 @@
         <div class="section-divider"></div>
 
         <!-- 06. ETIHAD AIRWAYS -->
-        <article class="mb-48">
+        <article class="mb-32">
             <div class="flex items-center gap-4 mb-8">
-                <span class="text-7xl font-black text-white/5">06</span>
+                <span class="text-6xl font-black text-white/5">06</span>
                 <div>
                     <h2 class="text-4xl font-black text-white leading-tight tracking-tighter">Etihad Airways</h2>
-                    <p class="text-[11px] text-gold-500 font-bold uppercase tracking-[0.2em] italic">The Royal Host of Abu Dhabi</p>
+                    <p class="text-[11px] text-yellow-500 font-bold uppercase tracking-[0.2em] italic">The Royal Host of Abu Dhabi</p>
                 </div>
             </div>
 
-            <div class="glass-module p-6 mb-12 border-r-4 border-yellow-500">
-                <div class="space-y-5 text-[15px] text-gray-300 font-light">
-                    <p><strong class="text-white underline decoration-yellow-500/50 underline-offset-4">שנת ייסוד רשמית:</strong> יולי 2003 (בצו מלכותי של האמיר). טיסה ראשונה לאל-עיין.</p>
+            <div class="glass-module p-6 mb-10 border-r-4 border-yellow-500">
+                <div class="space-y-4 text-[14px] text-gray-300 font-light">
+                    <p><strong class="text-white underline decoration-yellow-500/50 underline-offset-4">שנת ייסוד רשמית:</strong> יולי 2003 (הוקמה בצו מלכותי ישיר של האמיר, טיסה ראשונה לאל-עיין).</p>
                     <p><strong class="text-white underline decoration-yellow-500/50 underline-offset-4">הבונה והחזיונר:</strong> Sheikh Khalifa bin Zayed Al Nahyan (1948–2022).</p>
-                    <p><strong class="text-white underline decoration-yellow-500/50 underline-offset-4">מיקום ייסוד:</strong> אבו דאבי, איחוד האמירויות.</p>
+                    <p><strong class="text-white underline decoration-yellow-500/50 underline-offset-4">מיקום ייסוד:</strong> אבו דאבי, בירת איחוד האמירויות הערביות.</p>
                 </div>
             </div>
 
-            <section class="mb-14">
-                <h4 class="text-xs font-bold text-yellow-500 uppercase mb-5 border-b border-yellow-900/30 pb-1 flex items-center gap-2">הקשר הייסוד: רקע וסיבה מורחבים</h4>
-                <div class="founding-nexus-box text-[15px] font-light leading-relaxed text-justify" style="border-right-color: #fbbf24;">
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-yellow-500 uppercase mb-4">אטימולוגיה מורחבת וזהות</h4>
+                <div class="space-y-6 text-[14px] font-light text-justify leading-relaxed">
+                    <div>
+                        <span class="text-white font-bold block mb-1 underline italic">חלק א': Etihad (إتحاد)</span>
+                        <p>המילה <span class="text-white font-bold italic underline decoration-yellow-500">Etihad</span> (إتحاد) נגזרת מהשורש השמי והערבי <span class="etymology-chip" style="color:var(--accent-yellow);">א.ח.ד / A-H-D</span> שפירושו המילולי והמתמטי הוא "אחד", "לאחד" או "להיות יחד" (בדיוק כמו המילה 'אחד' בעברית). המשמעות הרשמית של השם היא "האיחוד" או "הברית" (של האמירויות). בחירת השם לאבו דאבי נועדה להעביר מסר לאומי, פוליטי ורשמי שאין לטעות בו פנימה והחוצה: אבו דאבי היא הלב המאחד, היציב, הרשמי והריבוני האמיתי של פדרציית שבע האמירויות, ולא דובאי המסחרית והצעקנית.</p>
+                    </div>
+                    <div>
+                        <span class="text-white font-bold block mb-1 underline italic">חלק ב': סמליות גיאומטרית וצבע</span>
+                        <p>סמליל החברה והעיצוב הגרפי שעל זנבות המטוסים (המורכב מקווים גיאומטריים של מנסרות בגווני זהב וחום) מסמלים מצד אחד את נופי המדבר המלכותי ואת האור המשתקף בחולות אבו דאבי, אך מצד שני הם גם מזכירים את ארכיטקטורת האוהל הבדואי המתוחכם. צבעי הזהב העמוקים מעידים על הון עתק נסתר – זוהי יוקרה שקטה שאינה צריכה לצעוק את נוכחותה כמו אמירויות, אלא פשוט קיימת מכוח המלוכה.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-yellow-500 uppercase mb-4 border-b border-yellow-900/30 pb-1 flex items-center gap-2">הקשר הייסוד: רקע וסיבה מורחבים</h4>
+                <div class="founding-nexus-box text-[14px] font-light leading-relaxed text-justify" style="border-right-color: var(--accent-yellow);">
                     <p>
-                        <span class="text-white font-bold block mb-2 underline italic">הרקע: המאבק על הכתר בתוך הפדרציה</span>
-                        אבו דאבי היא האמירות העשירה והחזקה ביותר, מחזיקה ברוב הנפט של האיחוד, אך דובאי "גנבה" לה את הבמה העולמית עם המותג Emirates. ב-2003, הממשל באבו דאבי החליט שהגיע הזמן להקים מותג משלו שיבטא את העוצמה הכלכלית העצומה של הבירה ויחזיר לה את היוקרה הלאומית כמנהיגת הפדרציה. אבו דאבי לא רצתה להיות רק ה"כספומט" של האיחוד, אלא הפנים המלוכתיות שלו.
+                        <span class="text-white font-bold block mb-2 underline italic">הרקע: המאבק הסמוי והיוקרתי על הכתר בתוך הפדרציה</span>
+                        אבו דאבי היא האמירות השלטת, הגדולה, העשירה והכבדה ביותר. היא יושבת על רוב עצום של עתודות הנפט והכסף של כל איחוד האמירויות ומהווה את הבירה הפוליטית. עם זאת, במשך שנים ארוכות, דובאי השכנה (שאין לה נפט רב) גנבה לה לחלוטין את הבמה התקשורתית העולמית והפכה למותג בינלאומי זוהר, מודרני ומוכר הרבה בעזרת חברת אמירטס. ב-2003, הממשל ואנשי המלוכה באבו דאבי החליטו שהמצב הפך בלתי נסבל מורלית: אבו דאבי לא מוכנה יותר להיתפס רק כ"כספומט המשעמם" או שומרת המסורת של האיחוד. הגיע הזמן להקים מותג משלה שיבטא את העוצמה הפיננסית העצומה של הבירה ויחזיר לה את יוקרתה הלאומית ואת מעמדה כמנהיגת הפדרציה גם באופן ויזואלי וגלובלי.
                     </p>
                     <p class="mt-4">
-                        <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד: גיוון הכלכלה ושימור מורשת האירוח</span>
-                        הסיבה הייתה **"חזון אבו דאבי 2030"** – הכנת המדינה ליום שאחרי הנפט. סיבת הייסוד הייתה יצירת מותג המבוסס על "אירוח בדואי מלכותי" (The Guest) בניגוד למותג המסחרי הקר והמהיר של דובאי. החברה נוסדה כדי להוכיח שאבו דאבי היא הלב המנהלי והתרבותי של העולם הערבי המודרני.
+                        <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד: פילוסופיית "האורח" במקום "לקוח" והיערכות לעידן הפוסט-נפט</span>
+                        הסיבה הפורמלית להקמת איתיחאד בצו מלכותי הייתה יישום של **"חזון אבו דאבי 2030"** – האסטרטגיה המאסיבית של הממשל להכין את כלכלת המדינה ליום שאחרי שהנפט ייגמר, דרך גיוון מקורות ההכנסה לתיירות איכותית, דיפלומטיה, ספורט ותרבות גבוהה. בניגוד למודל המסחרי, העמוס, הצעקני וההמוני של דובאי (אמירטס), איתיחאד נוסדה במטרה לבנות מותג בוטיק מדויק של "אירוח בדואי מלכותי". המטרה לא הייתה רק להעביר אנשים ממקום למקום או להרוויח כסף, אלא להוכיח בזהירות שאבו דאבי היא הלב התרבותי, הפילנתרופי והמכובד ביותר בעולם הערבי המודרני, שער אליטיסטי למזרח התיכון.
                     </p>
                 </div>
             </section>
 
-            <section class="mb-14">
-                <h4 class="text-xs font-bold text-yellow-500 uppercase mb-5">אטימולוגיה וזהות</h4>
-                <div class="space-y-4 text-[15px] font-light text-justify leading-relaxed">
-                    <p>
-                        המילה <span class="text-white font-bold italic underline decoration-yellow-500">Etihad</span> (إتحاد) נגזרת מהשורש הערבי <span class="etymology-chip">A-H-D</span> שפירושו "אחד" או "לאחד" (בדומה ל"אחד" בעברית). המשמעות היא "איחוד" או "ברית". השם נועד להדגיש את אבו דאבי כלב המאחד והיציב של שבע האמירויות.
-                    </p>
-                </div>
-            </section>
-
-            <section class="mb-14">
-                <h4 class="text-xs font-bold text-yellow-500 uppercase mb-5 flex items-center gap-2"><span>פרופיל מייסד: השייח' ח'ליפה בן זאיד</span></h4>
-                <div class="founder-profile-box" style="border-right-color: #fbbf24;">
-                    <div class="space-y-7 text-[15px] text-gray-400 font-light text-justify leading-relaxed">
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-yellow-500 uppercase mb-4">פרופיל מייסד: השייח' ח'ליפה בן זאיד אאל נהיאן</h4>
+                <div class="founder-profile-box" style="border-right-color: var(--accent-yellow);">
+                    <div class="space-y-6 text-[14px] text-gray-400 font-light text-justify leading-relaxed">
                         <p>
                             <span class="text-white font-bold block mb-1 underline italic text-[13px]">אטימולוגיה של שם המייסד:</span>
-                            <span class="text-yellow-500 font-bold italic">Khalifa</span> (יורש/מנהיג/מחליף - מהשורש ח.ל.פ). <span class="text-yellow-500 font-bold italic">Zayed</span> (משגשג/צומח/מוסיף - מהשורש ז.י.ד). <span class="text-yellow-500 font-bold italic">Al Nahyan</span> (המעיין המרווה או המקודש). השם המלא מסמל "המנהיג המשגשג והיורש הנובע מהמעיין המקודש".
+                            השם <span class="text-yellow-400 font-bold italic">Khalifa</span> (ח'ליפה) פירושו בערבית "היורש", "הממשיך" או "מנהיג" (מהשורש ח.ל.פ, מי שמחליף ומוביל). השם <span class="text-yellow-400 font-bold italic">Zayed</span> (זאיד) פירושו "המשגשג", "הצומח" או "המוסיף לשפע" (מהשורש ז.י.ד). שם השושלת <span class="text-yellow-400 font-bold italic">Al Nahyan</span> (אאל נהיאן) מתייחס אטימולוגית למקורות היסטוריים כ"מעיין המרווה" או למקום אליו באים מהמדבר כדי למצוא מים מתוקים ומקלט. השם המלא נושא מטען פואטי עמוק של אחריות ומנהיגות: "המנהיג והיורש המשגשג הנובע ממעיין השפע המקודש של האומה, המספק מים לעמו".
                         </p>
                         <p>
-                            <span class="text-white font-bold block mb-2 underline italic text-[13px]">ילדות ועיצוב פסיכולוגי:</span>
-                            הוא גדל באל-עיין בתקופה של עוני ופשטות בדואית קשה לפני עושר הנפט הגדול. הוא חונך על ידי אביו (השייח' זאיד, מייסד המדינה) לראות בעושר פיקדון לטובת העם ולא נכס אישי. בילדותו ראה את המעבר החד מהחיים באוהל במדבר לחיים בארמונות פאר, דבר שיצר אצלו צורך באיזון פנימי.
+                            <span class="text-white font-bold block mb-2 underline italic text-[13px]">ילדות, איזון מורכב ועיצוב תפיסת היוקרה והמסורת:</span>
+                            ח'ליפה נולד באל-עיין, נווה מדבר שורשי במזרח אבו דאבי, הרבה לפני שתעשיית הנפט המודרנית הפכה את משפחתו ואת המדינה לעשירה כקורח. הוא חווה בילדותו את המעבר המסחרר, החד והכמעט בלתי נתפס של עמו מחיים של רעב, פשטות בדואית קשה, גידול גמלים וציד בזים בחום המדברי – לחיים של ארמונות פאר ומטוסים פרטיים מזהב. הוא חונך בקפידה על ידי אביו (השייח' זאיד, מייסד המדינה הנערץ) לא להסתחרר מהכסף הרב ולראות בעושר הבלתי נתפס פיקדון חברתי ומדיני לטובת העם, המסורת והאזור, ולא שעשוע פרטי של טייקונים.
                         </p>
-                        <div class="trauma-highlight" style="border-right-color: #fbbf24; background:rgba(251,191,36,0.03);">
-                            האידיאולוגיה שלו הייתה "יוקרה מאופקת" (Subtle Luxury) – בניית אימפריה שאינה מנקרת עיניים אלא משדרת יציבות, אימות ואירוח ערבי שורשי. עבורו, איתיחאד הייתה הוכחה שניתן להוביל טכנולוגית בלי לאבד את הזהות המדברית הצנועה. הוא בנה את החברה כבית אירוח מעופף, שבו הנוסע הוא לא לקוח, אלא "אורח" (Dayf) של המדינה.
+                        <div class="trauma-highlight" style="border-right-color: var(--accent-yellow); background:rgba(251,191,36,0.03); color:#fde68a;">
+                            הפסיכולוגיה הניהולית של ח'ליפה נמנעה מהגאוותנות והראוותנות המאפיינות מתעשרים חדשים (Nouveau Riche). האידיאולוגיה השלטת שלו, שהוחדרה לאיתיחאד, הייתה "יוקרה מאופקת" (Subtle Luxury) – חזון של עוצמה שקטה שאינה צריכה לנקר עיניים, אלא משדרת יציבות פיננסית איתנה, סמכות ממלכתית ואירוח ערבי מסורתי. עבור השייח' ח'ליפה, איתיחאד הייתה הוכחה שאיחוד האמירויות יכולה להוביל את העולם בטכנולוגיה ובפאר, מבלי לאבד את נשמתה הטהורה ואת זהותה המדברית הצנועה. הוא עיצב את חווית הטיסה בחברה כך שהנוסע איננו נתפס כ"לקוח" שמשלם על מוצר בתמורה לכסף, אלא כ"אורח" (Dayf בערבית) המבקר בביתו המעופף והמכובד של האמיר עצמו.
                         </div>
+                        <p>
+                            <span class="text-white font-bold block mb-2 underline italic text-[13px]">הישגים מרכזיים ומורשת ארגונית:</span>
+                            <ul class="achievement-list" style="color: var(--accent-yellow);">
+                                <li class="achievement-item"><strong>פריצת דרך קונספטואלית (The Residence):</strong> יישום הראייה של חוויית המלוכה לאזרח הפשוט דרך פיתוח "הרזידנס" ו"הדירה" (The Apartment) במטוסי ה-A380 שלה – דירת 3 חדרים מעופפת (סלון, חדר שינה נפרד ומקלחת פרטית) עם משרת אישי שעבר הכשרה בלונדון, בתוך מטוס מסחרי רגיל. זהו סטנדרט שהגדיר מחדש את גבולות היוקרה בתעופה.</li>
+                                <li class="achievement-item"><strong>אסטרטגיית העוצמה הרכה והספורט:</strong> ניצול חכם של הונה העצום של החברה לרכישת זכויות שיום וחסויות בענפי ספורט עולמיים אהובים (כמו אצטדיון איתיחאד של מנצ'סטר סיטי, וחסות מרכזית על מרוצי פורמולה 1), כדי לנטוע את מותג אבו דאבי בסלון של כל בית מערבי כסמל ליוקרה וניצחון.</li>
+                                <li class="achievement-item"><strong>קפיטליזם של בני ברית (Airlines Equity Alliance):</strong> פיתוח אסטרטגיה כלכלית נועזת (אף כי התבררה כבעייתית ושנויה במחלוקת במבחן התוצאה) של יצירת ברית גלובלית אלטרנטיבית באמצעות רכישת מניות המיעוט בחברות תעופה אירופאיות קורסות (כמו אליטליה ואייר ברלין) בניסיון להצילן ולבנות אימפריית כוח עקיפה שתוביל נוסעים לאבו דאבי.</li>
+                            </ul>
+                        </p>
                     </div>
                 </div>
             </section>
@@ -472,58 +563,147 @@
         <div class="section-divider"></div>
 
         <!-- 07. CATHAY PACIFIC -->
-        <article class="mb-48">
+        <article class="mb-32">
             <div class="flex items-center gap-4 mb-8">
-                <span class="text-7xl font-black text-white/5">07</span>
+                <span class="text-6xl font-black text-white/5">07</span>
                 <div>
                     <h2 class="text-4xl font-black text-white leading-tight tracking-tighter">Cathay Pacific</h2>
-                    <p class="text-[11px] text-emerald-600 font-bold uppercase tracking-[0.2em] italic">The Merchant Adventurers of the Pacific</p>
+                    <p class="text-[11px] text-teal-600 font-bold uppercase tracking-[0.2em] italic">The Merchant Adventurers of the East</p>
                 </div>
             </div>
 
-            <div class="glass-module p-6 mb-12 border-r-4 border-emerald-900">
-                <div class="space-y-5 text-[15px] text-gray-300 font-light">
-                    <p><strong class="text-white underline decoration-emerald-900/50 underline-offset-4">שנת ייסוד רשמית:</strong> 24 בספטמבר, 1946.</p>
-                    <p><strong class="text-white underline decoration-emerald-900/50 underline-offset-4">הבונים/מייסדים:</strong> Roy Farrell (1912–1996) & Sydney de Kantzow (1914–1958).</p>
-                    <p><strong class="text-white underline decoration-emerald-900/50 underline-offset-4">מיקום ייסוד:</strong> הונג קונג (מושבה בריטית בתהליך שיקום).</p>
+            <div class="glass-module p-6 mb-10 border-r-4 border-teal-700">
+                <div class="space-y-4 text-[14px] text-gray-300 font-light">
+                    <p><strong class="text-white underline decoration-teal-700/50 underline-offset-4">שנת ייסוד רשמית:</strong> 24 בספטמבר, 1946.</p>
+                    <p><strong class="text-white underline decoration-teal-700/50 underline-offset-4">הבונים, היזמים וההרפתקנים:</strong> Roy Farrell (1912–1996) & Sydney de Kantzow (1914–1958).</p>
+                    <p><strong class="text-white underline decoration-teal-700/50 underline-offset-4">מיקום ייסוד:</strong> הונג קונג (שהייתה אז מושבת כתר בריטית בתהליכי שיקום).</p>
                 </div>
             </div>
 
-            <!-- Founding Nexus -->
-            <section class="mb-14">
-                <h4 class="text-xs font-bold text-emerald-900 uppercase mb-5 border-b border-emerald-900/30 pb-1 flex items-center gap-2">הקשר הייסוד: רקע וסיבה מורחבים</h4>
-                <div class="founding-nexus-box text-[15px] font-light leading-relaxed text-justify" style="border-right-color: #065f46;">
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-teal-600 uppercase mb-4">אטימולוגיה מורחבת וזהות</h4>
+                <div class="space-y-6 text-[14px] font-light text-justify leading-relaxed">
+                    <div>
+                        <span class="text-white font-bold block mb-1 underline italic">חלק א': Cathay (קָתַאי)</span>
+                        <p>המילה <span class="text-white font-bold italic underline decoration-teal-700">Cathay</span> היא השם הקדום, האקזוטי והפואטי של ארץ סין כפי שהייתה מוכרת באירופה של ימי הביניים (המוזכרת רבות בכתביו של חוקר הארצות מרקו פולו). מקור המילה במונגולית/טורקית עתיקה מתוך שמו של שבט ה-<span class="italic">Khitan</span> המסתורי והלוחמני ששלט בצפון סין. המייסדים בחרו שם זה (כאשר ישבו ותכננו בבר של מלון במנילה), שנחשב למסתורי ומפתה בעיני הקהל במערב, מתוך כוונה לשדר שחברתם אינה סתם חברה הונג-קונגית, אלא היא המפתח הקסום לאוצרות המזרח כולו.</p>
+                    </div>
+                    <div>
+                        <span class="text-white font-bold block mb-1 underline italic">חלק ב': Pacific (האוקיינוס השקט)</span>
+                        <p>המילה <span class="text-white font-bold italic">Pacific</span> (השקט) צורפה באופן אופטימי, מגלומני וחצוף למדי לשם החברה. למרות שבשנת 1946 לחברה היה רק מטוס דקוטה רעוע אחד שיכול היה לטוס מרחקים קצרים בלבד (למקאו ולשנגחאי), המייסדים הוסיפו את המילה "Pacific" מתוך החלום היזמי (שנראה אז הזוי לחלוטין) לחצות יום אחד את האוקיינוס השקט העצום ולהגיע בחזרה לאמריקה. המותג כולו, כהלחם, מייצג את הקוסמופוליטיות המוחלטת של הונג קונג – שילוב מושלם וחסר מדינה אמיתית של מורשת מסחר סינית עתיקה (Cathay) יחד עם יזמות וחלוציות אנגלו-אמריקאית טהורה.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-teal-600 uppercase mb-4 border-b border-teal-900/30 pb-1 flex items-center gap-2">הקשר הייסוד: רקע וסיבה מורחבים</h4>
+                <div class="founding-nexus-box text-[14px] font-light leading-relaxed text-justify" style="border-right-color: var(--accent-teal);">
                     <p>
-                        <span class="text-white font-bold block mb-2 underline italic">הרקע: סחר בין חורבות המלחמה באסיה</span>
-                        לאחר מלחמת העולם השנייה, דרום מזרח אסיה הייתה בתוהו ובוהו מוחלט. שרשראות האספקה נקטעו, והונג קונג הייתה אי של שיקום בריטי בלב ים סיני סוער. שני טייסים לשעבר מחיל האוויר – רוי פארל האמריקאי וסידני דה קנצו האוסטרלי – זיהו הזדמנות פראית להטיס סחורות נדירות (משי, תה, חלקי מכונות) מאוסטרליה ועד סין דרך הונג קונג. המטוס הראשון שלהם, "Betsy", היה שריד צבאי שהפך לכלי סחר.
+                        <span class="text-white font-bold block mb-2 underline italic">הרקע: סחר הברחות אמיץ בין חורבות המלחמה באסיה</span>
+                        לאחר סיומה של מלחמת העולם השנייה, הכלכלה של דרום מזרח אסיה הייתה בתוהו ובוהו מוחלט, ושרשראות האספקה המסורתיות נחתכו באכזריות. הונג קונג הייתה רק אי של ניסיון לשיקום אזרחי בלב ים סיני ופוליטי סוער. שני טייסים צבאיים לשעבר – רוי פארל האמריקאי וסידני דה קנצו האוסטרלי (שהטיסו בעבר אספקה נואשת ומסוכנת מעל רכס ההימלאיה במהלך המלחמה מול יפן) – זיהו הזדמנות עסקית פראית. הם רכשו עודפי מטוסי דקוטה (DC-3) ישנים של צבא ארה"ב, והחלו להטיס ולהבריח סחורות נדירות, החל ממשי ותה, דרך מטילי זהב, בגדי כותנה ואפילו בגדי צמר זולים מאוסטרליה אל שנגחאי והונג קונג. המטוס המסחרי הראשון שלהם כונה בחיבה "Betsy".
                     </p>
                     <p class="mt-4">
-                        <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד: רוח הסחר החופשי כנגד המונופול</span>
-                        סיבת הייסוד הייתה **יצירת שער כלכלי עצמאי לאסיה**. פארל ודה קנצו רצו חברה שאינה כבולה לבירוקרטיה הממשלתית הבריטית. סיבת הייסוד הייתה חיבור הונג קונג לעולם דרך האוקיינוס השקט (Pacific), מה שהפך את החברה לסמל ה"קוסמופוליטיות" של העיר – מרכז סחר גלובלי שאינו כפוף למדינת אם, אלא רק לרוח היזמות החופשית.
+                        <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד: רוח הסחר החופשי כנגד השמרנות הממשלתית הבריטית</span>
+                        סיבת הייסוד העמוקה של החברה הייתה **יצירת שער כלכלי ואווירי אזרחי ועצמאי לאסיה** באמצעות קפיטליזם של שוק חופשי. פארל ודה קנצו רצו להקים חברה אזרחית שמגיבה במהירות ובגמישות לצרכי הסוחרים (Merchant Adventurers) ואינה כבולה בשום צורה לשלשלאות הבירוקרטיה והכובד של הממשל הבריטי השמרני (שהפעיל אז את חברת BOAC כחברת הלאום המסורבלת). החברה הוקמה כדי להפוך את הונג קונג למרכז לוגיסטי גלובלי שאינו כפוף לגחמות של "מדינת אם" במערב, אלא מחויב רק לכוחות השוק, לנוסעים ולרוח היזמות החופשית של אסיה החדשה.
                     </p>
                 </div>
             </section>
 
-            <section class="mb-14">
-                <h4 class="text-xs font-bold text-emerald-900 uppercase mb-5">אטימולוגיה וזהות</h4>
-                <div class="space-y-4 text-[15px] font-light text-justify leading-relaxed">
-                    <p>
-                        המילה <span class="text-white font-bold italic underline decoration-emerald-900">Cathay</span> היא השם הקדום והפואטי של סין באירופה (כפי שמופיע בכתבי מרקו פולו), ומקורה בשבט ה-<span class="italic">Khitan</span> ששלט בצפון סין. המילה <span class="italic">Pacific</span> נבחרה מתוך שאיפה לחצות יום אחד את האוקיינוס השקט כולו. המותג מייצג את ה"קוסמופוליטיות" של הונג קונג – שילוב של מורשת סינית עתיקה עם ניהול מערבי חלוצי.
-                    </p>
-                </div>
-            </section>
-
-            <section class="mb-14">
-                <h4 class="text-xs font-bold text-emerald-900 uppercase mb-5 flex items-center gap-2"><span>פרופיל מייסדים: רוי פארל וסידני דה קנצו</span></h4>
-                <div class="founder-profile-box" style="border-right-color: #065f46;">
-                    <div class="space-y-7 text-[15px] text-gray-400 font-light text-justify leading-relaxed">
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-teal-600 uppercase mb-4">פרופיל מייסדים: רוי פארל וסידני דה קנצו</h4>
+                <div class="founder-profile-box" style="border-right-color: var(--accent-teal);">
+                    <div class="space-y-6 text-[14px] text-gray-400 font-light text-justify leading-relaxed">
                         <p>
-                            <span class="text-white font-bold block mb-1 underline italic text-[13px]">אטימולוגיה של שמות המייסדים:</span>
-                            השם <span class="text-emerald-800 font-bold italic">Roy</span> (מלך - מצרפתית עתיקה/לטינית Rex). <span class="text-emerald-800 font-bold italic">Farrell</span> (אדם בעל גבורה/אומץ - מהשורש האירי Ferghal). <span class="text-emerald-800 font-bold italic">Sydney</span> (אי רחב - מאנגלו-סקסית). <span class="text-emerald-800 font-bold italic">De Kantzow</span> (מקור סלאבי/גרמני המציין "בקצה" או "על הגבול"). השמות משקפים "הרפתקנות אמיצה וריבונית של אישים החיים על הגבול".
+                            <span class="text-white font-bold block mb-1 underline italic text-[13px]">אטימולוגיה של שמות המייסדים (צמד של גורל):</span>
+                            השם <span class="text-teal-400 font-bold italic">Roy</span> (רוי) הוא גרסה של המילה מצרפתית עתיקה (Rex) שפירושה "מלך" או "שליט". השם <span class="text-teal-400 font-bold italic">Farrell</span> (פארל) מקורו בשם משפחה גאלי (אירי) שפירושו "אדם בעל גבורה" או "איש אמיץ" (Ferghal).
+                            השם השותף, <span class="text-teal-400 font-bold italic">Sydney</span> (סידני), מקורו באנגלו-סקסית עתיקה ומשמעותו "אי רחב" או "מרעה רחב על שפת הנהר". שמו השני, <span class="text-teal-400 font-bold italic">De Kantzow</span> (דה קנצו), הוא שם ממקור שוודי/סלאבי המעיד על מגורים "בקצה העיר" או "על הגבול". צמד השמות והאטימולוגיה שלהם משקפים בבירור את החיבור הקוסמי ביניהם: "מלכים אמיצים ונועזים המנהלים אי רחב החי על גבול הסכנה וההזדמנות באסיה".
                         </p>
-                        <div class="trauma-highlight" style="border-right-color: #065f46; background:rgba(6,95,70,0.03);">
-                            הזהות של שניהם הייתה של "הרפתקנים עסקיים". הם תיעבו מונופולים ממשלתיים ונלחמו בשיניים כדי לשמר את עצמאותם מול הלחצים של הממשל הבריטי בהונג קונג. עבורם, קתאי הייתה הדרך להוכיח שהסחר הפרטי הוא הכוח החזק ביותר בשמיים, ושאין גבול לאוקיינוס השקט. הם חיו על הקצה, טסו בנתיבים מסוכנים וביססו את הונג קונג כיהלום שבכתר האסייתי המודרני.
+                        <div class="trauma-highlight" style="border-right-color: var(--accent-teal); background:rgba(20, 184, 166, 0.05); color:#5eead4;">
+                            הזהות הפסיכולוגית והמקצועית של שניהם התגבשה בלחץ האדיר של מלחמת העולם השנייה תחת הארכיטיפ של "ההרפתקנים העסקיים" (Merchant Adventurers). שניהם שרדו טיסות מטען צבאיות והתאבדותיות אל מעבר לרכס ההימלאיה הקטלני (נתיב ה-The Hump) תחת אש נ"מ של הצבא היפני ומזג אוויר קטלני. חוויה מכוננת זו לימדה אותם שהאוויר הוא מרחב של שורדים בלבד, שבו רק החזק והגמיש מנצח ואין מקום לטעויות אנוש. הם תיעבו בכל ליבם מונופולים ממשלתיים ובירוקרטיה קולוניאלית מיושנת. הם נאלצו להילחם בשיניים ולתמרן משפטית כדי לשמר את עצמאותם מול הלחצים האדירים של הממשל הבריטי שניסה למעוך אותם ולנכס לעצמו את שוק התעופה ההונג-קונגי המתפתח. הם חיו את חייהם על הקצה, תמיד עם מזוודה ארוזה, כשהם מאמינים שהעולם שייך למי שמעז לטוס.
                         </div>
+                        <p>
+                            <span class="text-white font-bold block mb-2 underline italic text-[13px]">הישגים מרכזיים ומורשת הונג קונגית:</span>
+                            <ul class="achievement-list" style="color: var(--accent-teal);">
+                                <li class="achievement-item"><strong>פתיחת השמיים של המזרח הרחוק:</strong> ייסוד רשת נתיבי הסחר והנוסעים האזרחית הראשונה שחיברה בצורה יעילה ומהירה את הערים המרכזיות וההרוסות של מזרח אסיה (מנילה, בנגקוק, סינגפור ושנגחאי) מיד לאחר חורבן מלחמת העולם השנייה, והתניעה מחדש את הכלכלה האזורית.</li>
+                                <li class="achievement-item"><strong>ביסוס הונג קונג כצומת סחר עולמי:</strong> בניית התשתית האווירית והלוגיסטית האזרחית שאפשרה להונג קונג הקטנה להפוך מאחז בריטי רעוע ליהלום הסחר, הפיננסים, וצומת המטענים והנוסעים החשוב והדינמי ביותר במזרח אסיה עד היום.</li>
+                                <li class="achievement-item"><strong>ניצחון היזמות על השלטון:</strong> ההצלחה של המודל העסקי שבו צמד יזמים פרטיים ללא שום גב מדיני מצליחים לגבור על כוחו של הכתר הבריטי (שאילץ אותם בסופו של דבר ב-1948 למכור חלק ממניותיהם לתאגיד ההונג קונגי הבריטי הענק "Swire Group", אך המותג העצמאי והרוח שניסחו שרדו את המהלך בגאווה ופועלים עד היום).</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <div class="section-divider" style="height: 1px; background: linear-gradient(to left, transparent, rgba(255, 255, 255, 0.1), transparent); margin: 4rem 0;"></div>
+
+        <!-- 08. ETHIOPIAN AIRLINES -->
+        <article class="mb-32">
+            <div class="flex items-center gap-4 mb-8">
+                <span class="text-6xl font-black text-white/5">08</span>
+                <div>
+                    <h2 class="text-4xl font-black text-white leading-tight tracking-tighter">Ethiopian Airlines</h2>
+                    <p class="text-[11px] text-green-500 font-bold uppercase tracking-[0.2em] italic">The Unconquered Soul of Africa</p>
+                </div>
+            </div>
+
+            <div class="glass-module p-6 mb-10 border-r-4 border-green-600">
+                <div class="space-y-4 text-[14px] text-gray-300 font-light">
+                    <p><strong class="text-white underline decoration-green-600/50 underline-offset-4">שנת ייסוד רשמית:</strong> 21 בדצמבר, 1945.</p>
+                    <p><strong class="text-white underline decoration-green-600/50 underline-offset-4">הבונה ואדריכל הריבונות:</strong> Emperor Haile Selassie I (1892–1975).</p>
+                    <p><strong class="text-white underline decoration-green-600/50 underline-offset-4">מיקום ייסוד:</strong> אדיס אבבה, קיסרות אתיופיה.</p>
+                </div>
+            </div>
+
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-green-500 uppercase mb-4">אטימולוגיה מורחבת וזהות</h4>
+                <div class="space-y-6 text-[14px] font-light text-justify leading-relaxed">
+                    <div>
+                        <span class="text-white font-bold block mb-1 underline italic">חלק א': Ethiopian</span>
+                        <p>השם <span class="text-white font-bold italic underline decoration-green-600">Ethiopian</span> (אתיופיאן) נגזר מהמילה היוונית העתיקה <span class="italic">Aithiops</span> (Αἰθίοψ), שפירושה המילולי "פנים צרובות שמש". אולם, עבור הקיסרות והעם האתיופי, השם לא היה תיאור פיזי, אלא היה סמל מהדהד לגאווה לאומית קדומה ואיתנה, כיוון שאתיופיה (או חבש) הייתה המדינה האפריקאית היחידה שמעולם לא עברה קולוניזציה מלאה על ידי המעצמות האירופאיות (למעט הכיבוש האיטלקי הקצר), ולכן ייצגה את אפריקה החופשית.</p>
+                    </div>
+                    <div>
+                        <span class="text-white font-bold block mb-1 underline italic">חלק ב': הלוגו והצבעים הלאומיים</span>
+                        <p>סמל החברה ההיסטורי והמוכר הוא דמות אריה שואג, "האריה של שבט יהודה" (The Lion of Judah). הסמל מקורו במסורת ובאפוס הלאומי (הכברה נגסת) לפיו השושלת הקיסרית האתיופית (השושלת הסולומונית) היא צאצאית ישירה של שלמה המלך ומלכת שבא, מה שמקנה לחברה הילה של קדושה. צבעי החברה – ירוק, צהוב ואדום – הם צבעי הדגל הלאומי האתיופי, שהפכו ברבות השנים לצבעים הכלל-אפריקאים (Pan-African Colors) שומצו על ידי מדינות אפריקה השונות עם שחרורן. המותג של אתיופיאן אינו משדר רק חברת תעופה מקומית, אלא משמש כנושא הדגל של "שחרור היבשת כולה" מעול הקולוניאליזם הלבן.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-green-500 uppercase mb-4 border-b border-green-900/30 pb-1 flex items-center gap-2">הקשר הייסוד: רקע וסיבה מורחבים</h4>
+                <div class="founding-nexus-box text-[14px] font-light leading-relaxed text-justify" style="border-right-color: #16a34a;">
+                    <p>
+                        <span class="text-white font-bold block mb-2 underline italic">הרקע: בידוד טופוגרפי מוחלט לאחר כיבוש פשיסטי אכזרי</span>
+                        אחרי שחרור אתיופיה מהפלישה והכיבוש האיטלקי הפשיסטי והאכזרי של מוסוליני (1935-1941) במהלך מלחמת העולם השנייה, הקיסרות נותרה מבודדת לחלוטין. היא הייתה מוקפת מכל עבר במדינות שהיו עדיין תחת שלטון קולוניאלי צרפתי ובריטי עוין, ועם טופוגרפיה הררית, מחורצת ופראית שמנעה כל סלילת דרכים יבשתיות מהירה או מסילות ברזל כבדות (באותה תקופה נדרשו שבועות וחודשים של רכיבה על פרדות רק כדי לחצות את המדינה מצד לצד). אתיופיה הייתה אמנם עצמאית שוב, אך ענייה ומנותקת לחלוטין מהעולם המודרני ומהמסחר.
+                    </p>
+                    <p class="mt-4">
+                        <span class="text-white font-bold block mb-2 underline italic">סיבת הייסוד: מטוסים כגשר פיזי מעל הקולוניאליזם והרים</span>
+                        היילה סלאסי החליט להקים את חברת התעופה הלאומית מתוך סיבה הישרדותית-דיפלומטית ולא מסחרית: **פריצת הבידוד הפיזי, הטופוגרפי והמדיני של ארצו דרך השמיים**. הוא הבין שעל מנת למנוע פלישה נוספת ולאחד את כל השבטים בארצו הענקית תחת שלטון מרכזי אחד, עליו לדלג מעל התשתיות היבשתיות החסרות ולהשתמש במטוסים מודרניים. באופן חסר תקדים למדינה אפריקאית אז, הוא יצר ברית טקטית, פרגמטית וצינית עם החברה האמריקאית הענקית TWA (Trans World Airlines) כדי שהם יקימו את החברה האתיופית בסטנדרט מערבי נוקשה וללא פשרות. הקיסר עשה זאת מתוך כוונה פוליטית ברורה וידועה מראש לבצע "אפריקניזציה" (הלאמה מלאה והעברת ניהול וטיסה לצוותים מקומיים) ברגע שהאזרחים האתיופים ילמדו את המלאכה וההנדסה – מהלך אסטרטגי שהוכיח את עצמו בצורה מבריקה והפך את אתיופיאן לאימפריה של ידע.
+                    </p>
+                </div>
+            </section>
+
+            <section class="mb-12">
+                <h4 class="text-xs font-bold text-green-500 uppercase mb-4">פרופיל מייסד: הקיסר היילה סלאסי הראשון</h4>
+                <div class="founder-profile-box" style="border-right-color: #16a34a;">
+                    <div class="space-y-6 text-[14px] text-gray-400 font-light text-justify leading-relaxed">
+                        <p>
+                            <span class="text-white font-bold block mb-1 underline italic text-[13px]">אטימולוגיה של שם המייסד:</span>
+                            השם המקורי שניתן לו בלידתו היה טפרי מקונן (Tafari Makonnen). משמעות השם טפרי בשפת הגעז העתיקה היא "האדם שיראים מפניו" או "המכובד" (ומכאן נגזרה גם תנועת הרסטפארי בג'מייקה הרואה בו אל - 'ראס טפרי'). עם הכתרתו לקיסר ב-1930, הוא נטל לעצמו את השם המלכותי <span class="text-green-400 font-bold italic">Haile Selassie</span> (היילה סלאסי). בשפת הגעז הקדומה, <span class="italic">Haile</span> פירושו "הכוח של" או "עוצמה", ו-<span class="italic">Selassie</span> פירושו "השילוש הקדוש" (האב, הבן ורוח הקודש בנצרות האורתודוקסית). השם המלא שבחר לעצמו מסמל עוצמה אלוהית שאינה ניתנת לערעור: "הכוח של השילוש הקדוש".
+                        </p>
+                        <p>
+                            <span class="text-white font-bold block mb-2 underline italic text-[13px]">טראומה קיומית קטלנית ועיצוב החזון הפאן-אפריקאי:</span>
+                            הטראומה הגדולה ביותר של הקיסר ושל האומה כולה הייתה הפלישה הברוטלית של צבא מוסוליני לאתיופיה ב-1935. צבאו היבשתי האמיץ של הקיסר, החמוש בנשק מיושן ופרימיטיבי, הושמד ללא רחם וללא קרב הוגן על ידי חיל האוויר האיטלקי שהטיל גז חרדל כימי קטלני מהשמיים על חיילים ואזרחים כאחד, חרף העובדה שאתיופיה הייתה חברה עצמאית בחבר הלאומים. היילה סלאסי נאלץ לגלות לאנגליה חסר אונים. בנאום ההיסטורי שלו מז'נבה הוא זעק שמדינה לא יכולה לסמוך על הגנה מוסרית של העולם, עליה להיות חזקה טכנולוגית. 
+                        </p>
+                        <div class="trauma-highlight" style="border-right-color: #16a34a; background: rgba(22, 163, 74, 0.05); color:#bbf7d0;">
+                            החוויה המשפילה, צורבת והאלימה הזו עיצבה את הפסיכולוגיה שלו ואת מדיניותו לכל חייו: התעופה עבורו לא הייתה "עסק של תיירות לרווח כלכלי" אלא "נשק ההרתעה הלאומי והקדוש". הוא ראה בחברת התעופה את הסמל המובהק ביותר של הפאן-אפריקניות והמודרניזציה. האידיאולוגיה שייסד הייתה חוסר תלות מוחלט בלבנים: "חברת תעופה אפריקאית גאה, המנוהלת על ידי אפריקאים, המתוחזקת על ידי מהנדסים ומכונאים אפריקאים ומוטסת על ידי קברניטים אפריקאים, אל שאר יבשת אפריקה והעולם הרחב".
+                        </div>
+                        <p>
+                            <span class="text-white font-bold block mb-2 underline italic text-[13px]">הישגים מרכזיים ומורשת דיפלומטית:</span>
+                            <ul class="achievement-list" style="color: var(--accent-green);">
+                                <li class="achievement-item"><strong>שרידות פוליטית-כלכלית מופתית וחריגה:</strong> החברה שרדה בהצלחה מהפכות קומוניסטיות (שלטון "הדרג" של מנגיסטו ב-1974 שרצח את הקיסר עצמו), מלחמות אזרחים ורעב כבד במדינה, וזאת בזכות מסורת של "בידוד ניהולי" (Corporate Ring-Fencing) – הממשלה באתיופיה (על כל גלגוליה) מעולם לא התערבה בהחלטות העסקיות והמקצועיות של הנהלת החברה, בניגוד מוחלט לכל שאר חברות הלאום באפריקה שקרסו עקב שחיתות.</li>
+                                <li class="achievement-item"><strong>תופרת היבשת הפוסט-קולוניאלית:</strong> הקמת רשת הנתיבים האוויריים הצפופה, הרחבה והאמינה ביותר בתוך יבשת אפריקה (עם ה-Hub המרכזי באדיס אבבה), שאפשרה לראשונה לאזרחים, לסוחרים ולפוליטיקאים אפריקאים לטוס ולסחור ממדינה למדינה בתוך היבשת, מבלי להצטרך לעבור קודם כל בלונדון או בפריז כפי שהיה נהוג ומחויב בעידן הקולוניאלי.</li>
+                                <li class="achievement-item"><strong>הפיכת אדיס אבבה לבירה גלובלית וגשר לאסיה:</strong> פיתוח כלכלי אגרסיבי והפניית כל התנועה והסחר ההולך וגובר בין אפריקה לסין (אסיה) דרך אתיופיה, מה שהפך אותה לחברת התעופה האפריקאית היחידה שמייצרת רווחי עתק יציבים, זוכה בפרסים בינלאומיים ומשמשת כמנוע הכלכלי העיקרי של המדינה כולה.</li>
+                            </ul>
+                        </p>
                     </div>
                 </div>
             </section>
@@ -533,13 +713,14 @@
         <footer class="mt-24 border-t border-white/5 pt-12 pb-20 text-center">
             <div class="inline-block p-1 rounded-full bg-emerald-600 mb-6 shadow-lg shadow-emerald-900/20">
                 <div class="bg-black rounded-full px-8 py-2">
-                    <span class="text-[11px] font-black text-white uppercase tracking-[0.4em]">Integrated Intelligence Standard</span>
+                    <span class="text-[11px] font-black text-white uppercase tracking-[0.4em]">Integrated Intelligence Standard • V3 Final Expansion</span>
                 </div>
             </div>
             <p class="text-[10px] text-gray-700 font-bold uppercase tracking-[0.2em] leading-relaxed text-center">
                 PHASE 02 COMPLETE ANALYSIS | GLOBAL CONNECTORS FULL DOSSIER<br>
                 OPTIMIZED FOR SAMSUNG S25 ULTRA INTERFACE<br>
-                © 2026 | ZERO SHORTCUTS POLICY
+                STATUS: MASSIVE EXPANSION APPLIED & ETYMOLOGY RESTORED (ZERO SHORTCUTS)<br>
+                © 2026 | AVIATION MATRIX
             </p>
         </footer>
 
@@ -547,4 +728,3 @@
 
 </body>
 </html>
-
