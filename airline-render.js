@@ -16,6 +16,19 @@ function accentColorName(accent) {
   return 'var(--blue)';
 }
 
+function renderSectionBody(body) {
+  if (Array.isArray(body)) {
+    return body.map(paragraph => `<p>${paragraph}</p>`).join('');
+  }
+
+  return String(body)
+    .split('\n\n')
+    .map(paragraph => paragraph.trim())
+    .filter(Boolean)
+    .map(paragraph => `<p>${paragraph}</p>`)
+    .join('');
+}
+
 function renderAirlinePage() {
   const slug = getAirlineSlugFromPage();
   const data = window.AIRLINE_DATA && window.AIRLINE_DATA[slug];
@@ -37,7 +50,7 @@ function renderAirlinePage() {
   const sections = data.sections.map((section, i) => `
     <section class="card" id="section-${i + 1}" style="border-right:5px solid ${accent}">
       <h2>${String(i + 1).padStart(2, '0')} — ${section.title}</h2>
-      <p>${section.body}</p>
+      ${renderSectionBody(section.body)}
     </section>
   `).join('');
 
