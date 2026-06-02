@@ -1,6 +1,11 @@
 function getAirlineSlugFromPage() {
+  const params = new URLSearchParams(window.location.search);
+  const fromQuery = params.get('airline');
+  if (fromQuery) return fromQuery;
+
   const current = document.body.dataset.airline;
   if (current) return current;
+
   const file = location.pathname.split('/').pop().replace('.html', '');
   return file;
 }
@@ -18,7 +23,7 @@ function renderAirlinePage() {
   if (!root) return;
 
   if (!data) {
-    root.innerHTML = `<section class="hero"><p class="eyebrow">Aviation Matrix</p><h1>הדף לא נמצא</h1><p>לא נמצאו נתונים עבור חברת התעופה המבוקשת.</p><a class="btn" href="../index.html">חזרה לדף הבית</a></section>`;
+    root.innerHTML = `<section class="hero"><p class="eyebrow">Aviation Matrix</p><h1>הדף לא נמצא</h1><p>לא נמצאו נתונים עבור חברת התעופה המבוקשת.</p><a class="btn" href="index.html">חזרה לדף הבית</a></section>`;
     return;
   }
 
@@ -45,8 +50,8 @@ function renderAirlinePage() {
       <h1>${data.name}</h1>
       <p>${data.subtitle}</p>
       <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:22px">
-        <a class="btn" href="../index.html">חזרה לדף הבית</a>
-        <a class="btn secondary" href="../${phaseFile(data.phase)}">חזרה לקבוצת המחקר</a>
+        <a class="btn" href="index.html">חזרה לדף הבית</a>
+        <a class="btn secondary" href="${phaseFile(data.phase)}">חזרה לקבוצת המחקר</a>
       </div>
     </section>
 
