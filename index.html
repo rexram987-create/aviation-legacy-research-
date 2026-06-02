@@ -1,140 +1,78 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl" class="dark">
+<html lang="he" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aviation Matrix | מרכז המחקר</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-dark: #050505;
-            --card-dark: #111111;
-            --accent-blue: #3b82f6;
-            --accent-emerald: #10b981;
-            --accent-orange: #f97316;
-        }
-        body {
-            font-family: 'Assistant', sans-serif;
-            background-color: var(--bg-dark);
-            color: #e5e7eb;
-            overflow-x: hidden;
-        }
-        .s25-container {
-            max-width: 480px; /* S25 Ultra Optimized */
-            margin: 0 auto;
-            min-height: 100vh;
-        }
-        .glass {
-            background: rgba(17, 17, 17, 0.8);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        .gradient-text {
-            background: linear-gradient(135deg, #fff 30%, #6366f1 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .nav-card {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .nav-card:active {
-            transform: scale(0.97);
-        }
-        .btn-blue {
-            background: linear-gradient(135deg, #2563eb, #1e40af);
-            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
-        }
-        .btn-emerald {
-            background: linear-gradient(135deg, #059669, #064e3b);
-            box-shadow: 0 4px 15px rgba(5, 150, 105, 0.3);
-        }
-        .btn-orange {
-            background: linear-gradient(135deg, #ea580c, #9a3412);
-            box-shadow: 0 4px 15px rgba(234, 88, 12, 0.3);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aviation Legacy Research | מרכז המחקר</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body class="p-0 m-0">
-
-    <div class="s25-container px-6 py-10">
-        
-        <!-- Header Section -->
-        <header class="mb-12 text-center">
-            <div class="inline-block p-1 mb-4 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 shadow-lg shadow-blue-900/20">
-                <div class="bg-black rounded-full px-4 py-1">
-                    <span class="text-[10px] font-bold tracking-[0.2em] text-blue-400 uppercase">Aviation Intelligence</span>
-                </div>
-            </div>
-            <h1 class="text-5xl font-extrabold tracking-tighter gradient-text mb-2">AVIATION<br>MATRIX</h1>
-            <p class="text-gray-500 text-xs font-light tracking-widest uppercase">Structural Mapping System</p>
-        </header>
-
-        <!-- Navigation Menu -->
-        <div class="space-y-6">
-            <h4 class="text-[10px] font-bold text-gray-600 uppercase tracking-[0.3em] px-2">Research Paths</h4>
-
-            <!-- Phase 1: Western Legacy -->
-            <a href="western_legacy.html" class="block">
-                <div class="nav-card glass rounded-3xl p-6 relative overflow-hidden group border-r-4 border-blue-600">
-                    <div class="flex justify-between items-start mb-3">
-                        <h2 class="text-2xl font-black text-white tracking-tight">Western Legacy</h2>
-                        <span class="bg-blue-600/20 text-blue-400 text-[10px] px-2 py-1 rounded-md font-bold uppercase">Phase 01</span>
-                    </div>
-                    <p class="text-gray-400 text-xs mb-6 leading-relaxed font-light">
-                        American, Delta, United, Air France, Lufthansa. ניתוח שורשי התעופה המערבית והקפיטליזם האווירי.
-                    </p>
-                    <div class="btn-blue text-white font-bold py-4 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-lg active:scale-95">
-                        <span class="text-sm tracking-wide">פתח מחקר שלב א'</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-                    </div>
-                </div>
-            </a>
-
-            <!-- Phase 2: Global Connectors -->
-            <a href="global_connectors.html" class="block">
-                <div class="nav-card glass rounded-3xl p-6 relative overflow-hidden group border-r-4 border-emerald-600">
-                    <div class="flex justify-between items-start mb-3">
-                        <h2 class="text-2xl font-black text-white tracking-tight">Global Connectors</h2>
-                        <span class="bg-emerald-600/20 text-emerald-400 text-[10px] px-2 py-1 rounded-md font-bold uppercase">Phase 02</span>
-                    </div>
-                    <p class="text-gray-400 text-xs mb-6 leading-relaxed font-light">
-                        Emirates, Singapore, Turkish, ANA, Qatar, Etihad, Cathay. עוצמה מהמזרח והקרנת כוח ריבונית.
-                    </p>
-                    <div class="btn-emerald text-white font-bold py-4 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-lg active:scale-95">
-                        <span class="text-sm tracking-wide">פתח מחקר שלב ב'</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-                    </div>
-                </div>
-            </a>
-
-            <!-- Phase 3: Low-Cost Pioneers -->
-            <a href="low_cost_pioneers.html" class="block">
-                <div class="nav-card glass rounded-3xl p-6 relative overflow-hidden group border-r-4 border-orange-600">
-                    <div class="flex justify-between items-start mb-3">
-                        <h2 class="text-2xl font-black text-white tracking-tight">Low-Cost Pioneers</h2>
-                        <span class="bg-orange-600/20 text-orange-400 text-[10px] px-2 py-1 rounded-md font-bold uppercase">Phase 03</span>
-                    </div>
-                    <p class="text-gray-400 text-xs mb-6 leading-relaxed font-light">
-                        Southwest, Ryanair, EasyJet, Wizz Air, Spirit. מהפכת הדמוקרטיזציה של השמיים והיעילות האכזרית.
-                    </p>
-                    <div class="btn-orange text-white font-bold py-4 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-lg active:scale-95">
-                        <span class="text-sm tracking-wide">פתח מחקר שלב ג'</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-                    </div>
-                </div>
-            </a>
-
-        </div>
-
-        <!-- System Footer -->
-        <footer class="mt-16 border-t border-white/5 pt-8 text-center pb-12">
-            <p class="text-[9px] text-gray-600 uppercase tracking-[0.4em] font-bold">Optimized for S25 Ultra Interface</p>
-            <p class="text-[9px] text-gray-700 mt-2 font-medium italic">© 2026 | Aviation Matrix | Integrated Path System</p>
-        </footer>
-
+<body>
+  <header class="topbar">
+    <div class="site-shell topbar-inner">
+      <a class="brand" href="index.html">Aviation Legacy Research</a>
+      <nav class="nav-links">
+        <a href="western_legacy.html">Western Legacy</a>
+        <a href="global_connectors.html">Global Connectors</a>
+        <a href="low_cost_pioneers.html">Low-Cost</a>
+      </nav>
     </div>
+  </header>
 
+  <main class="site-shell">
+    <section class="hero">
+      <p class="eyebrow">Aviation Matrix</p>
+      <h1>מחקר חברות התעופה הגדולות בעולם</h1>
+      <p>אתר מחקרי רספונסיבי המפריד בין עובדה היסטורית, אטימולוגיה, פרשנות מותגית ומקורות. כל חברת תעופה מקבלת דף מחקר עצמאי משלה.</p>
+    </section>
+
+    <section class="section">
+      <h2>שלושת מסלולי המחקר</h2>
+      <div class="grid grid-3">
+        <a class="card phase-blue" href="western_legacy.html">
+          <h3>Western Legacy</h3>
+          <p>חברות המורשת המערביות שעיצבו את התעופה המסחרית המודרנית.</p>
+          <span class="btn">פתיחת המסלול</span>
+        </a>
+        <a class="card phase-green" href="global_connectors.html">
+          <h3>Global Connectors</h3>
+          <p>חברות שמחברות יבשות, מדינות קטנות ועוצמה ריבונית גלובלית.</p>
+          <span class="btn">פתיחת המסלול</span>
+        </a>
+        <a class="card phase-orange" href="low_cost_pioneers.html">
+          <h3>Low-Cost Pioneers</h3>
+          <p>חברות ששינו את מחיר הטיסה והפכו את השמיים למוצר המוני.</p>
+          <span class="btn">פתיחת המסלול</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>כל חברות התעופה באתר</h2>
+      <div class="grid grid-3">
+        <a class="card" href="airline.html?airline=american-airlines"><h3>American Airlines</h3><p>קונסולידציה, דואר אוויר וזהות אמריקאית.</p></a>
+        <a class="card" href="airline.html?airline=delta-air-lines"><h3>Delta Air Lines</h3><p>מחברת ריסוס חקלאית לרשת עולמית.</p></a>
+        <a class="card" href="airline.html?airline=united-airlines"><h3>United Airlines</h3><p>איחוד בין תעשייה, דואר ורשת נתיבים.</p></a>
+        <a class="card" href="airline.html?airline=air-france"><h3>Air France</h3><p>דגל צרפתי, תרבות ודיפלומטיה אווירית.</p></a>
+        <a class="card" href="airline.html?airline=lufthansa"><h3>Lufthansa</h3><p>רצף גרמני מורכב, שיקום וסמל העגור.</p></a>
+        <a class="card" href="airline.html?airline=emirates"><h3>Emirates</h3><p>דובאי, ריבונות אווירית וקישוריות גלובלית.</p></a>
+        <a class="card" href="airline.html?airline=singapore-airlines"><h3>Singapore Airlines</h3><p>מדינה קטנה, שירות פרימיום ודיוק גלובלי.</p></a>
+        <a class="card" href="airline.html?airline=turkish-airlines"><h3>Turkish Airlines</h3><p>איסטנבול כגשר בין יבשות.</p></a>
+        <a class="card" href="airline.html?airline=ana"><h3>ANA</h3><p>יפן של דיוק, שירות ותשתית אזרחית.</p></a>
+        <a class="card" href="airline.html?airline=qatar-airways"><h3>Qatar Airways</h3><p>דוחא, פרימיום וכוח רך של מדינה קטנה.</p></a>
+        <a class="card" href="airline.html?airline=etihad-airways"><h3>Etihad Airways</h3><p>אבו דאבי, איחוד וזהות מדינתית.</p></a>
+        <a class="card" href="airline.html?airline=cathay-pacific"><h3>Cathay Pacific</h3><p>הונג קונג, מסחר וגשר פסיפי.</p></a>
+        <a class="card" href="airline.html?airline=southwest"><h3>Southwest Airlines</h3><p>הפיכת הטיסה לשירות עממי.</p></a>
+        <a class="card" href="airline.html?airline=ryanair"><h3>Ryanair</h3><p>פירוק מחיר הטיסה האירופית למוצר בסיסי.</p></a>
+        <a class="card" href="airline.html?airline=easyjet"><h3>easyJet</h3><p>לואו־קוסט אירופי נגיש וממותג.</p></a>
+        <a class="card" href="airline.html?airline=wizz-air"><h3>Wizz Air</h3><p>תנועה זולה בין מזרח ומערב אירופה.</p></a>
+        <a class="card" href="airline.html?airline=spirit-airlines"><h3>Spirit Airlines</h3><p>מודל אמריקאי קיצוני של מחיר בסיס ותוספות.</p></a>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="site-shell">© 2026 | Aviation Legacy Research | Research & Development by Ram</div></footer>
 </body>
 </html>
-
